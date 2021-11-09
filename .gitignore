@@ -1,1 +1,4 @@
  .devcontainer/php/apache2/logs/**
+.devcontainer/php/apache2/logs/access.log
+.devcontainer/php/apache2/logs/error.log
+.devcontainer/php/apache2/logs/access.log
