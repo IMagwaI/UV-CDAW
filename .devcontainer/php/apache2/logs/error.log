@@ -52,3 +52,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Mon Nov 08 11:15:37.870153 2021] [php:notice] [pid 21] [client 172.18.0.1:44512] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.18.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
 [Mon Nov 08 11:25:25.708285 2021] [php:notice] [pid 22] [client 172.18.0.1:44536] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.18.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
 [Mon Nov 08 11:26:17.973927 2021] [php:notice] [pid 516] [client 172.18.0.1:44544] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.18.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 08 16:02:31.189122 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.4. Set the 'ServerName' directive globally to suppress this message
+[Tue Nov 09 08:15:58.786033 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/8.0.12 configured -- resuming normal operations
+[Tue Nov 09 08:15:58.786351 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
