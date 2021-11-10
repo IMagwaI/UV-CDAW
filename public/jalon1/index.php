@@ -49,10 +49,7 @@
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Favori</a></li>
+                    <li><a class="nav-link scrollto" href="portfolio-details.php">Favori</a></li>
                     <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="#">Drop Down 1</a></li>
@@ -70,7 +67,7 @@
                             <li><a href="#">Drop Down 4</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link scrollto" href="#contact">Playlist</a></li>
+                    <li><a class="nav-link scrollto" href="portfolio-details.php">Playlist</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
@@ -88,80 +85,239 @@
 
             <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
                 <div class="col-xl-6 col-lg-8">
-                    <h1>Powerful Digital Solutions With Gp<span>.</span></h1>
-                    <h2>We are team of talented digital marketers</h2>
+                    <h1>Welcome to Movie Time<span>.</span></h1>
+                    <h2>There's always a time for a movie</h2>
+                    <br>
                 </div>
+            </div>
+            <div class="input-group">
+                <input type="search" class="form-control rounded" placeholder="Retrouver votre film" aria-label="Search" aria-describedby="search-addon" style="background-color:rgba(0,0,0,0)" />
+                <button type="button" class="btn warning" style="color:#fcc100; border-style: solid; border-color: #fcc100;">search</button>
             </div>
 
-            <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-                <div class="col-xl-2 col-md-4">
-                    <div class="icon-box">
-                        <i class="ri-store-line"></i>
-                        <h3><a href="">Lorem Ipsum</a></h3>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-md-4">
-                    <div class="icon-box">
-                        <i class="ri-bar-chart-box-line"></i>
-                        <h3><a href="">Dolor Sitema</a></h3>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-md-4">
-                    <div class="icon-box">
-                        <i class="ri-calendar-todo-line"></i>
-                        <h3><a href="">Sedare Perspiciatis</a></h3>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-md-4">
-                    <div class="icon-box">
-                        <i class="ri-paint-brush-line"></i>
-                        <h3><a href="">Magni Dolores</a></h3>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-md-4">
-                    <div class="icon-box">
-                        <i class="ri-database-2-line"></i>
-                        <h3><a href="">Nemos Enimade</a></h3>
-                    </div>
-                </div>
-            </div>
+
 
         </div>
     </section>
     <!-- End Hero -->
 
     <main id="main">
-
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="team">
             <div class="container" data-aos="fade-up">
 
-                <div class="row">
-                    <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-                        <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                <div class="section-title">
+                    <h2>Discover</h2>
+                    <p>Our media</p>
+
+                    <div class="row">
+
                     </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-                        <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-                        <p class="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
+
+                    <div class="btn-group btn-group-toggle " data-toggle="buttons" style="width: 100%;">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Film
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option2" autocomplete="off"> serie
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> Anime
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option4" autocomplete="off"> Documentaire
+                        </label>
+                    </div>
+
+                </div>
+                <div class="row ">
+                    <div class="col-lg-2 col-md-6 footer-links">
+
+                        <h4>Catégorie</h4>
                         <ul>
-                            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                            <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Film</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Serie</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Anime</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Documentaire</a></li>
                         </ul>
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-                        </p>
+
+                        <h4>Genre</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Action</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Drama</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Sience-fi</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Aventure</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Romance</a></li>
+                        </ul>
                     </div>
+                    <div class="col-lg-1 col-md-6 footer-links"></div>
+
+                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="fade-up" data-aos-delay="100">
+                            <div class="member-img">
+                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>C'Mon C'Mon</h4>
+                                <span>Chief Executive Officer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="fade-up" data-aos-delay="200">
+                            <div class="member-img">
+                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>C'Mon C'Mon</h4>
+                                <span>Product Manager</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="fade-up" data-aos-delay="300">
+                            <div class="member-img">
+                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>C'Mon C'Mon</h4>
+                                <span>CTO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="fade-up" data-aos-delay="400">
+                            <div class="member-img">
+                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>C'Mon C'Mon</h4>
+                                <span>Accountant</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-lg-2 col-md-6 footer-links ">
+                    </div>
+                    <div class="col-lg-1 col-md-6 footer-links"></div>
+
+
+                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="fade-up" data-aos-delay="100">
+                            <div class="member-img">
+                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>C'Mon C'Mon</h4>
+                                <span>Chief Executive Officer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="fade-up" data-aos-delay="200">
+                            <div class="member-img">
+                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>C'Mon C'Mon</h4>
+                                <span>Product Manager</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="fade-up" data-aos-delay="300">
+                            <div class="member-img">
+                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>C'Mon C'Mon</h4>
+                                <span>CTO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="fade-up" data-aos-delay="400">
+                            <div class="member-img">
+                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>C'Mon C'Mon</h4>
+                                <span>Accountant</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
         </section>
-        <!-- End About Section -->
+        <div style=" text-align:center;">
+            <a href="" class="get-started-btn scrollto" style="color: black;">Afficher Plus</a>
+        </div>
+
+        <!-- End Team Section -->
 
         <!-- ======= Clients Section ======= -->
-        <section id="clients" class="clients">
+        <!--         <section id="clients" class="clients">
             <div class="container" data-aos="zoom-in">
 
                 <div class="clients-slider swiper">
@@ -179,7 +335,7 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
         <!-- End Clients Section -->
 
         <!-- ======= Features Section ======= -->
@@ -324,7 +480,7 @@
                                 <p>App</p>
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                    <a href="portfolio-details.php" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -338,7 +494,7 @@
                                 <p>Web</p>
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                    <a href="portfolio-details.php" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -352,7 +508,7 @@
                                 <p>App</p>
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                    <a href="portfolio-details.php" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -366,7 +522,7 @@
                                 <p>Card</p>
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                    <a href="portfolio-details.php" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -380,7 +536,7 @@
                                 <p>Web</p>
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                    <a href="portfolio-details.php" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -394,7 +550,7 @@
                                 <p>App</p>
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                    <a href="portfolio-details.php" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -408,7 +564,7 @@
                                 <p>Card</p>
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                    <a href="portfolio-details.php" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -422,7 +578,7 @@
                                 <p>Card</p>
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                    <a href="portfolio-details.php" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -436,7 +592,7 @@
                                 <p>Web</p>
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                    <a href="portfolio-details.php" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -586,97 +742,10 @@
         </section>
         <!-- End Testimonials Section -->
 
-        <!-- ======= Team Section ======= -->
-        <section id="team" class="team">
-            <div class="container" data-aos="fade-up">
 
-                <div class="section-title">
-                    <h2>Team</h2>
-                    <p>Check our Team</p>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="100">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="200">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="300">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="400">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End Team Section -->
 
         <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
+        <!--         <section id="contact" class="contact">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
@@ -685,8 +754,7 @@
                 </div>
 
                 <div>
-                    <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                        frameborder="0" allowfullscreen></iframe>
+                    <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
                 </div>
 
                 <div class="row mt-5">
@@ -745,7 +813,7 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
         <!-- End Contact Section -->
 
     </main>
