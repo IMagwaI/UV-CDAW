@@ -10,7 +10,9 @@
             <ul>
                 <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                 <li><a class="nav-link scrollto" href="movie-details.php">Favori</a></li>
-                <li class="dropdown"><a href="#"><i class="bi bi-person-fill" style="color:yellow;margin-right:10px;"></i><span> Compte</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                        </svg><span> Compte</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="profil.php">Mon profil</a></li>
                         <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
