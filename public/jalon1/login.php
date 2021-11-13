@@ -47,6 +47,7 @@
             <div class="row" data-aos="fade-up" data-aos-delay="150">
                 <div class="col-xl-6 col-lg-4">
                     <h1>Rejoingnez-nous sur <span>Movie Time</span></h1>
+                    <h2>Notre braa eaaaaa aeredza ezczecezc ezcez</h2>
                 </div>
                 <div class="col-xl-2 col-lg-4">
                 </div>
