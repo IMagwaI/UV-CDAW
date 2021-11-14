@@ -9,7 +9,8 @@
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
                 <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                <li><a class="nav-link scrollto" href="movie-details.php">Favori</a></li>
+                <li><a class="nav-link scrollto" href="movie-details.php">Film</a></li>
+                <li><a class="nav-link scrollto" href="playlist.php">Playlist</a></li>
                 <li class="dropdown"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
                         </svg><span> Compte</span> <i class="bi bi-chevron-down"></i></a>
@@ -29,7 +30,6 @@
                         <li><a href="#">Drop Down 4</a></li>
                     </ul>
                 </li>
-                <li><a class="nav-link scrollto" href="movie-details.php">Playlist</a></li>
                 </li>
 
             </ul>
