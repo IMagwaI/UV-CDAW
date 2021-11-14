@@ -38,7 +38,7 @@
 
 <body>
 
-<?php include 'header.php'; ?>
+  <?php include 'header.php'; ?>
 
   <main id="main">
 
@@ -52,10 +52,17 @@
             <h2>Détails du média</h2>
 
           </div>
-          <div class="mr-auto">
-
-            <h2>Boutons ici (fav, vu, playlist)</h2>
-
+          <div class="col mr-auto">
+            <div class="container">
+              <div class="row w-100">
+                <div class="col">
+                  Ajouter aux favoris <i class="bi-heart-fill"></i></div>
+                <div class="col">
+                  Ajouter au playlist <i class="bi-plus-circle-fill"></i></div>
+                <div class="col">
+                  Marquer comme vu <i class="bi-eye-fill"></i></div>
+              </div>
+            </div>
           </div>
         </div>
 
