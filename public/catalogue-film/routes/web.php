@@ -18,6 +18,7 @@ use App\Http\Controllers\listeMediasController;
 }); */
 
 Route::get('/tami', 'App\Http\Controllers\listeMediasController@index')->name('welcome');
+Route::get('/cats', 'App\Http\Controllers\listeMediasController@getCategories')->name('getem');
 
 Route::get('/name/{name}',function($name){
     return "Welcome $name";
