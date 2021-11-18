@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\listeMediasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 /* Route::get('/', function () {
     return view('index');
 }); */
+
+Route::get('/tami', 'App\Http\Controllers\listeMediasController@index')->name('welcome');
+
 Route::get('/name/{name}',function($name){
     return "Welcome $name";
 });
