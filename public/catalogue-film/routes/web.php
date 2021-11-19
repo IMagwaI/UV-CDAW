@@ -41,8 +41,8 @@ Route::get('/listefilm',function(){
     
 });
 
-Route::get('/projet',function(){
-    return view('index');
+Route::get('/',function(){
+    return view('home');
 }); 
 Route::get('/movie-details',function(){
     return view('movie-details');
