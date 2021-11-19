@@ -26,7 +26,7 @@ class FilmController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('ajoutFilm', ['categories' => $categories]);
+        return view('addFilm', ['categories' => $categories]);
     }
 
     /**
