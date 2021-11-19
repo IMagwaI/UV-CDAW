@@ -20,7 +20,7 @@ use App\Http\Controllers\listeMediasController;
 Route::get('/tami', 'App\Http\Controllers\listeMediasController@index')->name('welcome');
 Route::get('/cats', 'App\Http\Controllers\listeMediasController@getCategories')->name('getem');
 Route::get('/films', 'App\Http\Controllers\FilmController@index')->name('films');
-Route::post('addFilm','App\Http\Controllers\FilmController@create');
+Route::get('addFilm','App\Http\Controllers\FilmController@create');
 
 Route::get('/name/{name}',function($name){
     return "Welcome $name";
