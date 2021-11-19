@@ -14,7 +14,7 @@ class listeMediasController extends Controller
 
     public function getCategories() {
         $categories = Category::all();
-        return view('categories', $categories);
+        return view('categories', ['categories' => $categories]);
     }
 
 }
