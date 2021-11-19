@@ -20,16 +20,17 @@ use App\Http\Controllers\listeMediasController;
 Route::get('/tami', 'App\Http\Controllers\listeMediasController@index')->name('welcome');
 Route::get('/cats', 'App\Http\Controllers\listeMediasController@getCategories')->name('getem');
 Route::get('/films', 'App\Http\Controllers\FilmController@index')->name('films');
-Route::post('addFilm','App\Http\Controllers\FilmController@create');
+Route::get('addFilm', 'App\Http\Controllers\FilmController@create');
+Route::post('addFilm', 'App\Http\Controllers\FilmController@store');
 
-Route::get('/name/{name}',function($name){
+Route::get('/name/{name}', function ($name) {
     return "Welcome $name";
 });
 Route::get('/title/{title}', function ($title) {
     return "Welcome $title";
 })->where('title', '[A-Za-z]+');
 
-Route::get('/listefilm',function(){
+Route::get('/listefilm', function () {
     return "<!doctype html>
     <html lang='fr'>
       <head>
@@ -40,25 +41,24 @@ Route::get('/listefilm',function(){
           <p>Le fichier risque d'être longggggg</p>
       </body>
     </html>";
-    
 });
 
-Route::get('/',function(){
+Route::get('/', function () {
     return view('home');
-}); 
-Route::get('/movie-details',function(){
+});
+Route::get('/movie-details', function () {
     return view('movie-details');
 });
-Route::get('/ajoutFilm',function(){
+Route::get('/ajoutFilm', function () {
     return view('ajoutFilm');
 });
 
-Route::get('/profil',function(){
+Route::get('/profil', function () {
     return view('profil');
 });
-Route::get('/playlist',function(){
+Route::get('/playlist', function () {
     return view('playlist');
 });
-Route::get('/login',function(){
+Route::get('/login', function () {
     return view('login');
 });

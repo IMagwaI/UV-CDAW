@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Film;
 use App\Models\Category;
+
 class FilmController extends Controller
 {
     /**
@@ -15,7 +16,7 @@ class FilmController extends Controller
     public function index()
     {
         $films = Film::all();
-        return view("film",["films" => $films]);
+        return view("film", ["films" => $films]);
     }
     /**
      * Show the form for creating a new resource.
@@ -26,7 +27,6 @@ class FilmController extends Controller
     {
         $categories = Category::all();
         return view('ajoutFilm', ['categories' => $categories]);
-
     }
 
     /**
@@ -37,7 +37,14 @@ class FilmController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $name = $request->input('name');
+        $director = $request->input('director');
+        $category = $request->input('category');
+
+        $data = ['name' => $name, 'director' => $director, 'category_id' => $category];
+
+        Film::create($data);
+        return redirect('/addFilm');
     }
 
     /**

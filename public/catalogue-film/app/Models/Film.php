@@ -9,11 +9,12 @@ class Film extends Model
 {
     use HasFactory;
 
-    protected $guarded=[]; 
-    protected $table = 'film';
+    protected $guarded = [];
+    protected $table = 'films';
 
 
-    public function category(){
-        return $this->belongsTo(Category::class,"category_id","id");
+    public function category()
+    {
+        return $this->belongsTo(Category::class, "category_id", "id");
     }
 }

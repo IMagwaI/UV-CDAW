@@ -2,6 +2,7 @@
 
 <body>
     <form method="POST" action="{{ url('#') }}">
+    @csrf
         <input type="text" name="name" placeholder="nom du film">
         <input type="text" name="director" placeholder="directeur du film">
         <select id="category" name="category">
