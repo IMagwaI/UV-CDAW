@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Film;
-use App\Models\Category;
 
-class FilmController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +13,9 @@ class FilmController extends Controller
      */
     public function index()
     {
-        $films = Film::all();
-        return view("addedFilms", ["films" => $films]);
+        //
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -25,8 +23,7 @@ class FilmController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        return view('addFilm', ['categories' => $categories]);
+        //
     }
 
     /**
@@ -37,13 +34,7 @@ class FilmController extends Controller
      */
     public function store(Request $request)
     {
-        $name = $request->input('name');
-        $director = $request->input('director');
-        $category = $request->input('category');
-
-        $data = ['name' => $name, 'director' => $director, 'category_id' => $category];
-        Film::create($data);
-        return redirect('/addedFilms');
+        //
     }
 
     /**
@@ -77,14 +68,7 @@ class FilmController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Film::where('id', $id)->update(
-            [
-                'name' => $request->input('name'),
-                'director' => $request->input('director'),
-                'category_id' => $request->input('category')
-            ]
-        );
-        return redirect('/addedFilms');
+        //
     }
 
     /**
@@ -95,7 +79,6 @@ class FilmController extends Controller
      */
     public function destroy($id)
     {
-        Film::destroy($id);
-        return redirect('/addedFilms');
+        //
     }
 }
