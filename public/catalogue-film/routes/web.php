@@ -22,8 +22,9 @@ Route::get('addFilm', 'App\Http\Controllers\FilmController@create')->name('addFi
 Route::post('addFilm', 'App\Http\Controllers\FilmController@store')->name('addFilm_store');
 Route::get('addedFilms', 'App\Http\Controllers\FilmController@index')->name('addedFilms');
 
-Route::put('/addedFilms/{id}', 'App\Http\Controllers\FilmController@update')->name('film_update');
+Route::post('/addedFilms/{id}', 'App\Http\Controllers\FilmController@edit')->name('film_update');
 Route::delete('/addedFilms/{id}', 'App\Http\Controllers\FilmController@destroy')->name('deleteFilm');
+Route::post('/updateFilm/{id}', 'App\Http\Controllers\FilmController@update')->name('updateFilm_put');
 
 
 Route::get('/name/{name}', function ($name) {

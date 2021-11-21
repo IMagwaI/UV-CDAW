@@ -65,7 +65,10 @@ class FilmController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categories = Category::all();
+        $film = Film::where('id', $id)->get()[0];
+        return view("updateFilm", ["film" => $film, "categories" => $categories]);
+        // echo $film;
     }
 
     /**
