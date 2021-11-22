@@ -31,7 +31,7 @@
                     <div class="form-group">
                         <label for="exampleInputCategory">Catégorie du film</label>
                         <br>
-                        <select id="category" name="category" selected={{$film->category_id}}>
+                        <select id="category" name="category">
                             @foreach ($categories as $category){
                                 <option value="{{ $category->id }}" {{ $film->category_id == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
                                 }
