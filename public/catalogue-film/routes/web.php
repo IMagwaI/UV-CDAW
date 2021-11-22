@@ -27,25 +27,7 @@ Route::delete('/addedFilms/{id}', 'App\Http\Controllers\FilmController@destroy')
 Route::post('/updateFilm/{id}', 'App\Http\Controllers\FilmController@update')->name('updateFilm_put');
 
 
-Route::get('/name/{name}', function ($name) {
-    return "Welcome $name";
-});
-Route::get('/title/{title}', function ($title) {
-    return "Welcome $title";
-})->where('title', '[A-Za-z]+');
 
-Route::get('/listefilm', function () {
-    return "<!doctype html>
-    <html lang='fr'>
-      <head>
-          <meta charset='UTF-8'>
-          <title>Mauvaise façon</title>
-      </head>
-      <body>
-          <p>Le fichier risque d'être longggggg</p>
-      </body>
-    </html>";
-});
 
 Route::get('/', function () {
     return view('home');
@@ -63,6 +45,10 @@ Route::get('/profil', function () {
 Route::get('/playlist', function () {
     return view('playlist');
 })->name('playlist');
-Route::get('/login', function () {
+/* Route::get('/login', function () {
     return view('login');
-})->name('login');
+})->name('login'); */
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
