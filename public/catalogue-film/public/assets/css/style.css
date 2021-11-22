@@ -5,7 +5,6 @@
 * License: https://bootstrapmade.com/license/
 */
 
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -33,7 +32,6 @@ h5,
 h6 {
     font-family: "Raleway", sans-serif;
 }
-
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -71,7 +69,6 @@ h6 {
     visibility: visible;
     opacity: 1;
 }
-
 
 /*--------------------------------------------------------------
 # Preloader
@@ -121,7 +118,6 @@ h6 {
     }
 }
 
-
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
@@ -131,7 +127,6 @@ h6 {
         transition-delay: 0 !important;
     }
 }
-
 
 /*--------------------------------------------------------------
 # Header
@@ -171,7 +166,6 @@ h6 {
     max-height: 40px;
 }
 
-
 /*--------------------------------------------------------------
 #  START LOGIN FORM
 --------------------------------------------------------------*/
@@ -179,7 +173,7 @@ h6 {
 .signin {
     width: 350px;
     height: 500px;
-    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    background: #0f0c29;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 5px 20px 50px #000;
@@ -203,7 +197,7 @@ h6 {
     margin: 60px;
     font-weight: bold;
     cursor: pointer;
-    transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .inputsingin {
@@ -232,7 +226,7 @@ h6 {
     outline: none;
     border: none;
     border-radius: 5px;
-    transition: .2s ease-in;
+    transition: 0.2s ease-in;
     cursor: pointer;
 }
 
@@ -243,33 +237,31 @@ button:hover {
 .login {
     height: 460px;
     background: #eee;
-    border-radius: 60% / 10%;
+    border-radius: 5px;
     transform: translateY(-180px);
-    transition: .8s ease-in-out;
+    transition: 0.8s ease-in-out;
 }
 
 .login label {
     color: #ffc451;
-    transform: scale(.6);
+    transform: scale(0.6);
 }
 
-#chk:checked~.login {
+#chk:checked ~ .login {
     transform: translateY(-500px);
 }
 
-#chk:checked~.login label {
+#chk:checked ~ .login label {
     transform: scale(1);
 }
 
-#chk:checked~.signup label {
-    transform: scale(.6);
+#chk:checked ~ .signup label {
+    transform: scale(0.6);
 }
-
 
 /*--------------------------------------------------------------
 #  END LOGIN FORM
 --------------------------------------------------------------*/
-
 
 /*--------------------------------------------------------------
 #  Get Startet Button
@@ -298,11 +290,9 @@ button:hover {
     }
 }
 
-
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-
 
 /**
 * Desktop Navigation 
@@ -347,7 +337,7 @@ button:hover {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
     color: #ffc451;
 }
 
@@ -384,11 +374,11 @@ button:hover {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
+.navbar .dropdown ul li:hover > a {
     background-color: #ffc451;
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -400,7 +390,7 @@ button:hover {
     visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -411,11 +401,10 @@ button:hover {
     .navbar .dropdown .dropdown ul {
         left: -90%;
     }
-    .navbar .dropdown .dropdown:hover>ul {
+    .navbar .dropdown .dropdown:hover > ul {
         left: -100%;
     }
 }
-
 
 /**
 * Mobile Navigation 
@@ -479,7 +468,7 @@ button:hover {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile li:hover > a {
     color: #151515;
     background-color: #ffc451;
 }
@@ -516,14 +505,13 @@ button:hover {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
+.navbar-mobile .dropdown ul li:hover > a {
     background-color: #ffc451;
 }
 
-.navbar-mobile .dropdown>.dropdown-active {
+.navbar-mobile .dropdown > .dropdown-active {
     display: block;
 }
-
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -628,7 +616,6 @@ button:hover {
     }
 }
 
-
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -673,7 +660,6 @@ section {
     color: #151515;
 }
 
-
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -705,7 +691,6 @@ section {
 .about .content p:last-child {
     margin-bottom: 0;
 }
-
 
 /*--------------------------------------------------------------
 # Clients
@@ -743,7 +728,6 @@ section {
     background-color: #ffc451;
 }
 
-
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
@@ -780,7 +764,6 @@ section {
     background-size: cover;
     min-height: 400px;
 }
-
 
 /*--------------------------------------------------------------
 # Services
@@ -840,13 +823,13 @@ section {
     transform: translateY(-10px);
 }
 
-
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
 
 .cta {
-    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center;
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/cta-bg.jpg") fixed center center;
     background-size: cover;
     padding: 60px 0;
 }
@@ -880,7 +863,6 @@ section {
     border-color: #ffc451;
     color: #151515;
 }
-
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -1006,7 +988,6 @@ section {
     opacity: 1;
 }
 
-
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -1024,7 +1005,10 @@ section {
     position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+    .portfolio-details-slider
+    .swiper-pagination
+    .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
     background-color: #fff;
@@ -1032,7 +1016,10 @@ section {
     border: 1px solid #ffc451;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+    .portfolio-details-slider
+    .swiper-pagination
+    .swiper-pagination-bullet-active {
     background-color: #ffc451;
 }
 
@@ -1055,7 +1042,7 @@ section {
     font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
     margin-top: 10px;
 }
 
@@ -1072,7 +1059,6 @@ section {
 .portfolio-details .portfolio-description p {
     padding: 0;
 }
-
 
 /*--------------------------------------------------------------
 # Counts
@@ -1155,7 +1141,6 @@ section {
         max-width: 100%;
     }
 }
-
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -1267,7 +1252,6 @@ section {
     }
 }
 
-
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
@@ -1355,7 +1339,6 @@ section {
     bottom: 15px;
 }
 
-
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
@@ -1417,7 +1400,7 @@ section {
     font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
     margin-top: 25px;
 }
 
@@ -1471,7 +1454,7 @@ section {
     padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
     background: #ffc451;
     border: 0;
     padding: 10px 24px;
@@ -1480,7 +1463,7 @@ section {
     border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
     background: #ffcd6b;
 }
 
@@ -1501,7 +1484,6 @@ section {
         transform: rotate(360deg);
     }
 }
-
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -1527,11 +1509,11 @@ section {
     margin: 0;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
     padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
     display: inline-block;
     padding-right: 10px;
     color: #2f2f2f;
@@ -1552,7 +1534,6 @@ section {
         display: inline-block;
     }
 }
-
 
 /*--------------------------------------------------------------
 # Footer
@@ -1671,13 +1652,13 @@ section {
     border-radius: 4px;
 }
 
-#footer .footer-top .footer-newsletter form input[type=email] {
+#footer .footer-top .footer-newsletter form input[type="email"] {
     border: 0;
     padding: 4px;
     width: calc(100% - 110px);
 }
 
-#footer .footer-top .footer-newsletter form input[type=submit] {
+#footer .footer-top .footer-newsletter form input[type="submit"] {
     position: absolute;
     top: 0;
     right: -2px;
@@ -1692,7 +1673,7 @@ section {
     border-radius: 0 4px 4px 0;
 }
 
-#footer .footer-top .footer-newsletter form input[type=submit]:hover {
+#footer .footer-top .footer-newsletter form input[type="submit"]:hover {
     background: #ffcd6b;
 }
 
