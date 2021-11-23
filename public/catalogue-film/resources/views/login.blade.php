@@ -11,28 +11,28 @@
                 <div class="col-xl-2 col-lg-4">
                 </div>
 
-                <div class="signin">  	
-		<input type="checkbox" id="chk" aria-hidden="true">
+                <div class="signin">
+                    <input type="checkbox" id="chk" aria-hidden="true">
 
-			<div class="signup">
-				<form>
-					<label class="labelsignin" for="chk" aria-hidden="true">Sign up</label>
-					<input class="inputsingin" type="text" name="txt" placeholder="User name" required="">
-					<input class="inputsingin" type="email" name="email" placeholder="Email" required="">
-					<input class="inputsingin" type="password" name="pswd" placeholder="Password" required="">
-					<button class="buttonsignin" >Sign up</button>
-				</form>
-			</div>
+                    <div class="signup">
+                        <form>
+                            <label class="labelsignin" for="chk" aria-hidden="true">Sign up</label>
+                            <input class="inputsingin" type="text" name="txt" placeholder="User name" required="">
+                            <input class="inputsingin" type="email" name="email" placeholder="Email" required="">
+                            <input class="inputsingin" type="password" name="pswd" placeholder="Password" required="">
+                            <button class="buttonsignin">Sign up</button>
+                        </form>
+                    </div>
 
-			<div class="login">
-				<form>
-					<label class="labelsignin" for="chk" aria-hidden="true">Login</label>
-					<input class="inputsingin" type="email" name="email" placeholder="Email" required="">
-					<input class="inputsingin" type="password" name="pswd" placeholder="Password" required="">
-					<button class="buttonsignin">Login</button>
-				</form>
-			</div>
-	</div>
+                    <div class="login">
+                        <form>
+                            <label class="labelsignin" for="chk" aria-hidden="true">Login</label>
+                            <input class="inputsingin" type="email" name="email" placeholder="Email" required="">
+                            <input class="inputsingin" type="password" name="pswd" placeholder="Password" required="">
+                            <button class="buttonsignin">Login</button>
+                        </form>
+                    </div>
+                </div>
 
             </div>
 
@@ -46,4 +46,4 @@
 
 
     </main>
-    @endsection
+@endsection

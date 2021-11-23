@@ -50,7 +50,7 @@
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto active" href={{ route('home') }}>Home</a></li>
                     @auth
                         <li><a class="nav-link scrollto" href="{{ route('movie-details') }}">Film</a></li>
                         <li><a class="nav-link scrollto" href="{{ route('playlist') }}">Playlist</a></li>
@@ -82,7 +82,16 @@
                                 <li><a href="#">Historique</a></li>
                                 <li><a href="#">Favoris</a></li>
                                 <li><a href="#">Playlists</a></li>
-                                <li><a href="#" class="btn-danger text-white">Déconnexion</a></li>
+                                <!-- Logout -->
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+
+                                    <x-jet-responsive-nav-link class="btn-danger" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                        {{ __('Log Out') }}
+                                    </x-jet-responsive-nav-link>
+                                </form>
                             </ul>
                         </li>
 
@@ -103,7 +112,7 @@
     <!-- End #main -->
 
     <!-- ======= Footer ======= -->
-    <footer id="footer" class="fixed-bottom">
+    <footer id="footer" class="bottom mb-0">
 
         <div class="container">
             <div class="copyright">

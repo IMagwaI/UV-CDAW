@@ -1,6 +1,6 @@
 @extends('template')
 @section('content')
-<!-- ======= Hero Section ======= -->
+    <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center justify-content-center">
         <div class="container" data-aos="fade-up">
 
@@ -12,8 +12,10 @@
                 </div>
             </div>
             <div class="input-group">
-                <input type="search" class="form-control rounded" placeholder="Retrouver votre film" aria-label="Search" aria-describedby="search-addon" style="background-color:rgba(0,0,0,0)" />
-                <button type="button" class="btn warning" style="color:#fcc100; border-style: solid; border-color: #fcc100;">search</button>
+                <input type="search" class="form-control rounded" placeholder="Retrouver votre film" aria-label="Search"
+                    aria-describedby="search-addon" style="background-color:rgba(0,0,0,0); color:white" />
+                <button type="button" class="btn warning"
+                    style="color:#fcc100; border-style: solid; border-color: #fcc100;">search</button>
             </div>
 
 
@@ -75,12 +77,11 @@
                     <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
                         <div class="member" data-aos="fade-up" data-aos-delay="100">
                             <div class="member-img">
-                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
+                                <img src="./assets/img/poster5.jpg" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                    <a href=""><i class="bi bi-heart"></i></a>
+                                    <a href=""><i class="bi bi-plus-circle"></i></a>
+                                    <a href=""><i class="bi bi-eye"></i></a>
                                 </div>
                             </div>
                             <div class="member-info">
@@ -93,12 +94,11 @@
                     <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
                         <div class="member" data-aos="fade-up" data-aos-delay="200">
                             <div class="member-img">
-                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
+                                <img src="./assets/img/poster3.jpg" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                    <a href=""><i class="bi bi-heart"></i></a>
+                                    <a href=""><i class="bi bi-plus-circle"></i></a>
+                                    <a href=""><i class="bi bi-eye"></i></a>
                                 </div>
                             </div>
                             <div class="member-info">
@@ -111,12 +111,11 @@
                     <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
                         <div class="member" data-aos="fade-up" data-aos-delay="300">
                             <div class="member-img">
-                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
+                                <img src="./assets/img/poster4.jpg" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                    <a href=""><i class="bi bi-heart"></i></a>
+                                    <a href=""><i class="bi bi-plus-circle"></i></a>
+                                    <a href=""><i class="bi bi-eye"></i></a>
                                 </div>
                             </div>
                             <div class="member-info">
@@ -129,12 +128,11 @@
                     <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
                         <div class="member" data-aos="fade-up" data-aos-delay="400">
                             <div class="member-img">
-                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
+                                <img src="./assets/img/poster2.jpg" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                    <a href=""><i class="bi bi-heart"></i></a>
+                                    <a href=""><i class="bi bi-plus-circle"></i></a>
+                                    <a href=""><i class="bi bi-eye"></i></a>
                                 </div>
                             </div>
                             <div class="member-info">
@@ -159,10 +157,9 @@
                             <div class="member-img">
                                 <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                    <a href=""><i class="bi bi-heart"></i></a>
+                                    <a href=""><i class="bi bi-plus-circle"></i></a>
+                                    <a href=""><i class="bi bi-eye"></i></a>
                                 </div>
                             </div>
                             <div class="member-info">
@@ -171,61 +168,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="200">
-                            <div class="member-img">
-                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>C'Mon C'Mon</h4>
-                                <span>Product Manager</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="300">
-                            <div class="member-img">
-                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>C'Mon C'Mon</h4>
-                                <span>CTO</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="400">
-                            <div class="member-img">
-                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>C'Mon C'Mon</h4>
-                                <span>Accountant</span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
 
             </div>
