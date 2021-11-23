@@ -31,7 +31,7 @@ Route::post('/updateFilm/{id}', 'App\Http\Controllers\FilmController@update')->n
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 Route::get('/movie-details', function () {
     return view('movie-details');
 })->name("movie-details");
