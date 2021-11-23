@@ -45,9 +45,9 @@ Route::get('/profil', function () {
 Route::get('/playlist', function () {
     return view('playlist');
 })->name('playlist');
-Route::get('/login', function () {
+/* Route::get('/login', function () {
     return view('login');
-})->name('login');
+})->name('login'); */
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
