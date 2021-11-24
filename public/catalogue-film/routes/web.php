@@ -26,12 +26,7 @@ Route::post('/addedFilms/{id}', 'App\Http\Controllers\FilmController@edit')->nam
 Route::delete('/addedFilms/{id}', 'App\Http\Controllers\FilmController@destroy')->name('deleteFilm');
 Route::post('/updateFilm/{id}', 'App\Http\Controllers\FilmController@update')->name('updateFilm_put');
 
-
-
-
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/','App\Http\Controllers\HomeController@populate' )->name('home');
 Route::get('/movie-details', function () {
     return view('movie-details');
 })->name("movie-details");

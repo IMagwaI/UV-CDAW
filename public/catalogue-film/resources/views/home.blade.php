@@ -32,10 +32,6 @@
                     <h2>Discover</h2>
                     <p>Our media</p>
 
-                    <div class="row">
-
-                    </div>
-
                     <div class="btn-group btn-group-toggle " data-toggle="buttons" style="width: 100%;">
                         <label class="btn btn-secondary active">
                             <input type="radio" name="options" id="option1" autocomplete="off" checked> Film
@@ -72,110 +68,43 @@
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Romance</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-1 col-md-6 footer-links"></div>
-
-                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="100">
-                            <div class="member-img">
-                                <img src="./assets/img/poster5.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-heart"></i></a>
-                                    <a href=""><i class="bi bi-plus-circle"></i></a>
-                                    <a href=""><i class="bi bi-eye"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>C'Mon C'Mon</h4>
-                                <span>Chief Executive Officer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="200">
-                            <div class="member-img">
-                                <img src="./assets/img/poster3.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-heart"></i></a>
-                                    <a href=""><i class="bi bi-plus-circle"></i></a>
-                                    <a href=""><i class="bi bi-eye"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>C'Mon C'Mon</h4>
-                                <span>Product Manager</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="300">
-                            <div class="member-img">
-                                <img src="./assets/img/poster4.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-heart"></i></a>
-                                    <a href=""><i class="bi bi-plus-circle"></i></a>
-                                    <a href=""><i class="bi bi-eye"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>C'Mon C'Mon</h4>
-                                <span>CTO</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="400">
-                            <div class="member-img">
-                                <img src="./assets/img/poster2.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-heart"></i></a>
-                                    <a href=""><i class="bi bi-plus-circle"></i></a>
-                                    <a href=""><i class="bi bi-eye"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>C'Mon C'Mon</h4>
-                                <span>Accountant</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                    <div class="col">
 
 
-
-                <div class="row">
-                    <div class="col-lg-2 col-md-6 footer-links ">
-                    </div>
-                    <div class="col-lg-1 col-md-6 footer-links"></div>
-
-
-                    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="100">
-                            <div class="member-img">
-                                <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-heart"></i></a>
-                                    <a href=""><i class="bi bi-plus-circle"></i></a>
-                                    <a href=""><i class="bi bi-eye"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>C'Mon C'Mon</h4>
-                                <span>Chief Executive Officer</span>
-                            </div>
+                        <div class="row">
+                            @if (!$homeFilms->isEmpty())
+                                @foreach ($homeFilms as $key => $value)
+                                    <div class="col-lg-2">
+                                        <div class="member" data-aos="fade-up" data-aos-delay="100">
+                                            <div class="member-img">
+                                                <img src="{{ $value->image }}" class="img-thumbnail"
+                                                    alt="Responsive image" style="width: 100%">
+                                                <div class="social">
+                                                    <a href=""><i class="bi bi-heart"></i></a>
+                                                    <a href=""><i class="bi bi-plus-circle"></i></a>
+                                                    <a href=""><i class="bi bi-eye"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="member-info">
+                                                <h4>
+                                                    <a href="">{{ $value->title }}</a>
+                                                </h4>
+                                                <span>Rating : {{ $value->rank }}</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @endif
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-        <div style=" text-align:center;">
-            <a href="" class="get-started-btn scrollto" style="color: black;">Afficher Plus</a>
-            <br></br>
-
+        <div style="display: flex;justify-content: center;">
+            <span class="pagination-link">
+                {{ $homeFilms->links() }}
+            </span>
         </div>
 
 

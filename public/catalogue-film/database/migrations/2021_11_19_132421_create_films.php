@@ -16,12 +16,22 @@ class CreateFilms extends Migration
         Schema::create('films', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name');
+            $table->string('title');
+            $table->string('fullTitle');
             $table->string("director");
+            $table->string("year");
+            $table->string("rank");
+            $table->string("image");
+            $table->string("imDBRating");
+            $table->string("imDbRatingCount");
+            $table->string("description");
+            $table->integer("duree_minute");
+            $table->integer("vue");
+
             $table->foreignId('category_id')->constrained('categories');
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *
