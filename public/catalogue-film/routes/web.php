@@ -27,9 +27,11 @@ Route::delete('/addedFilms/{id}', 'App\Http\Controllers\FilmController@destroy')
 Route::post('/updateFilm/{id}', 'App\Http\Controllers\FilmController@update')->name('updateFilm_put');
 
 Route::get('/','App\Http\Controllers\HomeController@populate' )->name('home');
-Route::get('/movie-details', function () {
-    return view('movie-details');
-})->name("movie-details");
+
+/* Route::get('/movie-details', 'App\Http\Controllers\MoviePageController@index')->name('movie-details');
+ */
+Route::get('/movie-details/{id}', 'App\Http\Controllers\MoviePageController@show')->name('movie-details-show');
+
 Route::get('/ajoutFilm', function () {
     return view('ajoutFilm');
 });
