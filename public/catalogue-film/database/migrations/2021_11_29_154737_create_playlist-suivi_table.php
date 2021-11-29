@@ -14,6 +14,7 @@ class CreatePlaylistSuiviTable extends Migration
     public function up()
     {
         Schema::create('playlist_suivi', function (Blueprint $table) {
+            $table->id();
             $table->bigInteger('playlist_id')->references('id')->on('playlists');
             $table->bigInteger('user_id')->references('id')->on('users');
         });

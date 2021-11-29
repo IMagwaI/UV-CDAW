@@ -14,6 +14,7 @@ class CreateFavorisTable extends Migration
     public function up()
     {
         Schema::create('favoris', function (Blueprint $table) {
+            $table->id();
             $table->bigInteger('user_id')->references('id')->on('users');
             $table->bigInteger('media_id')->references('id')->on('medias');
             $table->timestamps();

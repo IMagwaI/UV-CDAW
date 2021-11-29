@@ -14,6 +14,7 @@ class CreateContenuPlaylistTable extends Migration
     public function up()
     {
         Schema::create('contenu_playlist', function (Blueprint $table) {
+            $table->id();
             $table->bigInteger('playlist_id')->references('id')->on('playlists');
             $table->bigInteger('media_id')->references('id')->on('medias');
         });
