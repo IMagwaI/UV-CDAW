@@ -35,7 +35,7 @@ Route::get('/movie-details/{id}', 'App\Http\Controllers\MoviePageController@show
 Route::get('/ajoutFilm', function () {
     return view('ajoutFilm');
 });
-Route::post('/profil', 'App\Http\Controllers\UserController@update')->name("update_profil");
+Route::post('/profil/{id}', 'App\Http\Controllers\UserController@update')->name("update_profil");
 
 Route::get('/profil', 'App\Http\Controllers\UserController@index')->name("profil");
 Route::get('/playlist', function () {

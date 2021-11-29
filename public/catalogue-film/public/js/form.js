@@ -22,7 +22,9 @@ $(document).ready(function(){
     var theBday = document.getElementById('resultBday');
     /* theBday.innerHTML = Q4A; */
 };
-function editProfile(){
+
+$('#send').on('submit', function(e) {
+  e.preventDefault();
   var name = document.getElementById('name').value;
   var phone = document.getElementById('phone').value;
   var bday = document.getElementById('bday').value;
@@ -35,15 +37,42 @@ function editProfile(){
   document.getElementById('resultImage').src = image;
   document.getElementById('resultAdress').innerHTML = adress;
   document.getElementById('resultStatut').innerHTML = profilStatut;
+  document.getElementById('closef').click();
 
- /*  var data = $("#test").serializeArray();
-  data.push({name: 'id', value: idUser});
-  data.push({name: 'name', value: name});
-  data.push({name: 'phone', value: phone});
-  data.push({name: 'bday', value: bday});
-  data.push({name: 'image', value: image});
-  data.push({name: 'adress', value: adress});
-  data.push({name: 'profilStatut', value: profilStatut}); */
+  var form = this;
+  $.ajax({
+      url: $(form).attr('action'),
+      method: $(form).attr('method'),
+      data: new FormData(form),
+      processData: false,
+      dataType: 'json',
+      contentType: false,
+      beforeSend: function() {
+          $(form).find('span.error-text').text('');
+      },
+      success: function(data) {
+          if (data.code == 0) {
+              $.each(data.error, function(prefix, val) {
+                  $(form).find('span.' + prefix + '_error').text(val[0]);
+              });
+          }
+      }
+  });
+});
+
+/* function editProfile(){
+  var name = document.getElementById('name').value;
+  var phone = document.getElementById('phone').value;
+  var bday = document.getElementById('bday').value;
+  var image = document.getElementById('input-url').value;
+  var adress = document.getElementById('adress').value;
+  var profilStatut = document.getElementById('statut').value;
+  document.getElementById('resultName').innerHTML = name;
+  document.getElementById('resultPhone').innerHTML = phone;
+  document.getElementById('resultBday').innerHTML = bday;
+  document.getElementById('resultImage').src = image;
+  document.getElementById('resultAdress').innerHTML = adress;
+  document.getElementById('resultStatut').innerHTML = profilStatut;
 
   var jsonData = {
     "id": idUser,
@@ -78,7 +107,7 @@ $.ajax({
 
   document.getElementById('closef').click();
 
-}
+} */
 
 
 var inputUrlElem = document.getElementById('input-url');

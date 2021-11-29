@@ -67,17 +67,17 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
         
-        User::where('id', $request->input('id'))->update(
+        User::where('id',$id)->update(
             [
                 'name' => $request->input('name'),
                 'phone' => $request->input('phone'),
                 'image' => $request->input('image'),
                 'bday' => $request->input('bday'),
                 'adress' => $request->input('adress'),
-                'profilStatut' => $request->input('profilStatut'),
+                'profilStatut' => $request->input('statut'),
             ]
         );
         return $request;

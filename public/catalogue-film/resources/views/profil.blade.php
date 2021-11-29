@@ -3,10 +3,11 @@
     <link href="{{ asset('assets/css/form.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
         integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
- 
+
     <div id="popup-reg" class="popup">
         <div class="popup-content">
-            <form id="send" class="send-form">
+            <form id="send" class="send-form" method="POST" action="{{ route('update_profil', auth()->user()->id) }}">
+                @csrf
                 <div class="form-group">
                     <input type="text" placeholder="Enter name..." value="{{ auth()->user()->name }}" name="name"
                         id="name" class="form-control">
@@ -22,7 +23,7 @@
                     </label>
                 </div>
                 <div class="form-group">
-                    <input type="date" name="bday" id="bday" onchange="submitBday()">
+                    <input type="date" name="bday" id="bday" onchange="submitBday()" value="{{ auth()->user()->bday }}">
                 </div>
                 <div class="form-group">
                     <input type="text" placeholder="Adresse..." value="{{ auth()->user()->adress }}" name="adress"
@@ -48,8 +49,7 @@
                 <div class="form-group">
                     <img id="image-preview" class="image-preview" src="" />
                 </div>
-                <button type="button" class="main-btn-rect" name="text" value="Send"
-                    onclick="editProfile(); return false;">
+                <button type="submit" class="main-btn-rect" name="text" value="Send" {{-- onclick="editProfile();" --}}>
                     <i class="fa fa-paper-plane"></i>Modifier</button>
             </form>
             <span id="closef" class="fade-out main-btn-circle">╳</span>
@@ -70,16 +70,16 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-column align-items-center text-center">
-                                    <img src="{{ auth()->user()->image }}"
+                                    <img src="{{ auth()->user()->image }} "
                                         onError="this.src = 'https://bootdey.com/img/Content/avatar/avatar7.png'"
-                                        alt="Admin" class="rounded-circle" width="150" id="resultImage">
+                                        alt="Admin" class="rounded-circle" width="150" height="150" id="resultImage">
                                     <div class="mt-3">
                                         <h4 id="resultName">{{ auth()->user()->name }}</h4>
                                         <p class="text-secondary mb-1" id="resultStatut">
                                             {{ auth()->user()->profilStatut }}
                                         </p>
-                                        <p class="text-muted font-size-sm" id="resultAdress">Agadir, MOROCCO</p>
-                                        <button class="btn btn-primary">Follow</button>
+{{--                                         <p class="text-muted font-size-sm" id="resultAdress">Agadir, MOROCCO</p>
+ --}}                                        <button class="btn btn-primary">Follow</button>
                                         <button class="btn btn-outline-primary">Message</button>
                                     </div>
                                 </div>
@@ -101,9 +101,9 @@
                                     <span class="text-secondary">https://google.com</span>
                                 </li>
                                 <!--                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2 icon-inline"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</h6>
-                                <span class="text-secondary">bootdey</span>
-                              </li> -->
+                                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2 icon-inline"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</h6>
+                                    <span class="text-secondary">bootdey</span>
+                                  </li> -->
                                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                     <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -165,7 +165,7 @@
                                         <h6 class="mb-0">Birthday</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary" id="resultBday">
-                                        {{ auth()->user()->birthday }}
+                                        {{ auth()->user()->bday }}
                                     </div>
                                 </div>
                                 <hr>
@@ -238,9 +238,47 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
                 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
         </script>
-        <script>
-            var idUser ={{ auth()->user()->id }};
-        </script>
+{{--         <script>
+            $('#send').on('submit', function(e) {
+                e.preventDefault();
+                var name = document.getElementById('name').value;
+                var phone = document.getElementById('phone').value;
+                var bday = document.getElementById('bday').value;
+                var image = document.getElementById('input-url').value;
+                var adress = document.getElementById('adress').value;
+                var profilStatut = document.getElementById('statut').value;
+                document.getElementById('resultName').innerHTML = name;
+                document.getElementById('resultPhone').innerHTML = phone;
+                document.getElementById('resultBday').innerHTML = bday;
+                document.getElementById('resultImage').src = image;
+                document.getElementById('resultAdress').innerHTML = adress;
+                document.getElementById('resultStatut').innerHTML = profilStatut;
+                document.getElementById('closef').click();
+
+                var form = this;
+                $.ajax({
+                    url: $(form).attr('action'),
+                    method: $(form).attr('method'),
+                    data: new FormData(form),
+                    processData: false,
+                    dataType: 'json',
+                    contentType: false,
+                    beforeSend: function() {
+                        $(form).find('span.error-text').text('');
+                    },
+                    success: function(data) {
+                        if (data.code == 0) {
+                            $.each(data.error, function(prefix, val) {
+                                $(form).find('span.' + prefix + '_error').text(val[0]);
+                            });
+                        }
+                    }
+                });
+            });
+            /*             var idUser ={{ auth()->user()->id }};
+             */
+
+        </script> --}}
         <script src="js/form.js" crossorigin="anonymous"></script>
     </main>
 @endsection
