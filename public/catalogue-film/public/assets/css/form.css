@@ -283,7 +283,7 @@ form#send .main-btn-rect i {
 
 /*   img supp */
 .input-url, .input-drag, .image-preview {
-  width: 60%;
+  width: 30%;
   color: #999;
   background: #333;
   border: 1px solid #999;
@@ -303,4 +303,6 @@ form#send .main-btn-rect i {
 
 .image-preview[src=""] {
   display: none;
+  width: 60%;
+
 }

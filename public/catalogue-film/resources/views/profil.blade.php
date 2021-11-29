@@ -165,7 +165,11 @@
                                         <h6 class="mb-0">Birthday</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary" id="resultBday">
+                                        @if (auth()->user()->bday)
                                         {{ auth()->user()->bday }}
+                                        @else
+                                        <span class="text-secondary">No birthday</span>
+                                        @endif
                                     </div>
                                 </div>
                                 <hr>
@@ -174,7 +178,11 @@
                                         <h6 class="mb-0">Phone</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary" id="resultPhone">
-                                        0816-9029
+                                        @if (auth()->user()->phone)
+                                        {{ auth()->user()->phone}}
+                                        @else
+                                        <span class="text-secondary">No address</span>
+                                        @endif
                                     </div>
                                 </div>
                                 <hr>
@@ -183,7 +191,11 @@
                                         <h6 class="mb-0">Address</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary" id="resultAdress">
-                                        Agadir, Morocco
+                                        @if (auth()->user()->address)
+                                        {{ auth()->user()->address }}
+                                        @else
+                                        <span class="text-secondary">No address</span>
+                                        @endif
                                     </div>
                                 </div>
                                 <hr>
