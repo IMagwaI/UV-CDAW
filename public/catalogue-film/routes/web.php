@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\listeMediasController;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +27,7 @@ Route::post('/addedFilms/{id}', 'App\Http\Controllers\FilmController@edit')->nam
 Route::delete('/addedFilms/{id}', 'App\Http\Controllers\FilmController@destroy')->name('deleteFilm');
 Route::post('/updateFilm/{id}', 'App\Http\Controllers\FilmController@update')->name('updateFilm_put');
 
-Route::get('/','App\Http\Controllers\HomeController@populate' )->name('home');
+Route::get('/', 'App\Http\Controllers\HomeController@populate')->name('home');
 
 /* Route::get('/movie-details', 'App\Http\Controllers\MoviePageController@index')->name('movie-details');
  */
@@ -39,11 +40,16 @@ Route::post('/profil/{id}', 'App\Http\Controllers\UserController@update')->name(
 
 Route::get('/profil', 'App\Http\Controllers\UserController@index')->name("profil");
 Route::get('/playlist', function () {
-    return view('playlist');
+    if (Auth::check()) {
+        return view('playlist');
+        // The user is logged in...
+    } else {
+        return redirect()->action([HomeController::class, 'populate']);
+    }
 })->name('playlist');
 /* Route::get('/login', function () {
     return view('login');
-})->name('login'); */ 
+})->name('login'); */
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

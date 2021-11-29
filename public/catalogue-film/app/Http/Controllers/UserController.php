@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\HomeController;
+
 
 class UserController extends Controller
 {
@@ -14,7 +17,12 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('profil');
+        if (Auth::check()) {
+
+            return view('profil');
+        } else {
+            return redirect()->action([HomeController::class, 'populate']);
+        }
     }
 
     /**
@@ -69,20 +77,23 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
-        User::where('id',$id)->update(
-            [
-                'name' => $request->input('name'),
-                'phone' => $request->input('phone'),
-                'image' => $request->input('image'),
-                'bday' => $request->input('bday'),
-                'adress' => $request->input('adress'),
-                'profilStatut' => $request->input('statut'),
-            ]
-        );
-        return $request;
 
-     }
+        if (Auth::check()) {
+            User::where('id', $id)->update(
+                [
+                    'name' => $request->input('name'),
+                    'phone' => $request->input('phone'),
+                    'image' => $request->input('image'),
+                    'bday' => $request->input('bday'),
+                    'adress' => $request->input('adress'),
+                    'profilStatut' => $request->input('statut'),
+                ]
+            );
+            return $request;
+        } else {
+            return redirect()->action([HomeController::class, 'populate']);
+        }
+    }
 
     /**
      * Remove the specified resource from storage.
