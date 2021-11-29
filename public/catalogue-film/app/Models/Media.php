@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Film extends Model
+class Media extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
-    protected $table = 'films';
+    protected $table = 'medias';
 
 
     public function category()

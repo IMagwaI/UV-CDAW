@@ -13,7 +13,7 @@ class CreateFilms extends Migration
      */
     public function up()
     {
-        Schema::create('films', function (Blueprint $table) {
+        Schema::create('medias', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string('title');
@@ -31,7 +31,7 @@ class CreateFilms extends Migration
             $table->foreignId('category_id')->constrained('categories');
         });
     }
-    
+
     /**
      * Reverse the migrations.
      *
@@ -39,6 +39,6 @@ class CreateFilms extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('film');
+        Schema::dropIfExists('medias');
     }
 }

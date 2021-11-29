@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Film;
+use App\Models\Media;
 use App\Models\Category;
 
 class FilmController extends Controller
@@ -15,7 +15,7 @@ class FilmController extends Controller
      */
     public function index()
     {
-        $films = Film::all();
+        $films = Media::all();
         return view("addedFilms", ["films" => $films]);
     }
     /**
@@ -42,7 +42,7 @@ class FilmController extends Controller
         $category = $request->input('category');
 
         $data = ['name' => $name, 'director' => $director, 'category_id' => $category];
-        Film::create($data);
+        Media::create($data);
         return redirect('/addedFilms');
     }
 
@@ -66,7 +66,7 @@ class FilmController extends Controller
     public function edit($id)
     {
         $categories = Category::all();
-        $film = Film::where('id', $id)->get()[0];
+        $film = Media::where('id', $id)->get()[0];
         return view("updateFilm", ["film" => $film, "categories" => $categories]);
         // echo $film;
     }
@@ -80,7 +80,7 @@ class FilmController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Film::where('id', $id)->update(
+        Media::where('id', $id)->update(
             [
                 'name' => $request->input('name'),
                 'director' => $request->input('director'),
@@ -98,7 +98,7 @@ class FilmController extends Controller
      */
     public function destroy($id)
     {
-        Film::destroy($id);
+        Media::destroy($id);
         return redirect('/addedFilms');
     }
 }

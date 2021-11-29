@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Film;
+use App\Models\Media;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -16,7 +16,7 @@ class HomeController extends Controller
         $json = file_get_contents('http://localhost/UV-CDAW/public/catalogue-film/app/Http/Controllers/response.json');
         $films = json_decode($json, true);
         foreach ($films["items"] as $key => $value) {
-            $film = new Film();
+            $film = new Media();
             $film->title = $value['title'];
             $film->fullTitle = $value['fullTitle'];
             $film->director = $value['crew'];
@@ -29,9 +29,9 @@ class HomeController extends Controller
             $film->category_id = 0000;
             $film->duree_minute = 180;
             $film->description = "description non defini";
-             /* $film->save();  */
+            // $film->save();
         }
-        $homeFilms = DB::table('films')->paginate(24);
+        $homeFilms = DB::table('medias')->paginate(24);
         return view('home', ["homeFilms" => $homeFilms]);
     }
 }
