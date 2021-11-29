@@ -16,20 +16,22 @@
 
                     <div class="signup">
                         <form>
-                            <label class="labelsignin" for="chk" aria-hidden="true">Sign up</label>
+                            <label class="labelsignin" for="chk" aria-hidden="true">S'inscrire</label>
                             <input class="inputsingin" type="text" name="txt" placeholder="User name" required="">
                             <input class="inputsingin" type="email" name="email" placeholder="Email" required="">
                             <input class="inputsingin" type="password" name="pswd" placeholder="Password" required="">
-                            <button class="buttonsignin">Sign up</button>
+                            <button class="buttonsignin">S'inscrire</button>
                         </form>
                     </div>
 
                     <div class="login">
-                        <form>
-                            <label class="labelsignin" for="chk" aria-hidden="true">Login</label>
-                            <input class="inputsingin" type="email" name="email" placeholder="Email" required="">
-                            <input class="inputsingin" type="password" name="pswd" placeholder="Password" required="">
-                            <button class="buttonsignin">Login</button>
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
+
+                            <label class="labelsignin" for="chk" aria-hidden="true">Connexion</label>
+                            <input class="inputsingin" type="email" id="email" name="email" placeholder="Email" required="">
+                            <input class="inputsingin" type="password" id="password" name="pswd" placeholder="Password" required="">
+                            <button type="submit" class="buttonsignin">Se connecter</button>
                         </form>
                     </div>
                 </div>

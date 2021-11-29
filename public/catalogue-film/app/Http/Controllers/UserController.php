@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -13,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return view('profil');
     }
 
     /**
@@ -66,10 +67,22 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
-    }
+        
+        User::where('id', $request->input('id'))->update(
+            [
+                'name' => $request->input('name'),
+                'phone' => $request->input('phone'),
+                'image' => $request->input('image'),
+                'bday' => $request->input('bday'),
+                'adress' => $request->input('adress'),
+                'profilStatut' => $request->input('profilStatut'),
+            ]
+        );
+        return $request;
+
+     }
 
     /**
      * Remove the specified resource from storage.

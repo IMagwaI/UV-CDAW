@@ -219,7 +219,7 @@ h6 {
     justify-content: center;
     display: block;
     color: #fff;
-    background: #573b8a;
+    background: #ffc451;
     font-size: 1em;
     font-weight: bold;
     margin-top: 20px;
@@ -252,7 +252,7 @@ button:hover {
 }
 
 #chk:checked ~ .login label {
-    transform: scale(1);
+    transform: scale(0.8);
 }
 
 #chk:checked ~ .signup label {

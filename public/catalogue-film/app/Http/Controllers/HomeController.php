@@ -28,10 +28,10 @@ class HomeController extends Controller
             $film->imDbRatingCount = $value['imDbRatingCount'];
             $film->category_id = 0000;
             $film->duree_minute = 180;
-            $film->description="description non defini";
-            $film->save();
+            $film->description = "description non defini";
+             /* $film->save();  */
         }
         $homeFilms = DB::table('films')->paginate(24);
-        return view('home',["homeFilms" => $homeFilms]);
+        return view('home', ["homeFilms" => $homeFilms]);
     }
 }

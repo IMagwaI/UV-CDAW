@@ -35,16 +35,15 @@ Route::get('/movie-details/{id}', 'App\Http\Controllers\MoviePageController@show
 Route::get('/ajoutFilm', function () {
     return view('ajoutFilm');
 });
+Route::post('/profil', 'App\Http\Controllers\UserController@update')->name("update_profil");
 
-Route::get('/profil', function () {
-    return view('profil');
-})->name("profil");
+Route::get('/profil', 'App\Http\Controllers\UserController@index')->name("profil");
 Route::get('/playlist', function () {
     return view('playlist');
 })->name('playlist');
 /* Route::get('/login', function () {
     return view('login');
-})->name('login'); */
+})->name('login'); */ 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

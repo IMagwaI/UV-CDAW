@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
 
     <title>Acceuil Movie time</title>
     <meta content="" name="description">
@@ -52,8 +54,8 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href={{ route('home') }}>Home</a></li>
                     @auth
-                        <li><a class="nav-link scrollto" href="{{ route('movie-details') }}">Film</a></li>
-                        <li><a class="nav-link scrollto" href="{{ route('playlist') }}">Playlist</a></li>
+{{--                         <li><a class="nav-link scrollto" href="{{ route('movie-details') }}">Film</a></li>
+ --}}                        <li><a class="nav-link scrollto" href="{{ route('playlist') }}">Playlist</a></li>
                     @else
                         {{-- <li><a class="nav-link scrollto" href="{{ route('addFilm') }}">CRUD (Jalon 2)</a></li> --}}
                         <li><a class="nav-link scrollto" href="#main">Discover</a></li>
@@ -140,7 +142,10 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 </body>
 
 </html>
