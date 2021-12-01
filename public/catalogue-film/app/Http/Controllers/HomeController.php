@@ -31,7 +31,15 @@ class HomeController extends Controller
             $film->description = "description non defini";
             // $film->save();
         }
-        $homeFilms = DB::table('medias')->paginate(24);
+        $homeFilms = DB::table('medias')->paginate(8);
         return view('home', ["homeFilms" => $homeFilms]);
     }
+    public function moviesshowAjax(Request $request){
+        if($request->ajax())
+        {
+            $homeFilms = DB::table('medias')->paginate(8);
+            return view('media', ["homeFilms" => $homeFilms])->render();
+        }
+    }
+
 }

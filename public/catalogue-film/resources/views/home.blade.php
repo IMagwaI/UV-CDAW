@@ -1,6 +1,7 @@
 @extends('template')
 @section('content')
     <!-- ======= Hero Section ======= -->
+
     <section id="hero" class="d-flex align-items-center justify-content-center">
         <div class="container" data-aos="fade-up">
 
@@ -70,45 +71,65 @@
                     </div>
                     <div class="col">
 
-
-                        <div class="row">
-                            @if (!$homeFilms->isEmpty())
-                                @foreach ($homeFilms as $key => $value)
-                                    <div class="col-lg-2">
-                                        <div class="member" data-aos="fade-up" data-aos-delay="100">
-                                            <div class="member-img">
-                                                <img src="{{ $value->image }}" class="img-thumbnail"
-                                                    alt="Responsive image" style="width: 100%">
-                                                <div class="social">
-                                                    <a href=""><i class="bi bi-heart"></i></a>
-                                                    <a href=""><i class="bi bi-plus-circle"></i></a>
-                                                    <a href="{{route('movie-details-show', ['id' => $value->id]) }}"><i class="bi bi-eye"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="member-info">
-                                                <h4>
-                                                    <a href="{{route('movie-details-show', ['id' => $value->id]) }}">{{ $value->title }}</a>
-                                                </h4>
-                                                <span>Rating : {{ $value->rank }}</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            @endif
+                        <div class="row pagination_data">
+                           @include('media')
+                        </div>
+                        <div style="display: flex;justify-content: center;">
+                            <span  class="pagination-link">
+                                {{ $homeFilms->links() }}
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <div style="display: flex;justify-content: center;">
-            <span class="pagination-link">
-                {{ $homeFilms->links() }}
-            </span>
-        </div>
+        
+       
+        {{-- import Jquery --}}
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+                integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+        <script>
+            function fetch_data(page) {
+                $.ajax({
+                    url: "home?page=" + page,   
+                    success: function(data) {
+                        $('.pagination_data').html(data);
+                    }
+                });
+            }
 
+            $(document).ready(function() {
+                $('.pagination').on('click', function(e) {
+                    e.preventDefault();
+                    $('.page-item').removeClass('active');
+                    e.target.parentElement.classList.add('active');
+                    var page = e['target']['href'].split('page=')[1];
+                    fetch_data(page);
 
+                });
 
+            });
+        </script>
+        {{-- <script type="text/javascript">
+     $(document).ready(function () {
+       function fetch_data(page){
+              $.ajax({
+                url:BASE_URL + "/?page="+page,
+                success:function(data){
+                     $('#pagination_data').html(data);
+                }
+              });
+       }
+
+         $(document).on('click', '.pagination-link', function(e){
+             e.preventDefault();
+              var page = 2;
+              fetch_data(page);
+         });
+        });
+</script> --}}
     </main>
 
 @endsection

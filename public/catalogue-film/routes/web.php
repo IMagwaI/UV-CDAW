@@ -27,6 +27,7 @@ Route::post('/addedFilms/{id}', 'App\Http\Controllers\FilmController@edit')->nam
 Route::delete('/addedFilms/{id}', 'App\Http\Controllers\FilmController@destroy')->name('deleteFilm');
 Route::post('/updateFilm/{id}', 'App\Http\Controllers\FilmController@update')->name('updateFilm_put');
 
+Route::get('/home', 'App\Http\Controllers\HomeController@moviesshowAjax')->name('home_paginate');
 Route::get('/', 'App\Http\Controllers\HomeController@populate')->name('home');
 
 /* Route::get('/movie-details', 'App\Http\Controllers\MoviePageController@index')->name('movie-details');
