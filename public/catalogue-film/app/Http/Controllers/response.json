@@ -1,6 +1,7 @@
 {
   "items": [
     {
+      "type":"Movie",
       "id": "tt5491994",
       "rank": "1",
       "title": "Planet Earth II",
@@ -12,6 +13,7 @@
       "imDbRatingCount": "106324"
     },
     {
+      "type":"Movie",
       "id": "tt0795176",
       "rank": "2",
       "title": "Planet Earth",
@@ -23,6 +25,7 @@
       "imDbRatingCount": "175044"
     },
     {
+      "type":"Movie",
       "id": "tt0903747",
       "rank": "3",
       "title": "Breaking Bad",
@@ -34,6 +37,7 @@
       "imDbRatingCount": "1610585"
     },
     {
+      "type":"Movie",
       "id": "tt0185906",
       "rank": "4",
       "title": "Band of Brothers",
@@ -45,6 +49,7 @@
       "imDbRatingCount": "405103"
     },
     {
+      "type":"Movie",
       "id": "tt7366338",
       "rank": "5",
       "title": "Chernobyl",
@@ -56,6 +61,7 @@
       "imDbRatingCount": "627382"
     },
     {
+      "type":"Movie",
       "id": "tt0306414",
       "rank": "6",
       "title": "The Wire",
@@ -67,6 +73,7 @@
       "imDbRatingCount": "309705"
     },
     {
+      "type":"Movie",
       "id": "tt6769208",
       "rank": "7",
       "title": "Blue Planet II",
@@ -78,6 +85,7 @@
       "imDbRatingCount": "37149"
     },
     {
+      "type":"Movie",
       "id": "tt9253866",
       "rank": "8",
       "title": "Our Planet",
@@ -89,6 +97,7 @@
       "imDbRatingCount": "38440"
     },
     {
+      "type":"Movie",
       "id": "tt2395695",
       "rank": "9",
       "title": "Cosmos: A Spacetime Odyssey",
@@ -100,6 +109,7 @@
       "imDbRatingCount": "116342"
     },
     {
+      "type":"Movie",
       "id": "tt0417299",
       "rank": "10",
       "title": "Avatar: The Last Airbender",
@@ -111,6 +121,7 @@
       "imDbRatingCount": "277164"
     },
     {
+      "type":"Movie",
       "id": "tt0081846",
       "rank": "11",
       "title": "Cosmos",
@@ -122,6 +133,7 @@
       "imDbRatingCount": "38949"
     },
     {
+      "type":"Movie",
       "id": "tt11126994",
       "rank": "12",
       "title": "Arcane",
@@ -133,6 +145,7 @@
       "imDbRatingCount": "53644"
     },
     {
+      "type":"Movie",
       "id": "tt0944947",
       "rank": "13",
       "title": "Game of Thrones",
@@ -144,6 +157,7 @@
       "imDbRatingCount": "1903272"
     },
     {
+      "type":"Movie",
       "id": "tt0141842",
       "rank": "14",
       "title": "The Sopranos",
@@ -155,6 +169,7 @@
       "imDbRatingCount": "347571"
     },
     {
+      "type":"Movie",
       "id": "tt2861424",
       "rank": "15",
       "title": "Rick and Morty",
@@ -166,6 +181,7 @@
       "imDbRatingCount": "443440"
     },
     {
+      "type":"Movie",
       "id": "tt0071075",
       "rank": "16",
       "title": "The World at War",
@@ -177,6 +193,7 @@
       "imDbRatingCount": "24018"
     },
     {
+      "type":"Movie",
       "id": "tt8420184",
       "rank": "17",
       "title": "The Last Dance",
@@ -188,6 +205,7 @@
       "imDbRatingCount": "99979"
     },
     {
+      "type":"Movie",
       "id": "tt1533395",
       "rank": "18",
       "title": "Life",
@@ -199,6 +217,7 @@
       "imDbRatingCount": "39483"
     },
     {
+      "type":"Movie",
       "id": "tt1355642",
       "rank": "19",
       "title": "Fullmetal Alchemist: Brotherhood",
@@ -210,6 +229,7 @@
       "imDbRatingCount": "142715"
     },
     {
+      "type":"Movie",
       "id": "tt1475582",
       "rank": "20",
       "title": "Sherlock",
@@ -221,6 +241,7 @@
       "imDbRatingCount": "859967"
     },
     {
+      "type":"Movie",
       "id": "tt1877514",
       "rank": "21",
       "title": "The Vietnam War",
@@ -232,6 +253,7 @@
       "imDbRatingCount": "22586"
     },
     {
+      "type":"Movie",
       "id": "tt12392504",
       "rank": "22",
       "title": "Scam 1992: The Harshad Mehta Story",
@@ -243,6 +265,7 @@
       "imDbRatingCount": "133380"
     },
     {
+      "type":"Movie",
       "id": "tt0052520",
       "rank": "23",
       "title": "The Twilight Zone",
@@ -254,6 +277,7 @@
       "imDbRatingCount": "77151"
     },
     {
+      "type":"Movie",
       "id": "tt0296310",
       "rank": "24",
       "title": "The Blue Planet",
@@ -265,6 +289,7 @@
       "imDbRatingCount": "37255"
     },
     {
+      "type":"Movie",
       "id": "tt0103359",
       "rank": "25",
       "title": "Batman: The Animated Series",
@@ -276,6 +301,7 @@
       "imDbRatingCount": "94657"
     },
     {
+      "type":"Movie",
       "id": "tt1806234",
       "rank": "26",
       "title": "Human Planet",
@@ -287,6 +313,7 @@
       "imDbRatingCount": "25057"
     },
     {
+      "type":"Movie",
       "id": "tt10541088",
       "rank": "27",
       "title": "Clarkson's Farm",
@@ -298,6 +325,7 @@
       "imDbRatingCount": "25416"
     },
     {
+      "type":"Movie",
       "id": "tt0303461",
       "rank": "28",
       "title": "Firefly",
@@ -309,6 +337,7 @@
       "imDbRatingCount": "253333"
     },
     {
+      "type":"Movie",
       "id": "tt7920978",
       "rank": "29",
       "title": "Persona",
@@ -320,6 +349,7 @@
       "imDbRatingCount": "36649"
     },
     {
+      "type":"Movie",
       "id": "tt2092588",
       "rank": "30",
       "title": "Frozen Planet",
@@ -331,6 +361,7 @@
       "imDbRatingCount": "28677"
     },
     {
+      "type":"Movie",
       "id": "tt0877057",
       "rank": "31",
       "title": "Death Note",
@@ -342,6 +373,7 @@
       "imDbRatingCount": "276353"
     },
     {
+      "type":"Movie",
       "id": "tt0092337",
       "rank": "32",
       "title": "Dekalog",
@@ -353,6 +385,7 @@
       "imDbRatingCount": "23899"
     },
     {
+      "type":"Movie",
       "id": "tt2356777",
       "rank": "33",
       "title": "True Detective",
@@ -364,6 +397,7 @@
       "imDbRatingCount": "527847"
     },
     {
+      "type":"Movie",
       "id": "tt0213338",
       "rank": "34",
       "title": "Cowboy Bebop",
@@ -375,6 +409,7 @@
       "imDbRatingCount": "102435"
     },
     {
+      "type":"Movie",
       "id": "tt0098769",
       "rank": "35",
       "title": "The Civil War",
@@ -386,6 +421,7 @@
       "imDbRatingCount": "15194"
     },
     {
+      "type":"Movie",
       "id": "tt2560140",
       "rank": "36",
       "title": "Attack on Titan",
@@ -397,6 +433,7 @@
       "imDbRatingCount": "260125"
     },
     {
+      "type":"Movie",
       "id": "tt2802850",
       "rank": "37",
       "title": "Fargo",
@@ -408,6 +445,7 @@
       "imDbRatingCount": "350166"
     },
     {
+      "type":"Movie",
       "id": "tt2098220",
       "rank": "38",
       "title": "Hunter x Hunter",
@@ -419,6 +457,7 @@
       "imDbRatingCount": "75524"
     },
     {
+      "type":"Movie",
       "id": "tt0386676",
       "rank": "39",
       "title": "The Office",
@@ -430,6 +469,7 @@
       "imDbRatingCount": "487055"
     },
     {
+      "type":"Movie",
       "id": "tt7137906",
       "rank": "40",
       "title": "When They See Us",
@@ -441,6 +481,7 @@
       "imDbRatingCount": "107557"
     },
     {
+      "type":"Movie",
       "id": "tt2571774",
       "rank": "41",
       "title": "Africa",
@@ -452,6 +493,7 @@
       "imDbRatingCount": "15355"
     },
     {
+      "type":"Movie",
       "id": "tt1508238",
       "rank": "42",
       "title": "Apocalypse: The Second World War",
@@ -463,6 +505,7 @@
       "imDbRatingCount": "11493"
     },
     {
+      "type":"Movie",
       "id": "tt0081912",
       "rank": "43",
       "title": "Only Fools and Horses",
@@ -474,6 +517,7 @@
       "imDbRatingCount": "48888"
     },
     {
+      "type":"Movie",
       "id": "tt3530232",
       "rank": "44",
       "title": "Last Week Tonight with John Oliver",
@@ -485,6 +529,7 @@
       "imDbRatingCount": "84095"
     },
     {
+      "type":"Movie",
       "id": "tt4742876",
       "rank": "45",
       "title": "TVF Pitchers",
@@ -496,6 +541,7 @@
       "imDbRatingCount": "64576"
     },
     {
+      "type":"Movie",
       "id": "tt1865718",
       "rank": "46",
       "title": "Gravity Falls",
@@ -507,6 +553,7 @@
       "imDbRatingCount": "88138"
     },
     {
+      "type":"Movie",
       "id": "tt14164730",
       "rank": "47",
       "title": "Dexter: New Blood",
@@ -518,6 +565,7 @@
       "imDbRatingCount": "13098"
     },
     {
+      "type":"Movie",
       "id": "tt0098904",
       "rank": "48",
       "title": "Seinfeld",
@@ -529,6 +577,7 @@
       "imDbRatingCount": "280544"
     },
     {
+      "type":"Movie",
       "id": "tt0081834",
       "rank": "49",
       "title": "Das Boot",
@@ -540,6 +589,7 @@
       "imDbRatingCount": "28298"
     },
     {
+      "type":"Movie",
       "id": "tt0063929",
       "rank": "50",
       "title": "Monty Python's Flying Circus",
@@ -551,6 +601,7 @@
       "imDbRatingCount": "71314"
     },
     {
+      "type":"Movie",
       "id": "tt2297757",
       "rank": "51",
       "title": "Nathan for You",
@@ -562,6 +613,7 @@
       "imDbRatingCount": "23532"
     },
     {
+      "type":"Movie",
       "id": "tt0108778",
       "rank": "52",
       "title": "Friends",
@@ -573,6 +625,7 @@
       "imDbRatingCount": "912638"
     },
     {
+      "type":"Movie",
       "id": "tt0112130",
       "rank": "53",
       "title": "Pride and Prejudice",
@@ -584,6 +637,7 @@
       "imDbRatingCount": "80518"
     },
     {
+      "type":"Movie",
       "id": "tt2085059",
       "rank": "54",
       "title": "Black Mirror",
@@ -595,6 +649,7 @@
       "imDbRatingCount": "488545"
     },
     {
+      "type":"Movie",
       "id": "tt0098936",
       "rank": "55",
       "title": "Twin Peaks",
@@ -606,6 +661,7 @@
       "imDbRatingCount": "186632"
     },
     {
+      "type":"Movie",
       "id": "tt3718778",
       "rank": "56",
       "title": "Over the Garden Wall",
@@ -617,6 +673,7 @@
       "imDbRatingCount": "47904"
     },
     {
+      "type":"Movie",
       "id": "tt9432978",
       "rank": "57",
       "title": "Kota Factory",
@@ -628,6 +685,7 @@
       "imDbRatingCount": "63721"
     },
     {
+      "type":"Movie",
       "id": "tt0072500",
       "rank": "58",
       "title": "Fawlty Towers",
@@ -639,6 +697,7 @@
       "imDbRatingCount": "89036"
     },
     {
+      "type":"Movie",
       "id": "tt2707408",
       "rank": "59",
       "title": "Narcos",
@@ -650,6 +709,7 @@
       "imDbRatingCount": "387946"
     },
     {
+      "type":"Movie",
       "id": "tt0096548",
       "rank": "60",
       "title": "Blackadder Goes Forth",
@@ -661,6 +721,7 @@
       "imDbRatingCount": "50738"
     },
     {
+      "type":"TV-series",
       "id": "tt0472954",
       "rank": "61",
       "title": "It's Always Sunny in Philadelphia",
@@ -672,6 +733,7 @@
       "imDbRatingCount": "204180"
     },
     {
+      "type":"TV-series",
       "id": "tt10986410",
       "rank": "62",
       "title": "Ted Lasso",
@@ -683,6 +745,7 @@
       "imDbRatingCount": "137136"
     },
     {
+      "type":"TV-series",
       "id": "tt0193676",
       "rank": "63",
       "title": "Freaks and Geeks",
@@ -694,6 +757,7 @@
       "imDbRatingCount": "135992"
     },
     {
+      "type":"TV-series",
       "id": "tt3032476",
       "rank": "64",
       "title": "Better Call Saul",
@@ -705,6 +769,7 @@
       "imDbRatingCount": "364751"
     },
     {
+      "type":"TV-series",
       "id": "tt0353049",
       "rank": "65",
       "title": "Chappelle's Show",
@@ -716,6 +781,7 @@
       "imDbRatingCount": "59709"
     },
     {
+      "type":"TV-series",
       "id": "tt8111088",
       "rank": "66",
       "title": "The Mandalorian",
@@ -727,6 +793,7 @@
       "imDbRatingCount": "369359"
     },
     {
+      "type":"TV-series",
       "id": "tt2442560",
       "rank": "67",
       "title": "Peaky Blinders",
@@ -738,6 +805,7 @@
       "imDbRatingCount": "425885"
     },
     {
+      "type":"TV-series",
       "id": "tt0200276",
       "rank": "68",
       "title": "The West Wing",
@@ -749,6 +817,7 @@
       "imDbRatingCount": "69882"
     },
     {
+      "type":"TV-series",
       "id": "tt5753856",
       "rank": "69",
       "title": "Dark",
@@ -760,6 +829,7 @@
       "imDbRatingCount": "330594"
     },
     {
+      "type":"TV-series",
       "id": "tt1910272",
       "rank": "70",
       "title": "Steins;Gate",
@@ -771,6 +841,7 @@
       "imDbRatingCount": "53070"
     },
     {
+      "type":"TV-series",
       "id": "tt4508902",
       "rank": "71",
       "title": "One Punch Man",
@@ -782,6 +853,7 @@
       "imDbRatingCount": "135949"
     },
     {
+      "type":"TV-series",
       "id": "tt3398228",
       "rank": "72",
       "title": "BoJack Horseman",
@@ -793,6 +865,7 @@
       "imDbRatingCount": "132265"
     },
     {
+      "type":"TV-series",
       "id": "tt0121220",
       "rank": "73",
       "title": "Dragon Ball Z",
@@ -804,6 +877,7 @@
       "imDbRatingCount": "74265"
     },
     {
+      "type":"TV-series",
       "id": "tt0264235",
       "rank": "74",
       "title": "Curb Your Enthusiasm",
@@ -815,6 +889,7 @@
       "imDbRatingCount": "114788"
     },
     {
+      "type":"TV-series",
       "id": "tt0384766",
       "rank": "75",
       "title": "Rome",
@@ -826,6 +901,7 @@
       "imDbRatingCount": "162643"
     },
     {
+      "type":"TV-series",
       "id": "tt0214341",
       "rank": "76",
       "title": "Dragon Ball Z",
@@ -837,6 +913,7 @@
       "imDbRatingCount": "121048"
     },
     {
+      "type":"TV-series",
       "id": "tt0074006",
       "rank": "77",
       "title": "I, Claudius",
@@ -848,6 +925,7 @@
       "imDbRatingCount": "16704"
     },
     {
+      "type":"TV-series",
       "id": "tt10233448",
       "rank": "78",
       "title": "Vinland Saga",
@@ -859,6 +937,7 @@
       "imDbRatingCount": "24230"
     },
     {
+      "type":"TV-series",
       "id": "tt0118421",
       "rank": "79",
       "title": "Oz",
@@ -870,6 +949,7 @@
       "imDbRatingCount": "94391"
     },
     {
+      "type":"TV-series",
       "id": "tt6741278",
       "rank": "80",
       "title": "Invincible",
@@ -881,6 +961,7 @@
       "imDbRatingCount": "96270"
     },
     {
+      "type":"TV-series",
       "id": "tt5687612",
       "rank": "81",
       "title": "Fleabag",
@@ -892,6 +973,7 @@
       "imDbRatingCount": "126022"
     },
     {
+      "type":"TV-series",
       "id": "tt7660850",
       "rank": "82",
       "title": "Succession",
@@ -903,6 +985,7 @@
       "imDbRatingCount": "82300"
     },
     {
+      "type":"TV-series",
       "id": "tt1831164",
       "rank": "83",
       "title": "Leyla and Mecnun",
@@ -914,6 +997,7 @@
       "imDbRatingCount": "92121"
     },
     {
+      "type":"TV-series",
       "id": "tt0367279",
       "rank": "84",
       "title": "Arrested Development",
@@ -925,6 +1009,7 @@
       "imDbRatingCount": "289819"
     },
     {
+      "type":"TV-series",
       "id": "tt4574334",
       "rank": "85",
       "title": "Stranger Things",
@@ -936,6 +1021,7 @@
       "imDbRatingCount": "933795"
     },
     {
+      "type":"TV-series",
       "id": "tt0248654",
       "rank": "86",
       "title": "Six Feet Under",
@@ -947,6 +1033,7 @@
       "imDbRatingCount": "127995"
     },
     {
+      "type":"TV-series",
       "id": "tt5788792",
       "rank": "87",
       "title": "The Marvelous Mrs. Maisel",
@@ -958,6 +1045,7 @@
       "imDbRatingCount": "92467"
     },
     {
+      "type":"TV-series",
       "id": "tt0086661",
       "rank": "88",
       "title": "The Adventures of Sherlock Holmes",
@@ -969,6 +1057,7 @@
       "imDbRatingCount": "21191"
     },
     {
+      "type":"TV-series",
       "id": "tt0121955",
       "rank": "89",
       "title": "South Park",
@@ -980,6 +1069,7 @@
       "imDbRatingCount": "347112"
     },
     {
+      "type":"TV-series",
       "id": "tt1190634",
       "rank": "90",
       "title": "The Boys",
@@ -991,6 +1081,7 @@
       "imDbRatingCount": "324306"
     },
     {
+      "type":"TV-series",
       "id": "tt0388629",
       "rank": "91",
       "title": "One Piece",
@@ -1002,6 +1093,7 @@
       "imDbRatingCount": "88640"
     },
     {
+      "type":"TV-series",
       "id": "tt1856010",
       "rank": "92",
       "title": "House of Cards",
@@ -1013,6 +1105,7 @@
       "imDbRatingCount": "483934"
     },
     {
+      "type":"TV-series",
       "id": "tt14392248",
       "rank": "93",
       "title": "Aspirants",
@@ -1024,6 +1117,7 @@
       "imDbRatingCount": "287716"
     },
     {
+      "type":"TV-series",
       "id": "tt0407362",
       "rank": "94",
       "title": "Battlestar Galactica",
@@ -1035,6 +1129,7 @@
       "imDbRatingCount": "159286"
     },
     {
+      "type":"TV-series",
       "id": "tt6025022",
       "rank": "95",
       "title": "Justice League Unlimited",
@@ -1046,6 +1141,7 @@
       "imDbRatingCount": "13608"
     },
     {
+      "type":"TV-series",
       "id": "tt0459159",
       "rank": "96",
       "title": "The Thick of It",
@@ -1057,6 +1153,7 @@
       "imDbRatingCount": "22179"
     },
     {
+      "type":"TV-series",
       "id": "tt0412142",
       "rank": "97",
       "title": "House",
@@ -1068,6 +1165,7 @@
       "imDbRatingCount": "435460"
     },
     {
+      "type":"TV-series",
       "id": "tt0096697",
       "rank": "98",
       "title": "The Simpsons",
@@ -1079,6 +1177,7 @@
       "imDbRatingCount": "384455"
     },
     {
+      "type":"TV-series",
       "id": "tt4299972",
       "rank": "99",
       "title": "The Jinx: The Life and Deaths of Robert Durst",
@@ -1090,6 +1189,7 @@
       "imDbRatingCount": "42857"
     },
     {
+      "type":"TV-series",
       "id": "tt0286486",
       "rank": "100",
       "title": "The Shield",
@@ -1101,6 +1201,7 @@
       "imDbRatingCount": "76856"
     },
     {
+      "type":"TV-series",
       "id": "tt0318871",
       "rank": "101",
       "title": "Berserk",
@@ -1112,6 +1213,7 @@
       "imDbRatingCount": "33194"
     },
     {
+      "type":"TV-series",
       "id": "tt4786824",
       "rank": "102",
       "title": "The Crown",
@@ -1123,6 +1225,7 @@
       "imDbRatingCount": "179184"
     },
     {
+      "type":"TV-series",
       "id": "tt5712554",
       "rank": "103",
       "title": "The Grand Tour",
@@ -1134,6 +1237,7 @@
       "imDbRatingCount": "68937"
     },
     {
+      "type":"TV-series",
       "id": "tt0090509",
       "rank": "104",
       "title": "The Return of Sherlock Holmes",
@@ -1145,6 +1249,7 @@
       "imDbRatingCount": "11509"
     },
     {
+      "type":"TV-series",
       "id": "tt1606375",
       "rank": "105",
       "title": "Downton Abbey",
@@ -1156,6 +1261,7 @@
       "imDbRatingCount": "184328"
     },
     {
+      "type":"TV-series",
       "id": "tt2303687",
       "rank": "106",
       "title": "Line of Duty",
@@ -1167,6 +1273,7 @@
       "imDbRatingCount": "50877"
     },
     {
+      "type":"TV-series",
       "id": "tt9140342",
       "rank": "107",
       "title": "It's a Sin",
@@ -1178,6 +1285,7 @@
       "imDbRatingCount": "25664"
     },
     {
+      "type":"TV-series",
       "id": "tt0158417",
       "rank": "108",
       "title": "Mahabharat",
@@ -1189,6 +1297,7 @@
       "imDbRatingCount": "16064"
     },
     {
+      "type":"TV-series",
       "id": "tt3398540",
       "rank": "109",
       "title": "Haikyuu!!",
@@ -1200,6 +1309,7 @@
       "imDbRatingCount": "17995"
     },
     {
+      "type":"TV-series",
       "id": "tt0348914",
       "rank": "110",
       "title": "Deadwood",
@@ -1211,6 +1321,7 @@
       "imDbRatingCount": "100548"
     },
     {
+      "type":"TV-series",
       "id": "tt1628033",
       "rank": "111",
       "title": "Top Gear",
@@ -1222,6 +1333,7 @@
       "imDbRatingCount": "113199"
     },
     {
+      "type":"TV-series",
       "id": "tt0092455",
       "rank": "112",
       "title": "Star Trek: The Next Generation",
@@ -1233,6 +1345,7 @@
       "imDbRatingCount": "110826"
     },
     {
+      "type":"TV-series",
       "id": "tt4288182",
       "rank": "113",
       "title": "Atlanta",
@@ -1244,6 +1357,7 @@
       "imDbRatingCount": "59345"
     },
     {
+      "type":"TV-series",
       "id": "tt0268093",
       "rank": "114",
       "title": "Ramayan",
@@ -1255,6 +1369,7 @@
       "imDbRatingCount": "18271"
     },
     {
+      "type":"TV-series",
       "id": "tt0096639",
       "rank": "115",
       "title": "Lonesome Dove",
@@ -1266,6 +1381,7 @@
       "imDbRatingCount": "21742"
     },
     {
+      "type":"TV-series",
       "id": "tt0804503",
       "rank": "116",
       "title": "Mad Men",
@@ -1277,6 +1393,7 @@
       "imDbRatingCount": "222416"
     },
     {
+      "type":"TV-series",
       "id": "tt1733785",
       "rank": "117",
       "title": "The Bridge",
@@ -1288,6 +1405,7 @@
       "imDbRatingCount": "63762"
     },
     {
+      "type":"TV-series",
       "id": "tt8289930",
       "rank": "118",
       "title": "Formula 1: Drive to Survive",
@@ -1299,6 +1417,7 @@
       "imDbRatingCount": "29446"
     },
     {
+      "type":"TV-series",
       "id": "tt0994314",
       "rank": "119",
       "title": "Code Geass",
@@ -1310,6 +1429,7 @@
       "imDbRatingCount": "59174"
     },
     {
+      "type":"TV-series",
       "id": "tt1518542",
       "rank": "120",
       "title": "Sarabhai V/S Sarabhai",
@@ -1321,6 +1441,7 @@
       "imDbRatingCount": "16207"
     },
     {
+      "type":"Anime",
       "id": "tt9335498",
       "rank": "121",
       "title": "Demon Slayer: Kimetsu no Yaiba",
@@ -1332,6 +1453,7 @@
       "imDbRatingCount": "56905"
     },
     {
+      "type":"Anime",
       "id": "tt0088484",
       "rank": "122",
       "title": "Blackadder II",
@@ -1343,6 +1465,7 @@
       "imDbRatingCount": "44927"
     },
     {
+      "type":"Anime",
       "id": "tt1266020",
       "rank": "123",
       "title": "Parks and Recreation",
@@ -1354,6 +1477,7 @@
       "imDbRatingCount": "236005"
     },
     {
+      "type":"Anime",
       "id": "tt0106179",
       "rank": "124",
       "title": "The X-Files",
@@ -1365,6 +1489,7 @@
       "imDbRatingCount": "211264"
     },
     {
+      "type":"Anime",
       "id": "tt0387764",
       "rank": "125",
       "title": "Peep Show",
@@ -1376,6 +1501,7 @@
       "imDbRatingCount": "56705"
     },
     {
+      "type":"Anime",
       "id": "tt1641384",
       "rank": "126",
       "title": "Young Justice",
@@ -1387,6 +1513,7 @@
       "imDbRatingCount": "36178"
     },
     {
+      "type":"Anime",
       "id": "tt0758745",
       "rank": "127",
       "title": "Friday Night Lights",
@@ -1398,6 +1525,7 @@
       "imDbRatingCount": "61584"
     },
     {
+      "type":"Anime",
       "id": "tt5290382",
       "rank": "128",
       "title": "Mindhunter",
@@ -1409,6 +1537,7 @@
       "imDbRatingCount": "249177"
     },
     {
+      "type":"Anime",
       "id": "tt12343534",
       "rank": "129",
       "title": "Jujutsu Kaisen",
@@ -1420,6 +1549,7 @@
       "imDbRatingCount": "33855"
     },
     {
+      "type":"Anime",
       "id": "tt2049116",
       "rank": "130",
       "title": "Gomorrah",
@@ -1431,6 +1561,7 @@
       "imDbRatingCount": "33654"
     },
     {
+      "type":"Anime",
       "id": "tt0475784",
       "rank": "131",
       "title": "Westworld",
@@ -1442,6 +1573,7 @@
       "imDbRatingCount": "456881"
     },
     {
+      "type":"Anime",
       "id": "tt0314979",
       "rank": "132",
       "title": "Battlestar Galactica",
@@ -1453,6 +1585,7 @@
       "imDbRatingCount": "72417"
     },
     {
+      "type":"Anime",
       "id": "tt10530900",
       "rank": "133",
       "title": "Gullak",
@@ -1464,6 +1597,7 @@
       "imDbRatingCount": "10945"
     },
     {
+      "type":"Anime",
       "id": "tt0434706",
       "rank": "134",
       "title": "Monster",
@@ -1475,6 +1609,7 @@
       "imDbRatingCount": "24823"
     },
     {
+      "type":"Anime",
       "id": "tt5555260",
       "rank": "135",
       "title": "This Is Us",
@@ -1486,6 +1621,7 @@
       "imDbRatingCount": "120655"
     },
     {
+      "type":"Anime",
       "id": "tt5421602",
       "rank": "136",
       "title": "Anne with an E",
@@ -1497,6 +1633,7 @@
       "imDbRatingCount": "46555"
     },
     {
+      "type":"Anime",
       "id": "tt6763664",
       "rank": "137",
       "title": "The Haunting of Hill House",
@@ -1508,6 +1645,7 @@
       "imDbRatingCount": "213304"
     },
     {
+      "type":"Anime",
       "id": "tt0111958",
       "rank": "138",
       "title": "Father Ted",
@@ -1519,6 +1657,7 @@
       "imDbRatingCount": "38460"
     },
     {
+      "type":"Anime",
       "id": "tt0773262",
       "rank": "139",
       "title": "Dexter",
@@ -1530,6 +1669,7 @@
       "imDbRatingCount": "686938"
     },
     {
+      "type":"Anime",
       "id": "tt0092324",
       "rank": "140",
       "title": "Blackadder the Third",
@@ -1541,6 +1681,7 @@
       "imDbRatingCount": "42704"
     },
     {
+      "type":"Anime",
       "id": "tt0053488",
       "rank": "141",
       "title": "The Bugs Bunny Show",
@@ -1552,6 +1693,7 @@
       "imDbRatingCount": "32520"
     },
     {
+      "type":"Anime",
       "id": "tt1486217",
       "rank": "142",
       "title": "Archer",
@@ -1563,6 +1705,7 @@
       "imDbRatingCount": "146081"
     },
     {
+      "type":"Anime",
       "id": "tt3322312",
       "rank": "143",
       "title": "Daredevil",
@@ -1574,6 +1717,7 @@
       "imDbRatingCount": "385024"
     },
     {
+      "type":"Anime",
       "id": "tt10048342",
       "rank": "144",
       "title": "The Queen's Gambit",
@@ -1585,6 +1729,7 @@
       "imDbRatingCount": "366207"
     },
     {
+      "type":"Anime",
       "id": "tt12004706",
       "rank": "145",
       "title": "Panchayat",
@@ -1596,6 +1741,7 @@
       "imDbRatingCount": "46759"
     },
     {
+      "type":"Anime",
       "id": "tt1870479",
       "rank": "146",
       "title": "The Newsroom",
@@ -1607,6 +1753,7 @@
       "imDbRatingCount": "110041"
     },
     {
+      "type":"Anime",
       "id": "tt0080306",
       "rank": "147",
       "title": "Yes Minister",
@@ -1618,6 +1765,7 @@
       "imDbRatingCount": "13760"
     },
     {
+      "type":"Anime",
       "id": "tt9174558",
       "rank": "148",
       "title": "Dopesick",
@@ -1629,6 +1777,7 @@
       "imDbRatingCount": "11984"
     },
     {
+      "type":"Anime",
       "id": "tt0203082",
       "rank": "149",
       "title": "Rurouni Kenshin: Trust and Betrayal",
@@ -1640,6 +1789,7 @@
       "imDbRatingCount": "14172"
     },
     {
+      "type":"Anime",
       "id": "tt10850932",
       "rank": "150",
       "title": "Crash Landing on You",
@@ -1651,6 +1801,7 @@
       "imDbRatingCount": "20292"
     },
     {
+      "type":"Anime",
       "id": "tt1795096",
       "rank": "151",
       "title": "Behzat Ç.: Bir Ankara Polisiyesi",
@@ -1662,6 +1813,7 @@
       "imDbRatingCount": "28809"
     },
     {
+      "type":"Anime",
       "id": "tt0380136",
       "rank": "152",
       "title": "QI",
@@ -1673,6 +1825,7 @@
       "imDbRatingCount": "30740"
     },
     {
+      "type":"Anime",
       "id": "tt8595766",
       "rank": "153",
       "title": "Yeh Meri Family",
@@ -1684,6 +1837,7 @@
       "imDbRatingCount": "22592"
     },
     {
+      "type":"Anime",
       "id": "tt0094525",
       "rank": "154",
       "title": "Poirot",
@@ -1695,6 +1849,7 @@
       "imDbRatingCount": "41566"
     },
     {
+      "type":"Anime",
       "id": "tt1513168",
       "rank": "155",
       "title": "Through the Wormhole",
@@ -1706,6 +1861,7 @@
       "imDbRatingCount": "17406"
     },
     {
+      "type":"Anime",
       "id": "tt5189670",
       "rank": "156",
       "title": "Making a Murderer",
@@ -1717,6 +1873,7 @@
       "imDbRatingCount": "90948"
     },
     {
+      "type":"Anime",
       "id": "tt1489428",
       "rank": "157",
       "title": "Justified",
@@ -1728,6 +1885,7 @@
       "imDbRatingCount": "92742"
     },
     {
+      "type":"Anime",
       "id": "tt4236770",
       "rank": "158",
       "title": "Yellowstone",
@@ -1739,6 +1897,7 @@
       "imDbRatingCount": "61792"
     },
     {
+      "type":"Anime",
       "id": "tt2244495",
       "rank": "159",
       "title": "The Eric Andre Show",
@@ -1750,6 +1909,7 @@
       "imDbRatingCount": "15866"
     },
     {
+      "type":"Anime",
       "id": "tt7221388",
       "rank": "160",
       "title": "Cobra Kai",
@@ -1761,6 +1921,7 @@
       "imDbRatingCount": "129335"
     },
     {
+      "type":"Anime",
       "id": "tt9544034",
       "rank": "161",
       "title": "The Family Man",
@@ -1772,6 +1933,7 @@
       "imDbRatingCount": "77410"
     },
     {
+      "type":"Anime",
       "id": "tt0417349",
       "rank": "162",
       "title": "North & South",
@@ -1783,6 +1945,7 @@
       "imDbRatingCount": "31313"
     },
     {
+      "type":"Anime",
       "id": "tt0096657",
       "rank": "163",
       "title": "Mr. Bean",
@@ -1794,6 +1957,7 @@
       "imDbRatingCount": "110033"
     },
     {
+      "type":"Anime",
       "id": "tt0187664",
       "rank": "164",
       "title": "Spaced",
@@ -1805,6 +1969,7 @@
       "imDbRatingCount": "52840"
     },
     {
+      "type":"Anime",
       "id": "tt0275137",
       "rank": "165",
       "title": "Justice League",
@@ -1816,6 +1981,7 @@
       "imDbRatingCount": "43975"
     },
     {
+      "type":"Anime",
       "id": "tt0988824",
       "rank": "166",
       "title": "Naruto: Shippûden",
@@ -1827,6 +1993,7 @@
       "imDbRatingCount": "102921"
     },
     {
+      "type":"Anime",
       "id": "tt0112159",
       "rank": "167",
       "title": "Neon Genesis Evangelion",
@@ -1838,6 +2005,7 @@
       "imDbRatingCount": "59727"
     },
     {
+      "type":"Anime",
       "id": "tt0403778",
       "rank": "168",
       "title": "Long Way Round",
@@ -1849,6 +2017,7 @@
       "imDbRatingCount": "13495"
     },
     {
+      "type":"Anime",
       "id": "tt7908628",
       "rank": "169",
       "title": "What We Do in the Shadows",
@@ -1860,6 +2029,7 @@
       "imDbRatingCount": "56203"
     },
     {
+      "type":"Anime",
       "id": "tt0120570",
       "rank": "170",
       "title": "From the Earth to the Moon",
@@ -1871,6 +2041,7 @@
       "imDbRatingCount": "11810"
     },
     {
+      "type":"Anime",
       "id": "tt0423731",
       "rank": "171",
       "title": "Samurai Champloo",
@@ -1882,6 +2053,7 @@
       "imDbRatingCount": "44655"
     },
     {
+      "type":"Anime",
       "id": "tt0979432",
       "rank": "172",
       "title": "Boardwalk Empire",
@@ -1893,6 +2065,7 @@
       "imDbRatingCount": "180340"
     },
     {
+      "type":"Anime",
       "id": "tt4093826",
       "rank": "173",
       "title": "Twin Peaks",
@@ -1904,6 +2077,7 @@
       "imDbRatingCount": "62769"
     },
     {
+      "type":"Anime",
       "id": "tt0088509",
       "rank": "174",
       "title": "Dragon Ball",
@@ -1915,6 +2089,7 @@
       "imDbRatingCount": "52781"
     },
     {
+      "type":"Anime",
       "id": "tt0863046",
       "rank": "175",
       "title": "Flight of the Conchords",
@@ -1926,6 +2101,7 @@
       "imDbRatingCount": "57917"
     },
     {
+      "type":"Anime",
       "id": "tt7562112",
       "rank": "176",
       "title": "Pose",
@@ -1937,6 +2113,7 @@
       "imDbRatingCount": "25860"
     },
     {
+      "type":"Anime",
       "id": "tt1305826",
       "rank": "177",
       "title": "Adventure Time",
@@ -1948,6 +2125,7 @@
       "imDbRatingCount": "85216"
     },
     {
+      "type":"Anime",
       "id": "tt6108262",
       "rank": "178",
       "title": "Black Sun",
@@ -1959,6 +2137,7 @@
       "imDbRatingCount": "10770"
     },
     {
+      "type":"Anime",
       "id": "tt0280249",
       "rank": "179",
       "title": "Dragon Ball",
@@ -1970,6 +2149,7 @@
       "imDbRatingCount": "56937"
     },
     {
+      "type":"Anime",
       "id": "tt5897304",
       "rank": "180",
       "title": "Mob Psycho 100",
@@ -1981,6 +2161,7 @@
       "imDbRatingCount": "22507"
     },
     {
+      "type":"Documentary",
       "id": "tt4158110",
       "rank": "181",
       "title": "Mr. Robot",
@@ -1992,6 +2173,7 @@
       "imDbRatingCount": "359100"
     },
     {
+      "type":"Documentary",
       "id": "tt0086831",
       "rank": "182",
       "title": "Yes, Prime Minister",
@@ -2003,6 +2185,7 @@
       "imDbRatingCount": "10682"
     },
     {
+      "type":"Documentary",
       "id": "tt0487831",
       "rank": "183",
       "title": "The IT Crowd",
@@ -2014,6 +2197,7 @@
       "imDbRatingCount": "142496"
     },
     {
+      "type":"Documentary",
       "id": "tt0094517",
       "rank": "184",
       "title": "Mystery Science Theater 3000",
@@ -2025,6 +2209,7 @@
       "imDbRatingCount": "23884"
     },
     {
+      "type":"Documentary",
       "id": "tt0047708",
       "rank": "185",
       "title": "Alfred Hitchcock Presents",
@@ -2036,6 +2221,7 @@
       "imDbRatingCount": "16236"
     },
     {
+      "type":"Documentary",
       "id": "tt0237123",
       "rank": "186",
       "title": "Coupling",
@@ -2047,6 +2233,7 @@
       "imDbRatingCount": "44301"
     },
     {
+      "type":"Documentary",
       "id": "tt0118273",
       "rank": "187",
       "title": "Brass Eye",
@@ -2058,6 +2245,7 @@
       "imDbRatingCount": "10252"
     },
     {
+      "type":"Documentary",
       "id": "tt0421357",
       "rank": "188",
       "title": "Fullmetal Alchemist",
@@ -2069,6 +2257,7 @@
       "imDbRatingCount": "66604"
     },
     {
+      "type":"Documentary",
       "id": "tt4647692",
       "rank": "189",
       "title": "Letterkenny",
@@ -2080,6 +2269,7 @@
       "imDbRatingCount": "17551"
     },
     {
+      "type":"Documentary",
       "id": "tt0106028",
       "rank": "190",
       "title": "Homicide: Life on the Street",
@@ -2091,6 +2281,7 @@
       "imDbRatingCount": "12274"
     },
     {
+      "type":"Documentary",
       "id": "tt0436992",
       "rank": "191",
       "title": "Doctor Who",
@@ -2102,6 +2293,7 @@
       "imDbRatingCount": "210607"
     },
     {
+      "type":"Documentary",
       "id": "tt4082744",
       "rank": "192",
       "title": "Detectorists",
@@ -2113,6 +2305,7 @@
       "imDbRatingCount": "12753"
     },
     {
+      "type":"Documentary",
       "id": "tt5288312",
       "rank": "193",
       "title": "Skam",
@@ -2124,6 +2317,7 @@
       "imDbRatingCount": "31100"
     },
     {
+      "type":"Documentary",
       "id": "tt2701582",
       "rank": "194",
       "title": "Endeavour",
@@ -2135,6 +2329,7 @@
       "imDbRatingCount": "22445"
     },
     {
+      "type":"Documentary",
       "id": "tt2575988",
       "rank": "195",
       "title": "Silicon Valley",
@@ -2146,6 +2341,7 @@
       "imDbRatingCount": "137175"
     },
     {
+      "type":"Documentary",
       "id": "tt2100976",
       "rank": "196",
       "title": "Impractical Jokers",
@@ -2157,6 +2353,7 @@
       "imDbRatingCount": "36847"
     },
     {
+      "type":"Documentary",
       "id": "tt1492966",
       "rank": "197",
       "title": "Louie",
@@ -2168,6 +2365,7 @@
       "imDbRatingCount": "76747"
     },
     {
+      "type":"Documentary",
       "id": "tt0995832",
       "rank": "198",
       "title": "Generation Kill",
@@ -2179,6 +2377,7 @@
       "imDbRatingCount": "50679"
     },
     {
+      "type":"Documentary",
       "id": "tt2243973",
       "rank": "199",
       "title": "Hannibal",
@@ -2190,6 +2389,7 @@
       "imDbRatingCount": "241060"
     },
     {
+      "type":"Documentary",
       "id": "tt1586680",
       "rank": "200",
       "title": "Shameless",
@@ -2201,6 +2401,7 @@
       "imDbRatingCount": "220892"
     },
     {
+      "type":"Documentary",
       "id": "tt3230854",
       "rank": "201",
       "title": "The Expanse",
@@ -2212,6 +2413,7 @@
       "imDbRatingCount": "126350"
     },
     {
+      "type":"Documentary",
       "id": "tt1758429",
       "rank": "202",
       "title": "Spartacus: Gods of the Arena",
@@ -2223,6 +2425,7 @@
       "imDbRatingCount": "132145"
     },
     {
+      "type":"Documentary",
       "id": "tt0290978",
       "rank": "203",
       "title": "The Office",
@@ -2234,6 +2437,7 @@
       "imDbRatingCount": "105237"
     },
     {
+      "type":"Documentary",
       "id": "tt4295140",
       "rank": "204",
       "title": "Chef's Table",
@@ -2245,6 +2449,7 @@
       "imDbRatingCount": "14570"
     },
     {
+      "type":"Documentary",
       "id": "tt2401256",
       "rank": "205",
       "title": "The Night Of",
@@ -2256,6 +2461,7 @@
       "imDbRatingCount": "136400"
     },
     {
+      "type":"Documentary",
       "id": "tt1534360",
       "rank": "206",
       "title": "Ezel",
@@ -2267,6 +2473,7 @@
       "imDbRatingCount": "30126"
     },
     {
+      "type":"Documentary",
       "id": "tt7472896",
       "rank": "207",
       "title": "Mr Inbetween",
@@ -2278,6 +2485,7 @@
       "imDbRatingCount": "12779"
     },
     {
+      "type":"Documentary",
       "id": "tt0163507",
       "rank": "208",
       "title": "Whose Line Is It Anyway?",
@@ -2289,6 +2497,7 @@
       "imDbRatingCount": "41744"
     },
     {
+      "type":"Documentary",
       "id": "tt0278238",
       "rank": "209",
       "title": "Samurai Jack",
@@ -2300,6 +2509,7 @@
       "imDbRatingCount": "49590"
     },
     {
+      "type":"Documentary",
       "id": "tt1124373",
       "rank": "210",
       "title": "Sons of Anarchy",
@@ -2311,6 +2521,7 @@
       "imDbRatingCount": "277954"
     },
     {
+      "type":"Documentary",
       "id": "tt3920596",
       "rank": "211",
       "title": "Big Little Lies",
@@ -2322,6 +2533,7 @@
       "imDbRatingCount": "177195"
     },
     {
+      "type":"Documentary",
       "id": "tt0129690",
       "rank": "212",
       "title": "I'm Alan Partridge",
@@ -2333,6 +2545,7 @@
       "imDbRatingCount": "19741"
     },
     {
+      "type":"Documentary",
       "id": "tt1442449",
       "rank": "213",
       "title": "Spartacus",
@@ -2344,6 +2557,7 @@
       "imDbRatingCount": "232091"
     },
     {
+      "type":"Documentary",
       "id": "tt3895150",
       "rank": "214",
       "title": "Your Lie in April",
@@ -2355,6 +2569,7 @@
       "imDbRatingCount": "23354"
     },
     {
+      "type":"Documentary",
       "id": "tt6958022",
       "rank": "215",
       "title": "The Defiant Ones",
@@ -2366,6 +2581,7 @@
       "imDbRatingCount": "13259"
     },
     {
+      "type":"Documentary",
       "id": "tt5249462",
       "rank": "216",
       "title": "Erased",
@@ -2377,6 +2593,7 @@
       "imDbRatingCount": "38219"
     },
     {
+      "type":"Documentary",
       "id": "tt11301642",
       "rank": "217",
       "title": "Ethos",
@@ -2388,6 +2605,7 @@
       "imDbRatingCount": "24631"
     },
     {
+      "type":"Documentary",
       "id": "tt7278862",
       "rank": "218",
       "title": "My Brilliant Friend",
@@ -2399,6 +2617,7 @@
       "imDbRatingCount": "11708"
     },
     {
+      "type":"Documentary",
       "id": "tt0262150",
       "rank": "219",
       "title": "Black Books",
@@ -2410,6 +2629,7 @@
       "imDbRatingCount": "56580"
     },
     {
+      "type":"Documentary",
       "id": "tt10155688",
       "rank": "220",
       "title": "Mare of Easttown",
@@ -2421,6 +2641,7 @@
       "imDbRatingCount": "116817"
     },
     {
+      "type":"Documentary",
       "id": "tt7658402",
       "rank": "221",
       "title": "Harley Quinn",
@@ -2432,6 +2653,7 @@
       "imDbRatingCount": "20129"
     },
     {
+      "type":"Documentary",
       "id": "tt0472027",
       "rank": "222",
       "title": "John Adams",
@@ -2443,6 +2665,7 @@
       "imDbRatingCount": "30749"
     },
     {
+      "type":"Documentary",
       "id": "tt3526078",
       "rank": "223",
       "title": "Schitt's Creek",
@@ -2454,6 +2677,7 @@
       "imDbRatingCount": "100959"
     },
     {
+      "type":"Documentary",
       "id": "tt2937900",
       "rank": "224",
       "title": "The Knick",
@@ -2465,6 +2689,7 @@
       "imDbRatingCount": "46291"
     },
     {
+      "type":"Documentary",
       "id": "tt9561862",
       "rank": "225",
       "title": "Love, Death & Robots",
@@ -2476,6 +2701,7 @@
       "imDbRatingCount": "126721"
     },
     {
+      "type":"Documentary",
       "id": "tt12451520",
       "rank": "226",
       "title": "It's Okay to Not Be Okay",
@@ -2487,6 +2713,7 @@
       "imDbRatingCount": "16950"
     },
     {
+      "type":"Documentary",
       "id": "tt1227926",
       "rank": "227",
       "title": "Dr. Horrible's Sing-Along Blog",
@@ -2498,6 +2725,7 @@
       "imDbRatingCount": "42687"
     },
     {
+      "type":"Documentary",
       "id": "tt1439629",
       "rank": "228",
       "title": "Community",
@@ -2509,6 +2737,7 @@
       "imDbRatingCount": "240219"
     },
     {
+      "type":"Documentary",
       "id": "tt2674806",
       "rank": "229",
       "title": "Inside No. 9",
@@ -2520,6 +2749,7 @@
       "imDbRatingCount": "14943"
     },
     {
+      "type":"Documentary",
       "id": "tt5675620",
       "rank": "230",
       "title": "The Punisher",
@@ -2531,6 +2761,7 @@
       "imDbRatingCount": "203487"
     },
     {
+      "type":"Documentary",
       "id": "tt1883092",
       "rank": "231",
       "title": "Generation War",
@@ -2542,6 +2773,7 @@
       "imDbRatingCount": "28176"
     },
     {
+      "type":"Documentary",
       "id": "tt0118266",
       "rank": "232",
       "title": "The New Batman Adventures",
@@ -2553,6 +2785,7 @@
       "imDbRatingCount": "16135"
     },
     {
+      "type":"Documentary",
       "id": "tt5425186",
       "rank": "233",
       "title": "Horace and Pete",
@@ -2564,6 +2797,7 @@
       "imDbRatingCount": "15941"
     },
     {
+      "type":"Documentary",
       "id": "tt9398466",
       "rank": "234",
       "title": "Delhi Crime",
@@ -2575,6 +2809,7 @@
       "imDbRatingCount": "17351"
     },
     {
+      "type":"Documentary",
       "id": "tt0061287",
       "rank": "235",
       "title": "The Prisoner",
@@ -2586,6 +2821,7 @@
       "imDbRatingCount": "13377"
     },
     {
+      "type":"Documentary",
       "id": "tt0417373",
       "rank": "236",
       "title": "The Venture Bros.",
@@ -2597,6 +2833,7 @@
       "imDbRatingCount": "24872"
     },
     {
+      "type":"Documentary",
       "id": "tt0149460",
       "rank": "237",
       "title": "Futurama",
@@ -2608,6 +2845,7 @@
       "imDbRatingCount": "223010"
     },
     {
+      "type":"Documentary",
       "id": "tt1984119",
       "rank": "238",
       "title": "Feud: Bette and Joan",
@@ -2619,6 +2857,7 @@
       "imDbRatingCount": "18208"
     },
     {
+      "type":"Documentary",
       "id": "tt7927936",
       "rank": "239",
       "title": "Flames",
@@ -2630,6 +2869,7 @@
       "imDbRatingCount": "27073"
     },
     {
+      "type":"Documentary",
       "id": "tt0075520",
       "rank": "240",
       "title": "Jesus of Nazareth",
@@ -2641,6 +2881,7 @@
       "imDbRatingCount": "21226"
     },
     {
+      "type":"Documentary",
       "id": "tt0346314",
       "rank": "241",
       "title": "Ghost in the Shell: Stand Alone Complex",
@@ -2652,6 +2893,7 @@
       "imDbRatingCount": "18929"
     },
     {
+      "type":"Documentary",
       "id": "tt1474684",
       "rank": "242",
       "title": "Luther",
@@ -2663,6 +2905,7 @@
       "imDbRatingCount": "129112"
     },
     {
+      "type":"Documentary",
       "id": "tt0103584",
       "rank": "243",
       "title": "X-Men: The Animated Series",
@@ -2674,6 +2917,7 @@
       "imDbRatingCount": "40066"
     },
     {
+      "type":"Documentary",
       "id": "tt2433738",
       "rank": "244",
       "title": "Wentworth",
@@ -2685,6 +2929,7 @@
       "imDbRatingCount": "20236"
     },
     {
+      "type":"Documentary",
       "id": "tt0070644",
       "rank": "245",
       "title": "Scenes from a Marriage",
@@ -2696,6 +2941,7 @@
       "imDbRatingCount": "15827"
     },
     {
+      "type":"Documentary",
       "id": "tt2306299",
       "rank": "246",
       "title": "Vikings",
@@ -2707,6 +2953,7 @@
       "imDbRatingCount": "477905"
     },
     {
+      "type":"Documentary",
       "id": "tt0397150",
       "rank": "247",
       "title": "Garth Marenghi's Darkplace",
@@ -2718,6 +2965,7 @@
       "imDbRatingCount": "17354"
     },
     {
+      "type":"Documentary",
       "id": "tt0421291",
       "rank": "248",
       "title": "Avrupa Yakasi",
@@ -2729,6 +2977,7 @@
       "imDbRatingCount": "17506"
     },
     {
+      "type":"Documentary",
       "id": "tt5994364",
       "rank": "249",
       "title": "Guardian: The Lonely and Great God",
@@ -2740,6 +2989,7 @@
       "imDbRatingCount": "16206"
     },
     {
+      "type":"Documentary",
       "id": "tt11854694",
       "rank": "250",
       "title": "Special OPS",

@@ -24,9 +24,10 @@ class CreateFilms extends Migration
             $table->string("image");
             $table->string("imDBRating");
             $table->string("imDbRatingCount");
-            $table->string("description");
+            $table->longText("description");
             $table->integer("duree_minute");
             $table->integer("vue");
+            $table->string("type");
 
             $table->foreignId('category_id')->constrained('categories');
         });

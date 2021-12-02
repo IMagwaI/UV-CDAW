@@ -55,12 +55,6 @@
                         <div class="portfolio-description">
                             <h2>Sommaire</h2>
                             <p>{{ $movie->description }}</p>
-                            <p>
-                                Johnny is an emotionally stunted and softspoken radio journalist who travels the country
-                                interviewing a variety of kids about their thoughts concerning their world and their future.
-                                Then Johnny's saddled with caring for his young nephew Jesse. Jesse brings a new perspective
-                                and, as they travel from state to state, effectively turns the emotional tables on Johnny.
-                            </p>
                         </div>
                     </div>
 
