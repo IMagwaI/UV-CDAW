@@ -24,13 +24,13 @@ Route::post('addFilm', 'App\Http\Controllers\FilmController@store')->name('addFi
 Route::get('addedFilms', 'App\Http\Controllers\FilmController@index')->name('addedFilms');
 
 Route::post('/addComment/{id_user}/{id_film}', 'App\Http\Controllers\CommentController@saveComment')->name('addComment');
+Route::get('/commentsPagination/{id_film}', 'App\Http\Controllers\CommentController@paginate')->name('commentsPagination');
+Route::delete('/deletecomment/{id}', 'App\Http\Controllers\CommentController@deleteComment')->name('deleteComment');
 
 Route::post('/addedFilms/{id}', 'App\Http\Controllers\FilmController@edit')->name('film_update');
 Route::delete('/addedFilms/{id}', 'App\Http\Controllers\FilmController@destroy')->name('deleteFilm');
 Route::post('/updateFilm/{id}', 'App\Http\Controllers\FilmController@update')->name('updateFilm_put');
 
-/* Route::get('/home', 'App\Http\Controllers\HomeController@showAllMedias')->name('showAllMedias');
- */
 Route::get('/movieType/{type}', 'App\Http\Controllers\HomeController@getMediaByType')->name('getMediaByType');
 Route::get('/', 'App\Http\Controllers\HomeController@populate')->name('home');
 
@@ -52,9 +52,6 @@ Route::get('/playlist', function () {
         return redirect()->action([HomeController::class, 'populate']);
     }
 })->name('playlist');
-/* Route::get('/login', function () {
-    return view('login');
-})->name('login'); */
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

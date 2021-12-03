@@ -17,12 +17,10 @@ class MoviePageController extends Controller
     public function show($id)
     {
         $movie = DB::table('medias')->where('id', $id)->first();
-        $comments = Comment::where('media_id', $id)->get();
+        $comments = Comment::where('media_id', $id)->orderBy('created_at', 'desc')->paginate(4);
         //category khass tbdel mazal makatsupportich multiple
-        $category = DB::table('categories')->where('id', $movie->category_id)->first();
-        /* $user = DB::table('users')->where('id', $comments->user_id)->first(); */
-/*         dd($comments[0]->user->name);
- */    
+        $category = DB::table('categories')->where('id', $movie->category_id)->first();  
         return view('movie-details', ['movie' => $movie, 'category' => $category, 'comments' => $comments]);
     }
+    
 }

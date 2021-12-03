@@ -29,6 +29,16 @@ class CommentController extends Controller
         }
     }
 
+    public function paginate(Request $request, $id_film)
+    {
+        if($request->ajax())
+        {
+            $comments = Comment::where('media_id', $id_film)->orderBy('created_at', 'desc')->paginate(4);
+            return view('commentaire', ["comments" => $comments])->render();
+        }
+
+    }
+
     //delete comment
     public function deleteComment($id)
     {

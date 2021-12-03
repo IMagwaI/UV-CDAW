@@ -79,7 +79,6 @@
                         @include('commentaire')
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
                     @if (Auth::check())
                         <form id="sendComment" class="send-form" method="POST"
@@ -113,6 +112,14 @@
                 </div>
             </div>
         </div>
+        <div class="col">
+            <div style="display: flex;justify-content: center;">
+                <span class="pagination-link">
+                    {{ $comments->links() }}
+                </span>
+            </div>
+        </div>
+
 
     </main><!-- End #main -->
 @endsection
@@ -129,10 +136,23 @@ crossorigin="anonymous"></script>
 
     function deleter(e) {
         e.currentTarget.parentNode.remove();
+        // delete one comment from the database
+        var id = e.currentTarget.parentNode.id;
+        $.ajax({
+            type: "POST",
+            url: "{{ route('deleteComment', ['id' => 'idC']) }}".replace('idC', id),
+            data: {
+                "_token": "{{ csrf_token() }}",
+                "_method": "DELETE"
+            },
+            success: function(data) {
+                console.log(data);
+            }
+        });
     }
 
     function addComment() {
-  /*   $('#sendComsment').on('submit', function(e) { */
+        /*   $('#sendComsment').on('submit', function(e) { */
         event.preventDefault();
         if (document.getElementById("msg").value === "") {
             alert("Veuillez saisir un commentaire");
@@ -153,7 +173,7 @@ crossorigin="anonymous"></script>
             img.height = "40";
             var h4 = document.createElement("h4");
             @if (Auth::check())
-            h4.textContent = "{{ auth()->user()->name }}";
+                h4.textContent = "{{ auth()->user()->name }}";
             @endif
             h4.textContent = "Vous";
             var span = document.createElement("span");
@@ -178,45 +198,25 @@ crossorigin="anonymous"></script>
             CommentDiv.appendChild(span);
             CommentDiv.appendChild(p);
             const allcomments = document.getElementsByClassName("allComments")[0];
-            allcomments.appendChild(CommentDiv);
+            allcomments.insertBefore(CommentDiv, allcomments.firstChild);
             CommentDiv.appendChild(modify);
             CommentDiv.appendChild(remove);
             //update database
             var form = $('#sendComment').serialize();
             $.ajaxSetup({
-                 headers: {
-                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                 }
-             });
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
             $.ajax({
                 type: "POST",
                 url: "{{ route('addComment', ['id_user' => auth()->user()->id, 'id_film' => $movie->id]) }}",
                 data: form,
                 success: function(data) {
-                   /*  alert("Commentaire ajouté"); */
-                   
+                    /*  alert("Commentaire ajouté"); */
+
                 }
             });
-            /*  $.ajaxSetup({
-                 headers: {
-                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                 }
-             });
-            $.ajax({
-                url: $(form).attr('action'),
-                method: $(form).attr('method'),
-                data: new FormData(form),
-                processData: false,
-                dataType: 'json',
-                contentType: false,
-                beforeSend: function() {
-                    $(form).find('span.error-text').text('');
-                },
-                success: function(data) {
-                    $('.allComments').html(data);
-                }
-            }); */
-
             document.getElementById("msg").value = "";
         }
 
@@ -232,4 +232,25 @@ crossorigin="anonymous"></script>
     let remover = document.getElementsByClassName("remove");
     Array.from(remover).forEach(m => m
         .addEventListener("click", deleter));
+</script>
+<script>
+    function fetch_data(page) {
+        $.ajax({
+            url: "{{ route('commentsPagination', ['id_film' => $movie->id]) }}" + '?page=' + page,
+            success: function(data) {
+                $('.allComments').html(data);
+            }
+        });
+    }
+    $(document).ready(function() {
+        $('.pagination').on('click', function(e) {
+            e.preventDefault();
+            $('.page-item').removeClass('active');
+            e.target.parentElement.classList.add('active');
+            var page = e['target']['href'].split('page=')[1];
+            fetch_data(page);
+
+        });
+
+    });
 </script>
