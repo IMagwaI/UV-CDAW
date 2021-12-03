@@ -74,66 +74,41 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 col-md-6 col-12 pb-4">
-                    <h1>Comments</h1>
-                    <div class="comment mt-4 text-justify float-left"> <img src="https://i.imgur.com/yTFUilP.jpg" alt=""
-                            class="rounded-circle" width="40" height="40">
-                        <h4>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam
-                            vero sequi velit molestias doloremque molestiae dicta?</p>
-                            <button class="modify">Modify Comment</button>
-                            <button class="remove">Remove Comment</button>
+                    <h1>Commentaires</h1>
+                    <div class="allComments">
+                        @include('commentaire')
                     </div>
-                  
-{{--                     <div class="text-justify darker mt-4 float-right"> <img src="https://i.imgur.com/CFpa3nK.jpg" alt=""
-                            class="rounded-circle" width="40" height="40">
-                        <h4>Rob Simpson</h4> <span>- 20 October, 2018</span> <br>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam
-                            vero sequi velit molestias doloremque molestiae dicta?</p>
-                    </div>
-                    <div class="comment mt-4 text-justify"> <img src="https://i.imgur.com/yTFUilP.jpg" alt=""
-                            class="rounded-circle" width="40" height="40">
-                        <h4>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam
-                            vero sequi velit molestias doloremque molestiae dicta?</p>
-                    </div>
-                    <div class="darker mt-4 text-justify"> <img src="https://i.imgur.com/CFpa3nK.jpg" alt=""
-                            class="rounded-circle" width="40" height="40">
-                        <h4>Rob Simpson</h4> <span>- 20 October, 2018</span> <br>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam
-                            vero sequi velit molestias doloremque molestiae dicta?</p>
-                    </div> --}}
-                    <button id="addNew">Add new Comment</button>
-
                 </div>
-                {{-- @php
-    $user = Auth::user();
-                    dd($user['id']);
-@endphp --}}
 
                 <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
-                    <form id="algin-form">
-                        <div class="form-group">
-                            <h4>Leave a comment</h4> <label for="message">Message</label> <textarea name="msg" id="" msg
-                                cols="30" rows="5" class="form-control"
-                                style="background-color: rgb(255, 255, 255);"></textarea>
-                        </div>
-                        @if (!Auth::check()){
+                    @if (Auth::check())
+                        <form id="sendComment" class="send-form" method="POST"
+                            action="{{ route('addComment', ['id_user' => auth()->user()->id, 'id_film' => $movie->id]) }}">
+                            @csrf
+                            @method('POST')
                             <div class="form-group">
-                                <label for="name">Name</label> <input type="text" name="name" id="name"
-                                    class="form-control" placeholder="Enter your name">
+                                <h4>Laissez un commentaire</h4>
+                                <label for="message">Message</label>
+                                <textarea name="msg" id="msg" msg cols="30" rows="5" class="form-control"
+                                    style="background-color: rgb(255, 255, 255);"></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email</label> <input type="email" name="email" id="email"
-                                    class="form-control" placeholder="Enter your email">
+                            <br>
+                            <div style="display: flex;justify-content: center;" class="form-group">
+                                <button style="background-color: #ffbb38" type="button" id="post"
+                                    class="get-started-btn scrollto" onclick="addComment()">Ajouter
+                                </button>
                             </div>
-                            }
-                        @endif
-                        {{-- <div class="form-inline"> <input type="checkbox" name="check" id="checkbx" class="mr-1"> <label for="subscribe">Subscribe me to the newlettter</label> </div> --}}
-                        <div class="form-group">
-                            <button type="button" id="post" class="btn">Post
-                                Comment</button>
+                        </form>
 
+                    @endif
+                    @if (!Auth::check())
+                        <div class="form-group">
+                            <h4>Vous devez être connecté pour laisser un commentaire</h4>
                         </div>
+                        <a href="{{ route('login') }}" class="get-started-btn scrollto"
+                            style="background-color: #ffbb38;display: flex;justify-content: center;">Connexion</a>
+
+                    @endif
                     </form>
                 </div>
             </div>
@@ -141,56 +116,120 @@
 
     </main><!-- End #main -->
 @endsection
-
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+crossorigin="anonymous"></script>
 <script>
     "use strict";
 
     function modify(e) {
-        /*     alert(e.type +" on modify for "+ e.currentTarget.parentNode.id+" !");
-         */ // modifier commentaire
-        /*     alert(e.type +" on remove for "+ e.currentTarget.parentNode.id+" !");
-         */
         var name = prompt("update comment", ". . . .");
         var txtid = document.getElementById(e.currentTarget.parentNode.id);
         txtid.getElementsByTagName('p')[0].textContent = name;
-
     }
 
     function deleter(e) {
-        /*     alert(e.type + " on remove for " + e.currentTarget.parentNode.id + " !");
-         */
         e.currentTarget.parentNode.remove();
     }
 
-    document.getElementById("addNew").addEventListener("click", function(e) {
-        /* alert(e.type + " on add !"); */
-        var newDiv = document.createElement("div");
-        newDiv.id = "UserX";
+    function addComment() {
+  /*   $('#sendComsment').on('submit', function(e) { */
+        event.preventDefault();
+        if (document.getElementById("msg").value === "") {
+            alert("Veuillez saisir un commentaire");
+        } else {
+            //update UI
+            var comment = document.getElementById("msg").value;
+            var movie_id = {{ $movie->id }};
+            var CommentDiv = document.createElement("div");
+            CommentDiv.className = "comment mt-4 text-justify float-left";
+            var img = document.createElement("img");
+            @if (Auth::check())
+                img.src = "{{ auth()->user()->image }}";
+            @endif
+            img.src = "https://www.w3schools.com/howto/img_avatar.png";
+            img.Error = 'https://bootdey.com/img/Content/avatar/avatar7.png';
+            img.className = "rounded-circle";
+            img.width = "40";
+            img.height = "40";
+            var h4 = document.createElement("h4");
+            @if (Auth::check())
+            h4.textContent = "{{ auth()->user()->name }}";
+            @endif
+            h4.textContent = "Vous";
+            var span = document.createElement("span");
+            span.textContent = "il y a moins d'une minute";
+            span.style.fontSize = "12px";
+            var p = document.createElement("p");
+            p.textContent = document.getElementById("msg").value;
+            var modify = document.createElement("button");
+            modify.textContent = "Modify Comment";
+            modify.className = "modify";
+            if (modify.addEventListener) {
+                modify.addEventListener("click", modify);
+            };
+            var remove = document.createElement("button");
+            remove.textContent = "Remove Comment";
+            remove.className = "remove";
+            if (remove.addEventListener) {
+                remove.addEventListener("click", deleter);
+            };
+            CommentDiv.appendChild(img);
+            CommentDiv.appendChild(h4);
+            CommentDiv.appendChild(span);
+            CommentDiv.appendChild(p);
+            const allcomments = document.getElementsByClassName("allComments")[0];
+            allcomments.appendChild(CommentDiv);
+            CommentDiv.appendChild(modify);
+            CommentDiv.appendChild(remove);
+            //update database
+            var form = $('#sendComment').serialize();
+            $.ajaxSetup({
+                 headers: {
+                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                 }
+             });
+            $.ajax({
+                type: "POST",
+                url: "{{ route('addComment', ['id_user' => auth()->user()->id, 'id_film' => $movie->id]) }}",
+                data: form,
+                success: function(data) {
+                   /*  alert("Commentaire ajouté"); */
+                   
+                }
+            });
+            /*  $.ajaxSetup({
+                 headers: {
+                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                 }
+             });
+            $.ajax({
+                url: $(form).attr('action'),
+                method: $(form).attr('method'),
+                data: new FormData(form),
+                processData: false,
+                dataType: 'json',
+                contentType: false,
+                beforeSend: function() {
+                    $(form).find('span.error-text').text('');
+                },
+                success: function(data) {
+                    $('.allComments').html(data);
+                }
+            }); */
 
-        var name = prompt("Ajouter un nouveau commentaire", ". . . .");
-        const sender = document.createElement("h4");
-        const h4txt = document.createTextNode("another user");
-        sender.appendChild(h4txt);
-        newDiv.appendChild(sender);
-        const para = document.createElement("p");
-        const node = document.createTextNode(name);
-        para.appendChild(node);
-        newDiv.appendChild(para);
+            document.getElementById("msg").value = "";
+        }
 
-        const btn1 = document.createElement("button");
-        para.setAttribute("onclick", "modify(event)");
-        const edit = document.createTextNode("Modifier");
-        para.appendChild(edit);
-
-        const allcomments = document.getElementById("users");
-        allcomments.appendChild(newDiv);
-
-
-    })
-
+    };
+    var preventDefault = function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
     let modifiers = document.getElementsByClassName("modify");
-    Array.from(modifiers).forEach(m => m.addEventListener("click", modify));
+    Array.from(modifiers).forEach(m => m
+        .addEventListener("click", modify));
 
     let remover = document.getElementsByClassName("remove");
-    Array.from(remover).forEach(m => m.addEventListener("click", deleter));
+    Array.from(remover).forEach(m => m
+        .addEventListener("click", deleter));
 </script>

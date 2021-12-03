@@ -15,8 +15,9 @@ class CreateCommentaireTable extends Migration
     {
         Schema::create('commentaires', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id')->references('id')->on('users');
-            $table->bigInteger('media_id')->references('id')->on('medias');
+            // define foreign key media_id
+            $table->foreignId( 'media_id' )->constrained()->onDelete('cascade' );
+            $table->foreignId( 'user_id' )->constrained()->onDelete('cascade' );
             $table->string('text');
             $table->boolean('etat_moderation');
             $table->timestamp('date_moderation')->nullable('true');

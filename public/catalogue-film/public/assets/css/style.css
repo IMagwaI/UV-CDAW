@@ -5,6 +5,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -32,6 +33,7 @@ h5,
 h6 {
     font-family: "Raleway", sans-serif;
 }
+
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -69,6 +71,7 @@ h6 {
     visibility: visible;
     opacity: 1;
 }
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -118,6 +121,7 @@ h6 {
     }
 }
 
+
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
@@ -127,6 +131,7 @@ h6 {
         transition-delay: 0 !important;
     }
 }
+
 
 /*--------------------------------------------------------------
 # Header
@@ -165,6 +170,7 @@ h6 {
 #header .logo img {
     max-height: 40px;
 }
+
 
 /*--------------------------------------------------------------
 #  START LOGIN FORM
@@ -247,21 +253,23 @@ button:hover {
     transform: scale(0.6);
 }
 
-#chk:checked ~ .login {
+#chk:checked~.login {
     transform: translateY(-500px);
 }
 
-#chk:checked ~ .login label {
+#chk:checked~.login label {
     transform: scale(0.8);
 }
 
-#chk:checked ~ .signup label {
+#chk:checked~.signup label {
     transform: scale(0.6);
 }
+
 
 /*--------------------------------------------------------------
 #  END LOGIN FORM
 --------------------------------------------------------------*/
+
 
 /*--------------------------------------------------------------
 #  Get Startet Button
@@ -290,9 +298,11 @@ button:hover {
     }
 }
 
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+
 
 /**
 * Desktop Navigation 
@@ -337,7 +347,7 @@ button:hover {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover > a {
+.navbar li:hover>a {
     color: #ffc451;
 }
 
@@ -374,11 +384,11 @@ button:hover {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover > a {
+.navbar .dropdown ul li:hover>a {
     background-color: #ffc451;
 }
 
-.navbar .dropdown:hover > ul {
+.navbar .dropdown:hover>ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -390,7 +400,7 @@ button:hover {
     visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover > ul {
+.navbar .dropdown .dropdown:hover>ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -401,10 +411,11 @@ button:hover {
     .navbar .dropdown .dropdown ul {
         left: -90%;
     }
-    .navbar .dropdown .dropdown:hover > ul {
+    .navbar .dropdown .dropdown:hover>ul {
         left: -100%;
     }
 }
+
 
 /**
 * Mobile Navigation 
@@ -468,7 +479,7 @@ button:hover {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover > a {
+.navbar-mobile li:hover>a {
     color: #151515;
     background-color: #ffc451;
 }
@@ -505,13 +516,14 @@ button:hover {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover > a {
+.navbar-mobile .dropdown ul li:hover>a {
     background-color: #ffc451;
 }
 
-.navbar-mobile .dropdown > .dropdown-active {
+.navbar-mobile .dropdown>.dropdown-active {
     display: block;
 }
+
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -616,6 +628,7 @@ button:hover {
     }
 }
 
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -660,6 +673,7 @@ section {
     color: #151515;
 }
 
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -691,6 +705,7 @@ section {
 .about .content p:last-child {
     margin-bottom: 0;
 }
+
 
 /*--------------------------------------------------------------
 # Clients
@@ -728,6 +743,7 @@ section {
     background-color: #ffc451;
 }
 
+
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
@@ -764,6 +780,7 @@ section {
     background-size: cover;
     min-height: 400px;
 }
+
 
 /*--------------------------------------------------------------
 # Services
@@ -823,13 +840,13 @@ section {
     transform: translateY(-10px);
 }
 
+
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
 
 .cta {
-    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../img/cta-bg.jpg") fixed center center;
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center;
     background-size: cover;
     padding: 60px 0;
 }
@@ -863,6 +880,7 @@ section {
     border-color: #ffc451;
     color: #151515;
 }
+
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -988,6 +1006,7 @@ section {
     opacity: 1;
 }
 
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -1005,10 +1024,7 @@ section {
     position: relative;
 }
 
-.portfolio-details
-    .portfolio-details-slider
-    .swiper-pagination
-    .swiper-pagination-bullet {
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
     background-color: #fff;
@@ -1016,10 +1032,7 @@ section {
     border: 1px solid #ffc451;
 }
 
-.portfolio-details
-    .portfolio-details-slider
-    .swiper-pagination
-    .swiper-pagination-bullet-active {
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #ffc451;
 }
 
@@ -1042,7 +1055,7 @@ section {
     font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li + li {
+.portfolio-details .portfolio-info ul li+li {
     margin-top: 10px;
 }
 
@@ -1059,6 +1072,7 @@ section {
 .portfolio-details .portfolio-description p {
     padding: 0;
 }
+
 
 /*--------------------------------------------------------------
 # Counts
@@ -1141,6 +1155,7 @@ section {
         max-width: 100%;
     }
 }
+
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -1252,6 +1267,7 @@ section {
     }
 }
 
+
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
@@ -1339,6 +1355,7 @@ section {
     bottom: 15px;
 }
 
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
@@ -1400,7 +1417,7 @@ section {
     font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
+.contact .php-email-form .error-message br+br {
     margin-top: 25px;
 }
 
@@ -1485,6 +1502,14 @@ section {
     }
 }
 
+.comment {
+    background-color: whitesmoke;
+    border-top: 3px solid #ababab;
+    border-bottom: 3px solid #ababab;
+    border-radius: 20px;
+}
+
+
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
@@ -1509,11 +1534,11 @@ section {
     margin: 0;
 }
 
-.breadcrumbs ol li + li {
+.breadcrumbs ol li+li {
     padding-left: 10px;
 }
 
-.breadcrumbs ol li + li::before {
+.breadcrumbs ol li+li::before {
     display: inline-block;
     padding-right: 10px;
     color: #2f2f2f;
@@ -1534,6 +1559,7 @@ section {
         display: inline-block;
     }
 }
+
 
 /*--------------------------------------------------------------
 # Footer

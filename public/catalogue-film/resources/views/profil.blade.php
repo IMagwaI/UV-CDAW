@@ -3,8 +3,10 @@
     <link href="{{ asset('assets/css/form.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
         integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
-    <div id="popup-reg" class="popup">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>    <div id="popup-reg" class="popup">
         <div class="popup-content">
             <form id="send" class="send-form" method="POST" action="{{ route('update_profil', auth()->user()->id) }}">
                 @csrf
@@ -49,16 +51,12 @@
                 <div class="form-group">
                     <img id="image-preview" class="image-preview" src="" />
                 </div>
-                <button type="submit" class="main-btn-rect" name="text" value="Send" {{-- onclick="editProfile();" --}}>
+                <button type="submit" class="main-btn-rect" name="text" value="Send">
                     <i class="fa fa-paper-plane"></i>Modifier</button>
             </form>
             <span id="closef" class="fade-out main-btn-circle">╳</span>
         </div>
     </div>
-    {{-- @php
-    $user = Auth::user();
-                    dd($user['id']);
-@endphp --}}
     <main id="main">
         <br></br><br></br>
         <div class="container">
@@ -78,8 +76,7 @@
                                         <p class="text-secondary mb-1" id="resultStatut">
                                             {{ auth()->user()->profilStatut }}
                                         </p>
-{{--                                         <p class="text-muted font-size-sm" id="resultAdress">Agadir, MOROCCO</p>
- --}}                                        <button class="btn btn-primary">Follow</button>
+                                       <button class="btn btn-primary">Follow</button>
                                         <button class="btn btn-outline-primary">Message</button>
                                     </div>
                                 </div>
@@ -142,15 +139,6 @@
                     <div class="col-md-8">
                         <div class="card mb-3">
                             <div class="card-body">
-                                {{-- <div class="row">
-                                    <div class="col-sm-3">
-                                        <h6 class="mb-0">Full Name</h6>
-                                    </div>
-                                    <div class="col-sm-9 text-secondary" id="resultName">
-                                        {{auth()->user()->name}}
-                                    </div>
-                                </div>
-                                <hr> --}}
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <h6 class="mb-0">Email</h6>
@@ -191,8 +179,8 @@
                                         <h6 class="mb-0">Address</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary" id="resultAdress">
-                                        @if (auth()->user()->address)
-                                        {{ auth()->user()->address }}
+                                        @if (auth()->user()->adress)
+                                        {{ auth()->user()->adress }}
                                         @else
                                         <span class="text-secondary">No address</span>
                                         @endif
@@ -247,50 +235,7 @@
 
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
-{{--         <script>
-            $('#send').on('submit', function(e) {
-                e.preventDefault();
-                var name = document.getElementById('name').value;
-                var phone = document.getElementById('phone').value;
-                var bday = document.getElementById('bday').value;
-                var image = document.getElementById('input-url').value;
-                var adress = document.getElementById('adress').value;
-                var profilStatut = document.getElementById('statut').value;
-                document.getElementById('resultName').innerHTML = name;
-                document.getElementById('resultPhone').innerHTML = phone;
-                document.getElementById('resultBday').innerHTML = bday;
-                document.getElementById('resultImage').src = image;
-                document.getElementById('resultAdress').innerHTML = adress;
-                document.getElementById('resultStatut').innerHTML = profilStatut;
-                document.getElementById('closef').click();
 
-                var form = this;
-                $.ajax({
-                    url: $(form).attr('action'),
-                    method: $(form).attr('method'),
-                    data: new FormData(form),
-                    processData: false,
-                    dataType: 'json',
-                    contentType: false,
-                    beforeSend: function() {
-                        $(form).find('span.error-text').text('');
-                    },
-                    success: function(data) {
-                        if (data.code == 0) {
-                            $.each(data.error, function(prefix, val) {
-                                $(form).find('span.' + prefix + '_error').text(val[0]);
-                            });
-                        }
-                    }
-                });
-            });
-            /*             var idUser ={{ auth()->user()->id }};
-             */
-
-        </script> --}}
         <script src="js/form.js" crossorigin="anonymous"></script>
     </main>
 @endsection

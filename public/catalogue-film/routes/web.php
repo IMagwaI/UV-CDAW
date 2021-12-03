@@ -23,6 +23,8 @@ Route::get('addFilm', 'App\Http\Controllers\FilmController@create')->name('addFi
 Route::post('addFilm', 'App\Http\Controllers\FilmController@store')->name('addFilm_store');
 Route::get('addedFilms', 'App\Http\Controllers\FilmController@index')->name('addedFilms');
 
+Route::post('/addComment/{id_user}/{id_film}', 'App\Http\Controllers\CommentController@saveComment')->name('addComment');
+
 Route::post('/addedFilms/{id}', 'App\Http\Controllers\FilmController@edit')->name('film_update');
 Route::delete('/addedFilms/{id}', 'App\Http\Controllers\FilmController@destroy')->name('deleteFilm');
 Route::post('/updateFilm/{id}', 'App\Http\Controllers\FilmController@update')->name('updateFilm_put');
