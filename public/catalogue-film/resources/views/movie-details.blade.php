@@ -17,8 +17,15 @@
                     <div class="col mr-auto">
                         <div class="container">
                             <div class="row w-100">
-                                <div class="col add-button" style="cursor: pointer">
-                                    Ajouter aux favoris <i class="bi-heart-fill"></i></div>
+                                @if (!$isLiked)
+                                    <a class="col add-button" style="cursor: pointer"
+                                        href="{{ route('addFavoris', ['id' => $movie->id]) }}">
+                                        Ajouter aux favoris <i class="bi-heart-fill"></i></a>
+                                @else
+                                    <a class="col add-button" style="cursor: pointer; color: red"
+                                        href="{{ route('deleteFavoris', ['id' => $movie->id]) }}">
+                                        Supprimer des favoris <i class="bi-heart-fill"></i></a>
+                                @endif
                                 <div class="col  add-button" style="cursor: pointer">
                                     Ajouter au playlist <i class="bi-plus-circle-fill"></i></div>
                                 <div class="col  add-button" style="cursor: pointer">

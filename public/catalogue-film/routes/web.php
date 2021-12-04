@@ -27,6 +27,11 @@ Route::get('playlists', 'App\Http\Controllers\PlaylistController@index')->name('
 Route::get('addPlaylist', 'App\Http\Controllers\PlaylistController@create')->name('addPlaylist');
 Route::post('addPlaylist', 'App\Http\Controllers\PlaylistController@store')->name('addPlaylist_store');
 
+Route::get('favoris', 'App\Http\Controllers\FavoriController@index')->name('favoris');
+// get instead of post to submit from anchor tag
+Route::get('addFavoris/{id}', 'App\Http\Controllers\FavoriController@store')->name('addFavoris');
+Route::get('deleteFavoris/{id}', 'App\Http\Controllers\FavoriController@destroy')->name('deleteFavoris');
+
 
 Route::post('/addComment/{id_user}/{id_film}', 'App\Http\Controllers\CommentController@saveComment')->name('addComment');
 Route::get('/commentsPagination/{id_film}', 'App\Http\Controllers\CommentController@paginate')->name('commentsPagination');

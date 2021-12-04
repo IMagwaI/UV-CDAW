@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Comment;
+use App\Models\Favori;
 
 
 class MoviePageController extends Controller
@@ -16,11 +17,14 @@ class MoviePageController extends Controller
     }
     public function show($id)
     {
+        $isLiked = false;
+        if (Favori::where(['media_id' => $id, 'user_id' => auth()->user()->id])->exists()) {
+            $isLiked = true;
+        }
         $movie = DB::table('medias')->where('id', $id)->first();
         $comments = Comment::where('media_id', $id)->orderBy('created_at', 'desc')->paginate(4);
         //category khass tbdel mazal makatsupportich multiple
-        $category = DB::table('categories')->where('id', $movie->category_id)->first();  
-        return view('movie-details', ['movie' => $movie, 'category' => $category, 'comments' => $comments]);
+        $category = DB::table('categories')->where('id', $movie->category_id)->first();
+        return view('movie-details', ['movie' => $movie, 'category' => $category, 'comments' => $comments, 'isLiked' => $isLiked]);
     }
-    
 }
