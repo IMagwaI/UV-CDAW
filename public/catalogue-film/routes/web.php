@@ -32,6 +32,9 @@ Route::get('favoris', 'App\Http\Controllers\FavoriController@index')->name('favo
 Route::get('addFavoris/{id}', 'App\Http\Controllers\FavoriController@store')->name('addFavoris');
 Route::get('deleteFavoris/{id}', 'App\Http\Controllers\FavoriController@destroy')->name('deleteFavoris');
 
+Route::get('historique', 'App\Http\Controllers\HistoriqueController@index')->name('historique');
+Route::get('addHistorique/{id}', 'App\Http\Controllers\HistoriqueController@store')->name('addHistorique');
+Route::get('deleteHistorique/{id}', 'App\Http\Controllers\HistoriqueController@destroy')->name('deleteHistorique');
 
 Route::post('/addComment/{id_user}/{id_film}', 'App\Http\Controllers\CommentController@saveComment')->name('addComment');
 Route::get('/commentsPagination/{id_film}', 'App\Http\Controllers\CommentController@paginate')->name('commentsPagination');

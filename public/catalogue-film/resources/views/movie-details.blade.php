@@ -26,10 +26,20 @@
                                         href="{{ route('deleteFavoris', ['id' => $movie->id]) }}">
                                         Supprimer des favoris <i class="bi-heart-fill"></i></a>
                                 @endif
+
+                                @if (!$isSeen)
+                                    <a class="col add-button" style="cursor: pointer"
+                                        href="{{ route('addHistorique', ['id' => $movie->id]) }}">
+                                        Marquer comme vu <i class="bi-eye-fill"></i></a>
+                                @else
+                                    <a class="col add-button" style="cursor: pointer; color: red"
+                                        href="{{ route('deleteHistorique', ['id' => $movie->id]) }}">
+                                        Supprimer de l'historique <i class="bi-eye-fill"></i></a>
+                                @endif
                                 <div class="col  add-button" style="cursor: pointer">
                                     Ajouter au playlist <i class="bi-plus-circle-fill"></i></div>
-                                <div class="col  add-button" style="cursor: pointer">
-                                    Marquer comme vu <i class="bi-eye-fill"></i></div>
+                                {{-- <div class="col  add-button" style="cursor: pointer">
+                                    Marquer comme vu <i class="bi-eye-fill"></i></div> --}}
                             </div>
                         </div>
                     </div>
