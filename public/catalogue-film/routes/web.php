@@ -23,6 +23,11 @@ Route::get('addFilm', 'App\Http\Controllers\FilmController@create')->name('addFi
 Route::post('addFilm', 'App\Http\Controllers\FilmController@store')->name('addFilm_store');
 Route::get('addedFilms', 'App\Http\Controllers\FilmController@index')->name('addedFilms');
 
+Route::get('playlists', 'App\Http\Controllers\PlaylistController@index')->name('playlists');
+Route::get('addPlaylist', 'App\Http\Controllers\PlaylistController@create')->name('addPlaylist');
+Route::post('addPlaylist', 'App\Http\Controllers\PlaylistController@store')->name('addPlaylist_store');
+
+
 Route::post('/addComment/{id_user}/{id_film}', 'App\Http\Controllers\CommentController@saveComment')->name('addComment');
 Route::get('/commentsPagination/{id_film}', 'App\Http\Controllers\CommentController@paginate')->name('commentsPagination');
 Route::delete('/deletecomment/{id}', 'App\Http\Controllers\CommentController@deleteComment')->name('deleteComment');
@@ -44,14 +49,17 @@ Route::get('/ajoutFilm', function () {
 Route::post('/profil/{id}', 'App\Http\Controllers\UserController@update')->name("update_profil");
 
 Route::get('/profil', 'App\Http\Controllers\UserController@index')->name("profil");
-Route::get('/playlist', function () {
-    if (Auth::check()) {
-        return view('playlist');
-        // The user is logged in...
-    } else {
-        return redirect()->action([HomeController::class, 'populate']);
-    }
-})->name('playlist');
+// Route::get('/playlists', function () {
+//     if (Auth::check()) {
+//         return view('playlists');
+//         // The user is logged in...
+//     } else {
+//         return redirect()->action([HomeController::class, 'populate']);
+//     }
+// })->name('playlists');
+/* Route::get('/login', function () {
+    return view('login');
+})->name('login'); */
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

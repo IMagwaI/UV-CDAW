@@ -17,11 +17,11 @@
                     <div class="col mr-auto">
                         <div class="container">
                             <div class="row w-100">
-                                <div class="col">
+                                <div class="col add-button" style="cursor: pointer">
                                     Ajouter aux favoris <i class="bi-heart-fill"></i></div>
-                                <div class="col">
+                                <div class="col  add-button" style="cursor: pointer">
                                     Ajouter au playlist <i class="bi-plus-circle-fill"></i></div>
-                                <div class="col">
+                                <div class="col  add-button" style="cursor: pointer">
                                     Marquer comme vu <i class="bi-eye-fill"></i></div>
                             </div>
                         </div>
@@ -78,6 +78,7 @@
                     <div class="allComments">
                         @include('commentaire')
                     </div>
+
                 </div>
                 <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
                     @if (Auth::check())
