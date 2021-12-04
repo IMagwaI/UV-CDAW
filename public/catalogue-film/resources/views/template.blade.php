@@ -50,7 +50,7 @@
     <header id="header" class="fixed-top header-scrolled ">
         <div class="container d-flex align-items-center justify-content-lg-between">
 
-            <h1 class="logo me-auto me-lg-0"><a href="#">Movie Time<span>.</span></a></h1>
+            <h1 class="logo me-auto me-lg-0"><a href="{{ route('home') }}">Movie Time<span>.</span></a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -94,7 +94,7 @@
 
                                     <x-jet-responsive-nav-link class="btn-danger" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                            this.closest('form').submit();">
+                                                                                this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-jet-responsive-nav-link>
                                 </form>
