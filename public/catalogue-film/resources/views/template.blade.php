@@ -85,16 +85,16 @@
                                         <li><a href="#">Deep Drop Down 5</a></li>
                                     </ul>
                                 </li> --}}
-                                <li><a href="#">Historique</a></li>
-                                <li><a href="#">Favoris</a></li>
-                                <li><a href="#">Playlists</a></li>
+                                <li><a href="{{ route('historique') }}">Historique</a></li>
+                                <li><a href="{{ route('favoris') }}">Favoris</a></li>
+                                <li><a href="{{ route('playlists') }}">Playlists</a></li>
                                 <!-- Logout -->
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
 
                                     <x-jet-responsive-nav-link class="btn-danger" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                                this.closest('form').submit();">
+                                                                                    this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-jet-responsive-nav-link>
                                 </form>
