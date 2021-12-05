@@ -32,6 +32,12 @@ Route::get('deletePlaylist/{id}', 'App\Http\Controllers\PlaylistController@destr
 Route::get('addPlaylist', 'App\Http\Controllers\PlaylistController@create')->name('addPlaylist');
 Route::post('addPlaylist', 'App\Http\Controllers\PlaylistController@store')->name('addPlaylist_store');
 
+//admin routes
+Route::get('/admin', 'App\Http\Controllers\AdminController@index')->name('admin');
+Route::get('/admin/removeAdmin/{id}', 'App\Http\Controllers\AdminController@removeAdmin')->name('removeAdmin');
+Route::get('/admin/addAdmin/{id}', 'App\Http\Controllers\AdminController@addAdmin')->name('addAdmin');
+Route::get('/admin/banDebanUser/{id}', 'App\Http\Controllers\AdminController@banDebanUser')->name('banDebanUser');
+
 Route::get('favoris', 'App\Http\Controllers\FavoriController@index')->name('favoris');
 // get instead of post to submit from anchor tag
 Route::get('addFavoris/{id}', 'App\Http\Controllers\FavoriController@store')->name('addFavoris');

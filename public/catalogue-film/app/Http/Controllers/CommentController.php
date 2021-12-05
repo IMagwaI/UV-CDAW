@@ -67,25 +67,6 @@ class CommentController extends Controller
 
     }
 
-        
-/*             $comment = Comment::find($id_comment);
-            $comment->etat_moderation = 1;
-            $comment->save();
-            $comments = Comment::all();
-            return view('commentaire', ['comments' => $comments]);
-        
-    }
- */
-  /*   public function gotoUpdate($id_comment,$id_media){
-        $comment = Comment::find($id_comment);
-        $comment_user = $comment->user;
-        dd($comment_user);
-        $comment->etat_moderation = 1;
-        $comment->save();
-        $comments = Comment::where('media_id', $id_media)->orderBy('created_at', 'desc')->paginate(4);
-        return view('commentaire', ["comments" => $comments])->render();
-    } */
-
     //delete comment
     public function deleteComment($id_comment,$id_film)
     {

@@ -11,7 +11,7 @@
     <script>
         BASE_URL = "<?php echo url(''); ?>";
     </script>
-    <title>Acceuil Movie time</title>
+    <title>Accueil Movie time</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -56,6 +56,9 @@
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
+                    @if (Auth::check() && Auth::user()->role == 'admin')
+                    <li><a class="nav-link scrollto active" href={{ route('admin') }}>Admin Panel</a></li>
+                    @endif
                     <li><a class="nav-link scrollto active" href={{ route('home') }}>Home</a></li>
                     @auth
                         {{-- <li><a class="nav-link scrollto" href="{{ route('movie-details') }}">Film</a></li> --}} <li><a class="nav-link scrollto"
@@ -118,7 +121,9 @@
     <!-- End #main -->
 
     <!-- ======= Footer ======= -->
-    <footer id="footer" class="bottom mb-0">
+                        
+
+    <footer  id="footer" class="bottom mb-0;">
 
         <div class="container">
             <div class="copyright">
