@@ -153,7 +153,7 @@ crossorigin="anonymous"></script>
     }
 
     // add event listener to delete button
-     $(".deleter").click(function(e) {
+    /*  $(".deleter").click(function(e) {
         var id = e.currentTarget.parentNode.id;
         var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
         $.ajax({
@@ -167,7 +167,7 @@ crossorigin="anonymous"></script>
                  alert("Commentaire supprimé");
              }
          })
-    }); 
+    });  */
 
      function deleter(e) {
         // delete in html
@@ -207,7 +207,9 @@ crossorigin="anonymous"></script>
             @if (Auth::check())
                 img.src = "{{ auth()->user()->image }}";
             @endif
-            img.src = "https://www.w3schools.com/howto/img_avatar.png";
+            @if (!Auth::check())
+                img.src = "https://www.w3schools.com/howto/img_avatar.png";
+            @endif
             img.Error = 'https://bootdey.com/img/Content/avatar/avatar7.png';
             img.className = "rounded-circle";
             img.width = "40";
@@ -222,7 +224,7 @@ crossorigin="anonymous"></script>
             span.style.fontSize = "12px";
             var p = document.createElement("p");
             p.textContent = document.getElementById("msg").value;
-            var modify = document.createElement("button");
+           /*  var modify = document.createElement("button");
             modify.textContent = "Modify Comment";
             modify.className = "modify";
             if (modify.addEventListener) {
@@ -233,15 +235,15 @@ crossorigin="anonymous"></script>
             remove.className = "remove";
             if (remove.addEventListener) {
                 remove.addEventListener("click", deleter);
-            };
+            }; */
             CommentDiv.appendChild(img);
             CommentDiv.appendChild(h4);
             CommentDiv.appendChild(span);
             CommentDiv.appendChild(p);
             const allcomments = document.getElementsByClassName("allComments")[0];
             allcomments.insertBefore(CommentDiv, allcomments.firstChild);
-            CommentDiv.appendChild(modify);
-            CommentDiv.appendChild(remove);
+/*             CommentDiv.appendChild(modify);
+            CommentDiv.appendChild(remove); */
             //update database
             var form = $('#sendComment').serialize();
             $.ajaxSetup({

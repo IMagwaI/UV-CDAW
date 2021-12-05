@@ -39,7 +39,7 @@ Route::get('deleteHistorique/{id}', 'App\Http\Controllers\HistoriqueController@d
 Route::post('/addComment/{id_user}/{id_film}', 'App\Http\Controllers\CommentController@saveComment')->name('addComment');
 Route::get('/commentsPagination/{id_film}', 'App\Http\Controllers\CommentController@paginate')->name('commentsPagination');
 // update comment
-Route::post('/updateComment/{id_user}/{id_film}', 'App\Http\Controllers\CommentController@updateComment')->name('updateComment');
+Route::get('/updateComment/{id_comment}/{media_id}', 'App\Http\Controllers\CommentController@updateComment')->name('updateComment');
 Route::get('/deletecomment/{id_comment}/{id_film}', 'App\Http\Controllers\CommentController@deleteComment')->name('deleteComment');
 
 Route::post('/addedFilms/{id}', 'App\Http\Controllers\FilmController@edit')->name('film_update');

@@ -43,16 +43,46 @@ class CommentController extends Controller
     }
 
     //update comment
-    public function updateComment(Request $request, $id_comment)
+    public function updateComment(Request $request,$id_comment,$media_id)
     {
-        if ($request->ajax()) {
-            $comment = Comment::find($id_comment);
+
+        $isSeen = false;
+        if (Historique::where(['media_id' => $media_id, 'user_id' => auth()->user()->id])->exists()) {
+            $isSeen = true;
+        }
+        $isLiked = false;
+        if (Favori::where(['media_id' => $media_id, 'user_id' => auth()->user()->id])->exists()) {
+            $isLiked = true;
+        }
+        $movie = DB::table('medias')->where('id', $media_id)->first();
+        $category = DB::table('categories')->where('id', $movie->category_id)->first();  
+        $comment = Comment::find($id_comment);
+        $comment->etat_moderation = 1;
+        $comment->text = $request->text;
+        $comment->save();
+        $comments = Comment::where('media_id', $media_id)->orderBy('created_at', 'desc')->paginate(4);
+        return view('movie-details', ['movie' => $movie, 'category' => $category, 'comments' => $comments, 'isLiked' => $isLiked, 'isSeen' => $isSeen]);
+
+    }
+
+        
+/*             $comment = Comment::find($id_comment);
             $comment->etat_moderation = 1;
             $comment->save();
             $comments = Comment::all();
             return view('commentaire', ['comments' => $comments]);
-        }
+        
     }
+ */
+  /*   public function gotoUpdate($id_comment,$id_media){
+        $comment = Comment::find($id_comment);
+        $comment_user = $comment->user;
+        dd($comment_user);
+        $comment->etat_moderation = 1;
+        $comment->save();
+        $comments = Comment::where('media_id', $id_media)->orderBy('created_at', 'desc')->paginate(4);
+        return view('commentaire', ["comments" => $comments])->render();
+    } */
 
     //delete comment
     public function deleteComment($id_comment,$id_film)

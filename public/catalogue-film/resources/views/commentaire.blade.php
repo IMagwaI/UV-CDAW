@@ -8,11 +8,17 @@
             <br>
             <p>{{ $comment->text }}</p>
             @if (Auth::check())
-                <form action="{{ route('deleteComment', [$comment->id,$comment->media_id]) }}" method="DELETE">
-                    @csrf
-                    @method('delete')
-                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                </form>
+            <form action="{{ route('updateComment', [$comment->id, $comment->media_id]) }}" method="PUT">
+                @csrf
+                @method('put')
+                <input type="text" name="text" value="{{ $comment->text }}" class="form-control">
+                <button type="submit" class="btn btn-primary btn-sm">Update</button>
+            </form>
+            <form action="{{ route('deleteComment', [$comment->id, $comment->media_id]) }}" method="DELETE">
+                @csrf
+                @method('delete')
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
             @endif
 
         </div>
