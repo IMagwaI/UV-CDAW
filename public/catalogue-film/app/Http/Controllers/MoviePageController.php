@@ -20,12 +20,15 @@ class MoviePageController extends Controller
     {
         $isLiked = false;
         $isSeen = false;
-        if (Favori::where(['media_id' => $id, 'user_id' => auth()->user()->id])->exists()) {
-            $isLiked = true;
+        if(auth()->check()){
+            if (Favori::where(['media_id' => $id, 'user_id' => auth()->user()->id])->exists()) {
+                $isLiked = true;
+            }
+            if (Historique::where(['media_id' => $id, 'user_id' => auth()->user()->id])->exists()) {
+                $isSeen = true;
+            }
         }
-        if (Historique::where(['media_id' => $id, 'user_id' => auth()->user()->id])->exists()) {
-            $isSeen = true;
-        }
+       
         $movie = DB::table('medias')->where('id', $id)->first();
         $comments = Comment::where('media_id', $id)->orderBy('created_at', 'desc')->paginate(4);
         //category khass tbdel mazal makatsupportich multiple

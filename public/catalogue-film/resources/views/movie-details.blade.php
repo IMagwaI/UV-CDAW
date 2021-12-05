@@ -283,6 +283,8 @@ crossorigin="anonymous"></script>
                         CommentDiv.appendChild(remove); */
             //update database
             var form = $('#sendComment').serialize();
+            <?php if (Auth::check()) { ?>
+
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -297,6 +299,9 @@ crossorigin="anonymous"></script>
                      */
                 }
             });
+            <?php } ?>
+
+
             document.getElementById("msg").value = "";
         }
 

@@ -11,18 +11,22 @@
             @if ($comment->etat_moderation == 0)
                 <span style="color: red">Ce commentaire est en attente de modération</span>
             @endif
-            @if ((Auth::check() && $comment->user->id == Auth::user()->id) || Auth::user()->role == 'admin')
-                <form action="{{ route('updateComment', [$comment->id, $comment->media_id]) }}" method="PUT">
-                    @csrf
-                    @method('put')
-                    <input type="text" name="text" value="{{ $comment->text }}" class="form-control">
-                    <button type="submit" class="get-started-btn  btn-warning btn-sm">Update</button>
-                </form>
-                <form action="{{ route('deleteComment', [$comment->id, $comment->media_id]) }}" method="DELETE">
-                    @csrf
-                    @method('delete')
-                    <button type="submit" class="get-delete-btn  btn-danger btn-sm">Delete</button>
-                </form>
+            @if (Auth::check())
+
+
+                @if ((Auth::check() && $comment->user->id == Auth::user()->id) || Auth::user()->role == 'admin')
+                    <form action="{{ route('updateComment', [$comment->id, $comment->media_id]) }}" method="PUT">
+                        @csrf
+                        @method('put')
+                        <input type="text" name="text" value="{{ $comment->text }}" class="form-control">
+                        <button type="submit" class="get-started-btn  btn-warning btn-sm">Update</button>
+                    </form>
+                    <form action="{{ route('deleteComment', [$comment->id, $comment->media_id]) }}" method="DELETE">
+                        @csrf
+                        @method('delete')
+                        <button type="submit" class="get-delete-btn  btn-danger btn-sm">Delete</button>
+                    </form>
+                @endif
             @endif
 
         </div>
