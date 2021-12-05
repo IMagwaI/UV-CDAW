@@ -7,8 +7,14 @@
             <span style="font-size: 12px">{{ $comment->created_at->diffForHumans() }}</span>
             <br>
             <p>{{ $comment->text }}</p>
-            <button class="modify">Modify Comment</button>
-            <button class="remove">Remove Comment</button>
+            @if (Auth::check())
+                <form action="{{ route('deleteComment', [$comment->id,$comment->media_id]) }}" method="DELETE">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            @endif
+
         </div>
     @endforeach
 @endif

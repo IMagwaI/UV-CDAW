@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comment;
+use App\Models\Favori;
+use App\Models\Historique;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CommentController extends Controller
 {
@@ -39,11 +42,35 @@ class CommentController extends Controller
 
     }
 
-    //delete comment
-    public function deleteComment($id)
+    //update comment
+    public function updateComment(Request $request, $id_comment)
     {
-        $comment = Comment::find($id);
-        $comment->delete();
-        return response()->json($comment);
+        if ($request->ajax()) {
+            $comment = Comment::find($id_comment);
+            $comment->etat_moderation = 1;
+            $comment->save();
+            $comments = Comment::all();
+            return view('commentaire', ['comments' => $comments]);
+        }
+    }
+
+    //delete comment
+    public function deleteComment($id_comment,$id_film)
+    {
+        $isSeen = false;
+        if (Historique::where(['media_id' => $id_film, 'user_id' => auth()->user()->id])->exists()) {
+            $isSeen = true;
+        }
+        $isLiked = false;
+        if (Favori::where(['media_id' => $id_film, 'user_id' => auth()->user()->id])->exists()) {
+            $isLiked = true;
+        }
+            $movie = DB::table('medias')->where('id', $id_film)->first();
+            $category = DB::table('categories')->where('id', $movie->category_id)->first();  
+            $comment = Comment::find($id_comment);
+            $comment->delete();     
+            $newcomments = Comment::where('media_id', $id_film)->orderBy('created_at', 'desc')->paginate(4);
+            return view('movie-details', ['movie' => $movie, 'category' => $category, 'comments' => $newcomments, 'isLiked' => $isLiked, 'isSeen' => $isSeen]);
+        
     }
 }

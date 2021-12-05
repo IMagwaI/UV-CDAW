@@ -152,22 +152,44 @@ crossorigin="anonymous"></script>
         txtid.getElementsByTagName('p')[0].textContent = name;
     }
 
-    function deleter(e) {
-        e.currentTarget.parentNode.remove();
-        // delete one comment from the database
+    // add event listener to delete button
+     $(".deleter").click(function(e) {
         var id = e.currentTarget.parentNode.id;
+        var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
         $.ajax({
-            type: "POST",
-            url: "{{ route('deleteComment', ['id' => 'idC']) }}".replace('idC', id),
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "_method": "DELETE"
-            },
-            success: function(data) {
-                console.log(data);
-            }
-        });
-    }
+             type: "DELETE",
+             url: "{{ route('deleteComment', ['id_comment' => 'idC', 'id_film' => $movie->id]) }}".replace('idC', id),
+             data: {
+                 "_token": "{{ csrf_token() }}",
+                 "_method": "DELETE"
+             },
+             success: function(data) {
+                 alert("Commentaire supprimé");
+             }
+         })
+    }); 
+
+     function deleter(e) {
+        // delete in html
+        // get id of comment
+        var media_id = e.currentTarget.parentNode.value;
+         alert(e.currentTarget.parentNode.value); 
+
+    /*      e.currentTarget.parentNode.remove();
+         
+         var id = e.currentTarget.parentNode.id; 
+          $.ajax({
+             type: "DELETE",
+             url: ""{{ route('deleteComment', ['id_comment' => 'idC', 'id_film' => $movie->id]) }}".replace('idC', id),"
+             data: {
+                 "_token": "{{ csrf_token() }}",
+                 "_method": "DELETE"
+             },
+             success: function(data) {
+                 alert("Commentaire supprimé");
+             }
+         });   */
+    } 
 
     function addComment() {
         /*   $('#sendComsment').on('submit', function(e) { */
@@ -179,6 +201,7 @@ crossorigin="anonymous"></script>
             var comment = document.getElementById("msg").value;
             var movie_id = {{ $movie->id }};
             var CommentDiv = document.createElement("div");
+            CommentDiv.value = {{ $movie->id }};
             CommentDiv.className = "comment mt-4 text-justify float-left";
             var img = document.createElement("img");
             @if (Auth::check())
@@ -231,8 +254,8 @@ crossorigin="anonymous"></script>
                 url: "{{ route('addComment', ['id_user' => auth()->user()->id, 'id_film' => $movie->id]) }}",
                 data: form,
                 success: function(data) {
-                    /*  alert("Commentaire ajouté"); */
-
+/*                       alert("Commentaire ajouté"); 
+ */
                 }
             });
             document.getElementById("msg").value = "";
