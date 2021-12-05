@@ -23,7 +23,7 @@ class HomeController extends Controller
             $media->year = $value['year'];
             $media->rank = $value['rank'];
             $media->image = $value['image'];
-            $media->type=$value['type'];
+            $media->type = $value['type'];
             $media->vue = 0;
             $media->imDBRating = $value['imDbRating'];
             $media->imDbRatingCount = $value['imDbRatingCount'];
@@ -33,34 +33,30 @@ class HomeController extends Controller
             interviewing a variety of kids about their thoughts concerning their world and their future.
             Then Johnny's saddled with caring for his young nephew Jesse. Jesse brings a new perspective
             and, as they travel from state to state, effectively turns the emotional tables on Johnny.
-       "; 
-            /* $media->save(); */
+       ";
+            $media->save();
         }
         $homeFilms = DB::table('medias')->paginate(8);
         return view('home', ["homeFilms" => $homeFilms]);
     }
-    public function showAllMedias(Request $request){
-        if($request->ajax())
-        {
+    public function showAllMedias(Request $request)
+    {
+        if ($request->ajax()) {
             $homeFilms = DB::table('medias')->paginate(8);
             return view('media', ["homeFilms" => $homeFilms])->render();
         }
     }
 
-    public function getMediaByType(Request $request,$type){
-        if($request->ajax())
-        {
-            if($type=="all"){
+    public function getMediaByType(Request $request, $type)
+    {
+        if ($request->ajax()) {
+            if ($type == "all") {
                 $homeFilms = DB::table('medias')->paginate(8);
                 return view('media', ["homeFilms" => $homeFilms])->render();
-            }
-            else{
-                $homeFilms = DB::table('medias')->where('type',$type)->paginate(8);
+            } else {
+                $homeFilms = DB::table('medias')->where('type', $type)->paginate(8);
                 return view('media', ["homeFilms" => $homeFilms])->render();
             }
-
         }
     }
-
-
 }

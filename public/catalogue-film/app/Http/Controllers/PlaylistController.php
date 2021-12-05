@@ -79,8 +79,8 @@ class PlaylistController extends Controller
     {
         $playlist = Playlist::where('id', $id)->get();
         $medias = ContenuPlaylist::with('media')->where('id', $id)->get();
-        echo $medias;
-        return view("playlist-details", ["playlist" => $playlist[0], "medias" => $medias]);
+        // echo $medias;
+        return view("playlist-details", ["playlist" => $playlist[0], "medias" => $medias[0]->media]);
         // echo $playlist[0]->name;
     }
 
