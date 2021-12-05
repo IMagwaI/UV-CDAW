@@ -27,6 +27,8 @@ Route::get('playlists', 'App\Http\Controllers\PlaylistController@index')->name('
 Route::get('playlist/{id}', 'App\Http\Controllers\PlaylistController@show')->name('playlist-details');
 Route::get('addToPlaylist/{mediaId}', 'App\Http\Controllers\PlaylistController@showAddToPlaylist')->name('add-to-playlist');
 Route::post('addToPlaylist/{mediaId}', 'App\Http\Controllers\PlaylistController@addToPlaylist')->name('post-to-playlist');
+Route::get('deleteFromPlaylist/{mediaId}/{playlistId}', 'App\Http\Controllers\PlaylistController@deleteFromPlaylist')->name('delete-from-playlist');
+Route::get('deletePlaylist/{id}', 'App\Http\Controllers\PlaylistController@destroy')->name('delete-playlist');
 Route::get('addPlaylist', 'App\Http\Controllers\PlaylistController@create')->name('addPlaylist');
 Route::post('addPlaylist', 'App\Http\Controllers\PlaylistController@store')->name('addPlaylist_store');
 

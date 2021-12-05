@@ -10,6 +10,14 @@
                         <h2>Playlist</h2>
                         <p>{{ $playlist->name }}</p>
 
+                        <div class="col">
+                            <div class="mr-auto">
+                                <button class="btn btn-danger"><a
+                                        href="{{ route('delete-playlist', ['id' => $playlist->id]) }}">Supprimer la
+                                        playlist</a></button>
+                            </div>
+                        </div>
+
                         <div class="row">
 
                         </div>
@@ -38,6 +46,8 @@
                                                 href="{{ route('movie-details-show', ['id' => $value->media[0]->id]) }}">{{ $value->media[0]->title }}</a>
                                         </h4>
                                         <span>Rating : {{ $value->media[0]->rank }}</span>
+                                        <button class="btn btn-danger"><a
+                                                href="{{ route('delete-from-playlist', ['mediaId' => $value->media[0]->id, 'playlistId' => $playlist->id]) }}">Supprimer</a></button>
                                         </span>
                                     </div>
                                 </div>

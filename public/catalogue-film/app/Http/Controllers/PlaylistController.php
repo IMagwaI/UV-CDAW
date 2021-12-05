@@ -33,8 +33,10 @@ class PlaylistController extends Controller
     }
 
     // remove media from playlist
-    public function removeFromPlaylist($mediaId, $playlistId)
+    public function deleteFromPlaylist($mediaId, $playlistId)
     {
+        ContenuPlaylist::where(['playlist_id' => $playlistId, 'media_id' => $mediaId])->delete();
+        return redirect()->route('playlist-details', ["id" => $playlistId]);
     }
 
     /**
@@ -131,7 +133,7 @@ class PlaylistController extends Controller
      */
     public function destroy($id)
     {
-        // Media::destroy($id);
-        // return redirect('/addedFilms');
+        Playlist::where('id', $id)->delete();
+        return redirect()->route('playlists');
     }
 }
