@@ -24,6 +24,9 @@ Route::post('addFilm', 'App\Http\Controllers\FilmController@store')->name('addFi
 Route::get('addedFilms', 'App\Http\Controllers\FilmController@index')->name('addedFilms');
 
 Route::get('playlists', 'App\Http\Controllers\PlaylistController@index')->name('playlists');
+Route::get('playlist/{id}', 'App\Http\Controllers\PlaylistController@show')->name('playlist-details');
+Route::get('addToPlaylist/{mediaId}', 'App\Http\Controllers\PlaylistController@showAddToPlaylist')->name('add-to-playlist');
+Route::post('addToPlaylist/{mediaId}', 'App\Http\Controllers\PlaylistController@addToPlaylist')->name('post-to-playlist');
 Route::get('addPlaylist', 'App\Http\Controllers\PlaylistController@create')->name('addPlaylist');
 Route::post('addPlaylist', 'App\Http\Controllers\PlaylistController@store')->name('addPlaylist_store');
 

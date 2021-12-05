@@ -40,7 +40,9 @@
                                         </div>
                                     </div>
                                     <div class="member-info">
-                                        <h4>{{ $value->name }}</h4>
+                                        <h4><a
+                                                href="{{ route('playlist-details', ['id' => $value->id]) }}">{{ $value->name }}</a>
+                                        </h4>
                                         <span>Chief Executive Officer</span>
                                     </div>
                                 </div>

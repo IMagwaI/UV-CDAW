@@ -4,9 +4,33 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Playlist;
+use App\Models\ContenuPlaylist;
 
 class PlaylistController extends Controller
 {
+
+    // show add to playlist page
+    public function showAddToPlaylist($mediaId)
+    {
+        $playlists = Playlist::where('user_id', auth()->user()->id)->get();
+        return view("addFilmToPlaylist", ["playlists" => $playlists, "id" => $mediaId]);
+    }
+
+    // add media to playlist
+    public function addToPlaylist($mediaId, Request $request)
+    {
+        $id = $request->input("playlist");
+        ContenuPlaylist::create(["media_id" => $mediaId, "playlist_id" => $id]);
+        $playlist = Playlist::where('id', $id)->get();
+        // $medias = ContenuPlaylist::with('media')->where('id', $id)->get();
+        return redirect()->route('playlist-details', ["id" => $playlist[0]->id]);
+    }
+
+    // remove media from playlist
+    public function removeFromPlaylist($mediaId, $playlistId)
+    {
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -53,7 +77,11 @@ class PlaylistController extends Controller
      */
     public function show($id)
     {
-        //
+        $playlist = Playlist::where('id', $id)->get();
+        $medias = ContenuPlaylist::with('media')->where('id', $id)->get();
+        echo $medias;
+        return view("playlist-details", ["playlist" => $playlist[0], "medias" => $medias]);
+        // echo $playlist[0]->name;
     }
 
     /**

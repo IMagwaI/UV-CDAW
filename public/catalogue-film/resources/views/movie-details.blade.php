@@ -1,7 +1,6 @@
 @extends('template')
 @section('content')
 
-
     <main id="main">
 
         <!-- ======= Breadcrumbs ======= -->
@@ -16,28 +15,61 @@
                     </div>
                     <div class="col mr-auto">
                         <div class="container">
-                            <div class="row w-100">
+                            <div class="row w-100 align-middle">
                                 @if (!$isLiked)
-                                    <a class="col add-button" style="cursor: pointer"
-                                        href="{{ route('addFavoris', ['id' => $movie->id]) }}">
-                                        Ajouter aux favoris <i class="bi-heart-fill"></i></a>
+                                    <button class="col add-button"
+                                        style="cursor: pointer; border: none; padding: 1rem; border-radius: 5px">
+                                        <a href="{{ route('addFavoris', ['id' => $movie->id]) }}">Ajouter aux favoris</a>
+                                        <i class="bi-heart-fill"></i></button>
                                 @else
-                                    <a class="col add-button" style="cursor: pointer; color: red"
+                                    <button class="col add-button"
+                                        style="cursor: pointer; border: none; padding: 1rem; border-radius: 5px; color: red"
                                         href="{{ route('deleteFavoris', ['id' => $movie->id]) }}">
-                                        Supprimer des favoris <i class="bi-heart-fill"></i></a>
+                                        <a href="{{ route('deleteFavoris', ['id' => $movie->id]) }}">Supprimer des
+                                            favoris</a> <i class="bi-heart-fill"></i></button>
                                 @endif
 
                                 @if (!$isSeen)
-                                    <a class="col add-button" style="cursor: pointer"
+                                    <button class="col add-button"
+                                        style="cursor: pointer; border: none; padding: 1rem; border-radius: 5px"
                                         href="{{ route('addHistorique', ['id' => $movie->id]) }}">
-                                        Marquer comme vu <i class="bi-eye-fill"></i></a>
+                                        <a href="{{ route('addHistorique', ['id' => $movie->id]) }}">Marquer comme vu</a>
+                                        <i class="bi-eye-fill"></i></button>
                                 @else
-                                    <a class="col add-button" style="cursor: pointer; color: red"
+                                    <button class="col add-button"
+                                        style="cursor: pointer; border: none; padding: 1rem; border-radius: 5px; color: red"
                                         href="{{ route('deleteHistorique', ['id' => $movie->id]) }}">
-                                        Supprimer de l'historique <i class="bi-eye-fill"></i></a>
+                                        <a href="{{ route('deleteHistorique', ['id' => $movie->id]) }}">Supprimer de
+                                            l'historique </a><i class="bi-eye-fill"></i></button>
                                 @endif
-                                <div class="col  add-button" style="cursor: pointer">
-                                    Ajouter au playlist <i class="bi-plus-circle-fill"></i></div>
+                                <button class="col  add-button"
+                                    style="cursor: pointer; border: none; padding: 1rem; border-radius: 5px"
+                                    data-toggle="modal" data-target="#exampleModal">
+                                    <a href="{{ route('add-to-playlist', ['mediaId' => $movie->id]) }}">Ajouter au
+                                        playlist</a>
+                                    <i class="bi-plus-circle-fill"></i></button>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                ...
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 {{-- <div class="col  add-button" style="cursor: pointer">
                                     Marquer comme vu <i class="bi-eye-fill"></i></div> --}}
                             </div>
@@ -169,27 +201,27 @@ crossorigin="anonymous"></script>
          })
     });  */
 
-     function deleter(e) {
+    function deleter(e) {
         // delete in html
         // get id of comment
         var media_id = e.currentTarget.parentNode.value;
-         alert(e.currentTarget.parentNode.value); 
+        alert(e.currentTarget.parentNode.value);
 
-    /*      e.currentTarget.parentNode.remove();
-         
-         var id = e.currentTarget.parentNode.id; 
-          $.ajax({
-             type: "DELETE",
-             url: ""{{ route('deleteComment', ['id_comment' => 'idC', 'id_film' => $movie->id]) }}".replace('idC', id),"
-             data: {
-                 "_token": "{{ csrf_token() }}",
-                 "_method": "DELETE"
-             },
-             success: function(data) {
-                 alert("Commentaire supprimé");
-             }
-         });   */
-    } 
+        /*      e.currentTarget.parentNode.remove();
+             
+             var id = e.currentTarget.parentNode.id; 
+              $.ajax({
+                 type: "DELETE",
+                 url: ""{{ route('deleteComment', ['id_comment' => 'idC', 'id_film' => $movie->id]) }}".replace('idC', id),"
+                 data: {
+                     "_token": "{{ csrf_token() }}",
+                     "_method": "DELETE"
+                 },
+                 success: function(data) {
+                     alert("Commentaire supprimé");
+                 }
+             });   */
+    }
 
     function addComment() {
         /*   $('#sendComsment').on('submit', function(e) { */
@@ -226,20 +258,20 @@ crossorigin="anonymous"></script>
             p.textContent = document.getElementById("msg").value;
             var textmoderation = document.createElement("span");
             textmoderation.textContent = "Ce commentaire est en attente de modération";
-            textmoderation.style.color = "red";         
+            textmoderation.style.color = "red";
 
-           /*  var modify = document.createElement("button");
-            modify.textContent = "Modify Comment";
-            modify.className = "modify";
-            if (modify.addEventListener) {
-                modify.addEventListener("click", modify);
-            };
-            var remove = document.createElement("button");
-            remove.textContent = "Remove Comment";
-            remove.className = "remove";
-            if (remove.addEventListener) {
-                remove.addEventListener("click", deleter);
-            }; */
+            /*  var modify = document.createElement("button");
+             modify.textContent = "Modify Comment";
+             modify.className = "modify";
+             if (modify.addEventListener) {
+                 modify.addEventListener("click", modify);
+             };
+             var remove = document.createElement("button");
+             remove.textContent = "Remove Comment";
+             remove.className = "remove";
+             if (remove.addEventListener) {
+                 remove.addEventListener("click", deleter);
+             }; */
             CommentDiv.appendChild(img);
             CommentDiv.appendChild(h4);
             CommentDiv.appendChild(span);
@@ -247,8 +279,8 @@ crossorigin="anonymous"></script>
             CommentDiv.appendChild(textmoderation);
             const allcomments = document.getElementsByClassName("allComments")[0];
             allcomments.insertBefore(CommentDiv, allcomments.firstChild);
-/*             CommentDiv.appendChild(modify);
-            CommentDiv.appendChild(remove); */
+            /*             CommentDiv.appendChild(modify);
+                        CommentDiv.appendChild(remove); */
             //update database
             var form = $('#sendComment').serialize();
             $.ajaxSetup({
@@ -261,8 +293,8 @@ crossorigin="anonymous"></script>
                 url: "{{ route('addComment', ['id_user' => auth()->user()->id, 'id_film' => $movie->id]) }}",
                 data: form,
                 success: function(data) {
-/*                       alert("Commentaire ajouté"); 
- */
+                    /*                       alert("Commentaire ajouté"); 
+                     */
                 }
             });
             document.getElementById("msg").value = "";
