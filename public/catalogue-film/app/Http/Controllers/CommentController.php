@@ -57,7 +57,9 @@ class CommentController extends Controller
         $movie = DB::table('medias')->where('id', $media_id)->first();
         $category = DB::table('categories')->where('id', $movie->category_id)->first();  
         $comment = Comment::find($id_comment);
-        $comment->etat_moderation = 1;
+        if(auth()->user()->role == 'admin'){
+            $comment->etat_moderation = 1;
+        }      
         $comment->text = $request->text;
         $comment->save();
         $comments = Comment::where('media_id', $media_id)->orderBy('created_at', 'desc')->paginate(4);

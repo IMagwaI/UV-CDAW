@@ -11,7 +11,7 @@
             @if ($comment->etat_moderation == 0)
                 <span style="color: red">Ce commentaire est en attente de modération</span>
             @endif
-            @if (Auth::check())
+            @if ((Auth::check() && $comment->user->id == Auth::user()->id) || Auth::user()->role == 'admin')
                 <form action="{{ route('updateComment', [$comment->id, $comment->media_id]) }}" method="PUT">
                     @csrf
                     @method('put')
