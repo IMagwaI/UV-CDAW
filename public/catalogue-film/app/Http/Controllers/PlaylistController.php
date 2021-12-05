@@ -20,8 +20,14 @@ class PlaylistController extends Controller
     public function addToPlaylist($mediaId, Request $request)
     {
         $id = $request->input("playlist");
-        ContenuPlaylist::create(["media_id" => $mediaId, "playlist_id" => $id]);
         $playlist = Playlist::where('id', $id)->get();
+        // if already in playlist skip
+
+        $exists = ContenuPlaylist::where(["media_id" => $mediaId, "playlist_id" => $id])->first();
+        if ($exists === null) {
+            ContenuPlaylist::create(["media_id" => $mediaId, "playlist_id" => $id]);
+        }
+
         // $medias = ContenuPlaylist::with('media')->where('id', $id)->get();
         return redirect()->route('playlist-details', ["id" => $playlist[0]->id]);
     }
@@ -78,9 +84,9 @@ class PlaylistController extends Controller
     public function show($id)
     {
         $playlist = Playlist::where('id', $id)->get();
-        $medias = ContenuPlaylist::with('media')->where('id', $id)->get();
+        $medias = ContenuPlaylist::with('media')->where('playlist_id', $id)->get();
+        return view("playlist-details", ["playlist" => $playlist[0], "medias" => $medias]);
         // echo $medias;
-        return view("playlist-details", ["playlist" => $playlist[0], "medias" => $medias[0]->media]);
         // echo $playlist[0]->name;
     }
 
