@@ -224,6 +224,10 @@ crossorigin="anonymous"></script>
             span.style.fontSize = "12px";
             var p = document.createElement("p");
             p.textContent = document.getElementById("msg").value;
+            var textmoderation = document.createElement("span");
+            textmoderation.textContent = "Ce commentaire est en attente de modération";
+            textmoderation.style.color = "red";         
+
            /*  var modify = document.createElement("button");
             modify.textContent = "Modify Comment";
             modify.className = "modify";
@@ -240,6 +244,7 @@ crossorigin="anonymous"></script>
             CommentDiv.appendChild(h4);
             CommentDiv.appendChild(span);
             CommentDiv.appendChild(p);
+            CommentDiv.appendChild(textmoderation);
             const allcomments = document.getElementsByClassName("allComments")[0];
             allcomments.insertBefore(CommentDiv, allcomments.firstChild);
 /*             CommentDiv.appendChild(modify);

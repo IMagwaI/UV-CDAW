@@ -283,7 +283,22 @@ button:hover {
     transition: 0.3s;
     font-size: 14px;
     display: inline-block;
-    border: 2px solid #ffc451;
+    border: 2px solid #473716;
+}
+
+.get-delete-btn {
+    color: #fff;
+    border-radius: 4px;
+    padding: 7px 25px 8px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 14px;
+    display: inline-block;
+    border: 2px solid #755959;
+}
+
+.get-delete-btn:hover {
+    background: #e91313;
 }
 
 .get-started-btn:hover {
