@@ -94,7 +94,7 @@
                             <div class="row ">
                                 <div class="col-lg-2 col-md-6 footer-links">
 
-                                    <h4>Catégorie</h4>
+                                    <h4>Type</h4>
                                     <ul>
                                         <li style="cursor: pointer;"
                                             onclick="document.getElementById('Movie').click(); return false;"><i
@@ -110,7 +110,7 @@
                                                 class="bx bx-chevron-right"></i> <a href="">Documentaire</a></li>
                                     </ul>
 
-                                    <h4>Genre</h4>
+                                    <h4>Catégorie</h4>
                                     <ul>
                                         <li><i class="bx bx-chevron-right"></i> <a href="#">Action</a></li>
                                         <li><i class="bx bx-chevron-right"></i> <a href="#">Drama</a></li>

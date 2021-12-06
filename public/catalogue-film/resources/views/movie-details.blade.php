@@ -96,13 +96,13 @@
                     <div class="col">
                         <div class="portfolio-info d-flex flex-row justify-items-between">
                             <div class="col">
-                                <img src="{{ $movie->image }}" />
+                                <img src="{{ $movie->image }}"   height="200" width="150" alt="">
                             </div>
                             <div class="col">
                                 <h3>{{ $movie->fullTitle }}</h3>
                                 <ul>
-                                    {{-- <li><strong>Genre:</strong> {{$movie->category}}</li> --}}
-                                    <li><strong>Categorie</strong>: Drame, Famille, Romance</li>
+                                    <li><strong>Type :</strong> {{$movie->type}}</li>
+                                    <li><strong>Categorie</strong>: {{$movie->category}}</li>
                                     <li><strong>Directeur</strong>: {{ $movie->director }}</li>
                                     <li><strong>Année</strong>: {{ $movie->year }}</li>
                                 </ul>
@@ -244,7 +244,11 @@ crossorigin="anonymous"></script>
             CommentDiv.className = "comment mt-4 text-justify float-left";
             var img = document.createElement("img");
             @if (Auth::check())
-                img.src = "{{ auth()->user()->image }}";
+                if ("{{ auth()->user()->image }}" != "") {
+                    img.src = "{{ auth()->user()->image }}";
+                } else {
+                    img.src = 'https://bootdey.com/img/Content/avatar/avatar7.png';
+                }
             @endif
             @if (!Auth::check())
                 img.src = "https://www.w3schools.com/howto/img_avatar.png";
@@ -267,18 +271,6 @@ crossorigin="anonymous"></script>
             textmoderation.textContent = "Ce commentaire est en attente de modération";
             textmoderation.style.color = "red";
 
-            /*  var modify = document.createElement("button");
-             modify.textContent = "Modify Comment";
-             modify.className = "modify";
-             if (modify.addEventListener) {
-                 modify.addEventListener("click", modify);
-             };
-             var remove = document.createElement("button");
-             remove.textContent = "Remove Comment";
-             remove.className = "remove";
-             if (remove.addEventListener) {
-                 remove.addEventListener("click", deleter);
-             }; */
             CommentDiv.appendChild(img);
             CommentDiv.appendChild(h4);
             CommentDiv.appendChild(span);

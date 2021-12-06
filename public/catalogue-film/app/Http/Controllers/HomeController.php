@@ -27,7 +27,7 @@ class HomeController extends Controller
             $media->vue = 0;
             $media->imDBRating = $value['imDbRating'];
             $media->imDbRatingCount = $value['imDbRatingCount'];
-            $media->category_id = 0000;
+            $media->category = $value['category'];
             $media->duree_minute = 180;
             $media->description = " Johnny is an emotionally stunted and softspoken radio journalist who travels the country
             interviewing a variety of kids about their thoughts concerning their world and their future.

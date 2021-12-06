@@ -20,8 +20,12 @@ Route::get('/tami', 'App\Http\Controllers\listeMediasController@index')->name('w
 Route::get('/cats', 'App\Http\Controllers\listeMediasController@getCategories')->name('getem');
 Route::get('/films', 'App\Http\Controllers\FilmController@index')->name('films');
 Route::get('addFilm', 'App\Http\Controllers\FilmController@create')->name('addFilm');
-Route::post('addFilm', 'App\Http\Controllers\FilmController@store')->name('addFilm_store');
 Route::get('addedFilms', 'App\Http\Controllers\FilmController@index')->name('addedFilms');
+
+
+
+Route::post('addFilm', 'App\Http\Controllers\FilmController@store')->name('addFilm_store');
+Route::get('addMedia', 'App\Http\Controllers\FilmController@index')->name('addMediaPage');
 
 Route::get('playlists', 'App\Http\Controllers\PlaylistController@index')->name('playlists');
 Route::get('playlist/{id}', 'App\Http\Controllers\PlaylistController@show')->name('playlist-details');

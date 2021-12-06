@@ -5,7 +5,7 @@
                 onError="this.src = 'https://bootdey.com/img/Content/avatar/avatar7.png'"
                 alt="{{ $comment->user->name }}" class="rounded-circle" width="40" height="40">
             <h4>{{ $comment->user->name }}</h4>
-            <span style="font-size: 12px">{{ $comment->created_at->diffForHumans() }}</span>
+            <span style="font-size: 12px;color:rgb(167, 166, 166)">{{ $comment->created_at->diffForHumans() }}</span>
             <br>
             <p>{{ $comment->text }}</p>
             @if ($comment->etat_moderation == 0)

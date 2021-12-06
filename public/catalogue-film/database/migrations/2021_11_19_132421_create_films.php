@@ -28,8 +28,7 @@ class CreateFilms extends Migration
             $table->integer("duree_minute");
             $table->integer("vue");
             $table->string("type");
-
-            $table->foreignId('category_id')->constrained('categories');
+            $table->string("category");
         });
     }
 

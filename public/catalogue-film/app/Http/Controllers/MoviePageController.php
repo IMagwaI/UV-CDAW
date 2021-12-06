@@ -36,8 +36,6 @@ class MoviePageController extends Controller
 
         $movie = DB::table('medias')->where('id', $id)->first();
         $comments = Comment::where('media_id', $id)->orderBy('created_at', 'desc')->paginate(4);
-        //category khass tbdel mazal makatsupportich multiple
-        $category = DB::table('categories')->where('id', $movie->category_id)->first();
-        return view('movie-details', ['movie' => $movie, 'category' => $category, 'comments' => $comments, 'isLiked' => $isLiked, 'isSeen' => $isSeen, 'playlistExists' => $playlistExists]);
+        return view('movie-details', ['movie' => $movie, 'comments' => $comments, 'isLiked' => $isLiked, 'isSeen' => $isSeen, 'playlistExists' => $playlistExists]);
     }
 }

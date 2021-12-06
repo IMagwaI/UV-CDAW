@@ -55,7 +55,7 @@ class CommentController extends Controller
             $isLiked = true;
         }
         $movie = DB::table('medias')->where('id', $media_id)->first();
-        $category = DB::table('categories')->where('id', $movie->category_id)->first();  
+        $category = $movie->category;  
         $comment = Comment::find($id_comment);
         if(auth()->user()->role == 'admin'){
             $comment->etat_moderation = 1;

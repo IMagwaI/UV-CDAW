@@ -63,6 +63,8 @@
                     @auth
                         {{-- <li><a class="nav-link scrollto" href="{{ route('movie-details') }}">Film</a></li> --}} <li><a class="nav-link scrollto"
                                 href="{{ route('playlists') }}">Playlists</a></li>
+                        <li><a class="nav-link scrollto"
+                            href="{{ route('addMediaPage') }}">Ajouter media</a></li>
                     @else
                         {{-- <li><a class="nav-link scrollto" href="{{ route('addFilm') }}">CRUD (Jalon 2)</a></li> --}}
                         <li><a class="nav-link scrollto" href="#main">Discover</a></li>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Media;
 use App\Models\Category;
+use Illuminate\Support\Facades\DB;
 
 class FilmController extends Controller
 {
@@ -15,8 +16,8 @@ class FilmController extends Controller
      */
     public function index()
     {
-        $films = Media::all();
-        return view("addedFilms", ["films" => $films]);
+
+        return view("addFilm");
     }
     /**
      * Show the form for creating a new resource.
@@ -37,13 +38,30 @@ class FilmController extends Controller
      */
     public function store(Request $request)
     {
-        $name = $request->input('name');
-        $director = $request->input('director');
-        $category = $request->input('category');
+        //create new film from request
+        $media = new Media();
+        $media->title = $request->input('name');
+        $media->rank = rand(251, 350);
+        $media->imDBRating = rand(4, 9);
+        $media->imDbRatingCount = rand(452, 2000);
+        $media->duree_minute = 180;
+        $media->vue = 0;
+        $media->fullTitle = $request->input('name');
+        $media->fullTitle = $request->input('name');
+        $media->director = $request->input('director');
+        $media->type = $request->input('type');
+        $media->year = $request->input('year');
+        $media->image = $request->input('image');
+        $media->category = $request->input('category');
+        $media->description = " Johnny is an emotionally stunted and softspoken radio journalist who travels the country
+        interviewing a variety of kids about their thoughts concerning their world and their future.
+        Then Johnny's saddled with caring for his young nephew Jesse. Jesse brings a new perspective
+        and, as they travel from state to state, effectively turns the emotional tables on Johnny.
+   ";
+        $media->save();
+        $homeFilms = DB::table('medias')->paginate(8);
 
-        $data = ['name' => $name, 'director' => $director, 'category_id' => $category];
-        Media::create($data);
-        return redirect('/addedFilms');
+        return view('home', ["homeFilms" => $homeFilms]);
     }
 
     /**
