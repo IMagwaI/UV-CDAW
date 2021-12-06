@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Comment;
 use App\Models\Favori;
 use App\Models\Historique;
+use App\Models\Playlist;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -47,6 +48,11 @@ class CommentController extends Controller
     {
 
         $isSeen = false;
+        $playlistExists = false;
+        if (Playlist::where(['user_id' => auth()->user()->id])->exists()) {
+            $playlistExists = true;
+        }
+
         if (Historique::where(['media_id' => $media_id, 'user_id' => auth()->user()->id])->exists()) {
             $isSeen = true;
         }
@@ -63,7 +69,7 @@ class CommentController extends Controller
         $comment->text = $request->text;
         $comment->save();
         $comments = Comment::where('media_id', $media_id)->orderBy('created_at', 'desc')->paginate(4);
-        return view('movie-details', ['movie' => $movie, 'category' => $category, 'comments' => $comments, 'isLiked' => $isLiked, 'isSeen' => $isSeen]);
+        return view('movie-details', ['movie' => $movie, 'category' => $category, 'comments' => $comments, 'isLiked' => $isLiked, 'isSeen' => $isSeen, 'playlistExists' => $playlistExists]);
 
     }
 
@@ -71,6 +77,10 @@ class CommentController extends Controller
     public function deleteComment($id_comment,$id_film)
     {
         $isSeen = false;
+        $playlistExists = false;
+        if (Playlist::where(['user_id' => auth()->user()->id])->exists()) {
+            $playlistExists = true;
+        }
         if (Historique::where(['media_id' => $id_film, 'user_id' => auth()->user()->id])->exists()) {
             $isSeen = true;
         }
@@ -79,11 +89,11 @@ class CommentController extends Controller
             $isLiked = true;
         }
             $movie = DB::table('medias')->where('id', $id_film)->first();
-            $category = DB::table('categories')->where('id', $movie->category_id)->first();  
+            $category =   $movie->category;
             $comment = Comment::find($id_comment);
             $comment->delete();     
             $newcomments = Comment::where('media_id', $id_film)->orderBy('created_at', 'desc')->paginate(4);
-            return view('movie-details', ['movie' => $movie, 'category' => $category, 'comments' => $newcomments, 'isLiked' => $isLiked, 'isSeen' => $isSeen]);
+            return view('movie-details', ['movie' => $movie, 'category' => $category, 'comments' => $newcomments, 'isLiked' => $isLiked, 'isSeen' => $isSeen, 'playlistExists' => $playlistExists]);
         
     }
 }

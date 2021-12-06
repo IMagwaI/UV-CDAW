@@ -96,9 +96,9 @@
                                     <span class="text-secondary">https://google.com</span>
                                 </li>
                                 <!--                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                            <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2 icon-inline"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</h6>
-                                            <span class="text-secondary">bootdey</span>
-                                          </li> -->
+                                                <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2 icon-inline"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</h6>
+                                                <span class="text-secondary">bootdey</span>
+                                              </li> -->
                                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                     <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -202,6 +202,82 @@
             </div>
         </div>
 
-        <script src="js/form.js" crossorigin="anonymous"></script>
+        <script>
+            "use strict";
+
+
+            $(document).ready(function() {
+                $('.popup-btn').click(function() {
+                    var popupBlock = $('#' + $(this).data('popup'));
+                    popupBlock.addClass('active')
+                        .find('.fade-out').click(function() {
+                            popupBlock.css('opacity', '0').find('.popup-content').css('margin-top',
+                            '350px');
+                            setTimeout(function() {
+                                $('.popup').removeClass('active');
+                                popupBlock.css('opacity', '').find('.popup-content').css(
+                                    'margin-top', '');
+                            }, 600);
+                        });
+                });
+            });
+
+            function submitBday() {
+                var Q4A = "Your birthday is: ";
+                var Bdate = document.getElementById('bday').value;
+                var Bday = +new Date(Bdate);
+                Q4A += Bdate + ". You are " + ~~((Date.now() - Bday) / (31557600000));
+                var theBday = document.getElementById('resultBday');
+                /* theBday.innerHTML = Q4A; */
+            };
+
+            $('#send').on('submit', function(e) {
+                e.preventDefault();
+                var name = document.getElementById('name').value;
+                var phone = document.getElementById('phone').value;
+                var bday = document.getElementById('bday').value;
+                var image = document.getElementById('input-url').value;
+                var adress = document.getElementById('adress').value;
+                var profilStatut = document.getElementById('statut').value;
+                document.getElementById('resultName').innerHTML = name;
+                document.getElementById('resultPhone').innerHTML = phone;
+                document.getElementById('resultBday').innerHTML = bday;
+                document.getElementById('resultImage').src = image;
+                document.getElementById('resultAdress').innerHTML = adress;
+                document.getElementById('resultStatut').innerHTML = profilStatut;
+                document.getElementById('closef').click();
+
+                var form = this;
+                $.ajax({
+                    url: $(form).attr('action'),
+                    method: $(form).attr('method'),
+                    data: new FormData(form),
+                    processData: false,
+                    dataType: 'json',
+                    contentType: false,
+                    beforeSend: function() {
+                        $(form).find('span.error-text').text('');
+                    },
+                    success: function(data) {
+                        if (data.code == 0) {
+                            $.each(data.error, function(prefix, val) {
+                                $(form).find('span.' + prefix + '_error').text(val[0]);
+                            });
+                        }
+                    }
+                });
+            });
+
+
+            var inputUrlElem = document.getElementById('input-url');
+            var inputDragElem = document.getElementById('input-drag');
+            var imagePreviewUrlElem = document.getElementById('image-preview');
+
+            var preventDefault = function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                return false;
+            }
+        </script>
     </main>
 @endsection

@@ -56,16 +56,5 @@ class HomeController extends Controller
         }
     }
 
-    public function getMediaByType(Request $request, $type)
-    {
-        if ($request->ajax()) {
-            if ($type == "all") {
-                $homeFilms = DB::table('medias')->paginate(8);
-                return view('media', ["homeFilms" => $homeFilms])->render();
-            } else {
-                $homeFilms = DB::table('medias')->where('type', $type)->paginate(8);
-                return view('media', ["homeFilms" => $homeFilms])->render();
-            }
-        }
-    }
+  
 }
