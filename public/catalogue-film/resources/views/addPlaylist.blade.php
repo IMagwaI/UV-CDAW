@@ -20,8 +20,8 @@
                     @csrf
                     <div class="form-group">
                         <label for="exampleInputName">Nom du playlist</label>
-                        <input type="text" name="name" class="form-control" id="exampleInputName" aria-describedby="Nom"
-                            placeholder="Nom">
+                        <input required type="text" name="name" class="form-control" id="exampleInputName"
+                            aria-describedby="Nom" placeholder="Nom">
                     </div><br>
 
                     <br>

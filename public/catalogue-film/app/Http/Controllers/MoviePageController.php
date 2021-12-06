@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Comment;
 use App\Models\Favori;
 use App\Models\Historique;
+use App\Models\Playlist;
 
 
 class MoviePageController extends Controller
@@ -20,19 +21,23 @@ class MoviePageController extends Controller
     {
         $isLiked = false;
         $isSeen = false;
-        if(auth()->check()){
+        $playlistExists = false;
+        if (auth()->check()) {
             if (Favori::where(['media_id' => $id, 'user_id' => auth()->user()->id])->exists()) {
                 $isLiked = true;
             }
             if (Historique::where(['media_id' => $id, 'user_id' => auth()->user()->id])->exists()) {
                 $isSeen = true;
             }
+            if (Playlist::where(['user_id' => auth()->user()->id])->exists()) {
+                $playlistExists = true;
+            }
         }
-       
+
         $movie = DB::table('medias')->where('id', $id)->first();
         $comments = Comment::where('media_id', $id)->orderBy('created_at', 'desc')->paginate(4);
         //category khass tbdel mazal makatsupportich multiple
         $category = DB::table('categories')->where('id', $movie->category_id)->first();
-        return view('movie-details', ['movie' => $movie, 'category' => $category, 'comments' => $comments, 'isLiked' => $isLiked, 'isSeen' => $isSeen]);
+        return view('movie-details', ['movie' => $movie, 'category' => $category, 'comments' => $comments, 'isLiked' => $isLiked, 'isSeen' => $isSeen, 'playlistExists' => $playlistExists]);
     }
 }

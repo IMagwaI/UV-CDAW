@@ -1,7 +1,5 @@
 @extends('template')
 @section('content')
-
-
     @if (auth()->check() && auth()->user()->role == 'banned')
         <div class="main">
             <br><br><br><br><br>
@@ -20,7 +18,7 @@
                             <div class="card-body">
                                 <div class="alert alert-danger" role="alert">
                                     {{ __('You will be disconnected shortly') }}
-                                    {{Auth::logout()}}
+                                    {{ Auth::logout() }}
                                 </div>
                             </div>
                         </div>
@@ -33,7 +31,6 @@
 
                 <section id="hero" class="d-flex align-items-center justify-content-center" style="height: 50%">
                     <div class="container" data-aos="fade-up">
-
                         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
                             <div class="col-xl-6 col-lg-8">
                                 <h1>Welcome to Movie Time<span>.</span></h1>
@@ -41,18 +38,23 @@
                                 <br>
                             </div>
                         </div>
-                        <div class="input-group">
-                            <input type="search" class="form-control rounded" placeholder="Retrouver votre film"
-                                aria-label="Search" aria-describedby="search-addon"
-                                style="background-color:rgba(0,0,0,0); color:white" />
-                            <button type="button" class="btn warning"
-                                style="color:#fcc100; border-style: solid; border-color: #fcc100;">search</button>
-                        </div>
+                        <form method="POST" action="{{ route('search') }}">
+                            @csrf
+                            @method('POST')
+                            <div class="input-group">
+                                <input required name="title" id="title" type="search" class="form-control rounded"
+                                    placeholder="Retrouver votre film" aria-label="Search" aria-describedby="search-addon"
+                                    style="background-color:rgba(0,0,0,0); color:white" />
+                                <button type="submit" class="btn warning"
+                                    style="color:#fcc100; border-style: solid; border-color: #fcc100;">search</button>
+                            </div>
+                        </form>
 
 
 
                     </div>
                 </section>
+
 
                 <main id="main">
                     <!-- ======= Team Section ======= -->
@@ -70,7 +72,8 @@
                                     </label>
                                     <label class="btn btn-secondary">
                                         <input onclick="movieType();" type="radio" name="options" id="Movie"
-                                            autocomplete="off"> Film
+                                            autocomplete="off">
+                                        Film
                                     </label>
                                     <label class="btn btn-secondary">
                                         <input onclick="movieType();" type="radio" name="options" id="TV-series"
@@ -78,7 +81,8 @@
                                     </label>
                                     <label class="btn btn-secondary">
                                         <input onclick="movieType();" type="radio" name="options" id="Anime"
-                                            autocomplete="off"> Anime
+                                            autocomplete="off">
+                                        Anime
                                     </label>
                                     <label class="btn btn-secondary">
                                         <input onclick="movieType();" type="radio" name="options" id="Documentary"

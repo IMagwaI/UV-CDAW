@@ -34,11 +34,20 @@ class HomeController extends Controller
             Then Johnny's saddled with caring for his young nephew Jesse. Jesse brings a new perspective
             and, as they travel from state to state, effectively turns the emotional tables on Johnny.
        ";
-            $media->save();
+            // $media->save();
         }
         $homeFilms = DB::table('medias')->paginate(8);
         return view('home', ["homeFilms" => $homeFilms]);
     }
+
+    public function searchByTitle(Request $request)
+    {
+        $homeFilms = Media::where('title', 'like', '%' . $request->title . '%')->paginate(8);
+        // echo $homeFilms;
+        return view('search', ["homeFilms" => $homeFilms]);
+    }
+
+
     public function showAllMedias(Request $request)
     {
         if ($request->ajax()) {

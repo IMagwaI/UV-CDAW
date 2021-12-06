@@ -19,13 +19,15 @@
                                 @if (!$isLiked)
                                     <button class="col add-button"
                                         style="cursor: pointer; border: none; padding: 1rem; border-radius: 5px">
-                                        <a href="{{ route('addFavoris', ['id' => $movie->id]) }}">Ajouter aux favoris</a>
+                                        <a style="color: black"
+                                            href="{{ route('addFavoris', ['id' => $movie->id]) }}">Ajouter aux favoris</a>
                                         <i class="bi-heart-fill"></i></button>
                                 @else
                                     <button class="col add-button"
                                         style="cursor: pointer; border: none; padding: 1rem; border-radius: 5px; color: red"
                                         href="{{ route('deleteFavoris', ['id' => $movie->id]) }}">
-                                        <a href="{{ route('deleteFavoris', ['id' => $movie->id]) }}">Supprimer des
+                                        <a style="color: black"
+                                            href="{{ route('deleteFavoris', ['id' => $movie->id]) }}">Supprimer des
                                             favoris</a> <i class="bi-heart-fill"></i></button>
                                 @endif
 
@@ -33,21 +35,26 @@
                                     <button class="col add-button"
                                         style="cursor: pointer; border: none; padding: 1rem; border-radius: 5px"
                                         href="{{ route('addHistorique', ['id' => $movie->id]) }}">
-                                        <a href="{{ route('addHistorique', ['id' => $movie->id]) }}">Marquer comme vu</a>
+                                        <a style="color: black"
+                                            href="{{ route('addHistorique', ['id' => $movie->id]) }}">Marquer comme vu</a>
                                         <i class="bi-eye-fill"></i></button>
                                 @else
                                     <button class="col add-button"
                                         style="cursor: pointer; border: none; padding: 1rem; border-radius: 5px; color: red"
                                         href="{{ route('deleteHistorique', ['id' => $movie->id]) }}">
-                                        <a href="{{ route('deleteHistorique', ['id' => $movie->id]) }}">Supprimer de
+                                        <a style="color: black"
+                                            href="{{ route('deleteHistorique', ['id' => $movie->id]) }}">Supprimer de
                                             l'historique </a><i class="bi-eye-fill"></i></button>
                                 @endif
-                                <button class="col  add-button"
-                                    style="cursor: pointer; border: none; padding: 1rem; border-radius: 5px"
-                                    data-toggle="modal" data-target="#exampleModal">
-                                    <a href="{{ route('add-to-playlist', ['mediaId' => $movie->id]) }}">Ajouter au
-                                        playlist</a>
-                                    <i class="bi-plus-circle-fill"></i></button>
+                                @if ($playlistExists)
+                                    <button class="col  add-button"
+                                        style="cursor: pointer; border: none; padding: 1rem; border-radius: 5px"
+                                        data-toggle="modal" data-target="#exampleModal">
+                                        <a style="color: black"
+                                            href="{{ route('add-to-playlist', ['mediaId' => $movie->id]) }}">Ajouter au
+                                            playlist</a>
+                                        <i class="bi-plus-circle-fill"></i></button>
+                                @endif
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
