@@ -30,7 +30,8 @@
                             <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
                                 <div class="member" data-aos="fade-up" data-aos-delay="100">
                                     <div class="member-img">
-                                        <img src="./assets/img/poster.jpg" class="img-fluid" alt="">
+                                        {{-- <img src="./assets/img/poster.jpg" class="img-fluid" alt=""> --}}
+                                        <img width="1013" src={{ $images[$key] }} class="img-fluid" alt="">
                                         <div class="social">
                                             <a href=""><i class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -42,7 +43,6 @@
                                         <h4><a
                                                 href="{{ route('playlist-details', ['id' => $value->id]) }}">{{ $value->name }}</a>
                                         </h4>
-                                        <span>Chief Executive Officer</span>
                                     </div>
                                 </div>
                             </div>

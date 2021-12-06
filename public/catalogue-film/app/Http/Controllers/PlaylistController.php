@@ -47,8 +47,16 @@ class PlaylistController extends Controller
     public function index()
     {
         $playlists = Playlist::where('user_id', auth()->user()->id)->get();
+        $images = [];
+        foreach ($playlists as $key => $playlist) {
+            if (ContenuPlaylist::with('media')->where('playlist_id', $playlist->id)->exists()) {
+                array_push($images, ContenuPlaylist::with('media')->where('playlist_id', $playlist->id)->first()->media[0]->image);
+            } else {
 
-        return view("playlists", ["playlists" => $playlists]);
+                array_push($images, "./assets/img/poster.jpg");
+            }
+        }
+        return view("playlists", ["playlists" => $playlists, "images" => $images]);
     }
     /**
      * Show the form for creating a new resource.
