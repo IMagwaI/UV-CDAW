@@ -108,12 +108,26 @@ class FilmController extends Controller
         return redirect('/addedFilms');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    public function getMediaByType(Request $request, $type)
+    {
+        if ($request->ajax()) {
+            if ($type == "all") {
+                $homeFilms = DB::table('medias')->paginate(8);
+                return view('media', ["homeFilms" => $homeFilms])->render();
+            } else {
+                $homeFilms = DB::table('medias')->where('type', $type)->paginate(8);
+                return view('media', ["homeFilms" => $homeFilms])->render();
+            }
+        }
+    }
+
+    public function getByCategory(Request $request, $category)
+    {
+        if ($request->ajax()) {
+            $homeFilms = DB::table('medias')->where('category', $category)->paginate(8);
+            return view('media', ["homeFilms" => $homeFilms])->render();
+        }
+    }
     public function destroy($id)
     {
         Media::destroy($id);

@@ -112,11 +112,11 @@
 
                                     <h4>Catégorie</h4>
                                     <ul>
-                                        <li><i class="bx bx-chevron-right"></i> <a href="#">Action</a></li>
-                                        <li><i class="bx bx-chevron-right"></i> <a href="#">Drama</a></li>
-                                        <li><i class="bx bx-chevron-right"></i> <a href="#">Sience-fi</a></li>
-                                        <li><i class="bx bx-chevron-right"></i> <a href="#">Aventure</a></li>
-                                        <li><i class="bx bx-chevron-right"></i> <a href="#">Romance</a></li>
+                                        <li style="cursor: pointer;" id="Action" onclick="category(this.id);return false;"><i class="bx bx-chevron-right" ></i> <a href="">Action</a></li>
+                                        <li style="cursor: pointer;" id="Drama" onclick="category(this.id);return false;"><i class="bx bx-chevron-right" ></i> <a href="">Drama</a></li>
+                                        <li style="cursor: pointer;" id="Sience-fi" onclick="category(this.id);return false;"><i class="bx bx-chevron-right" ></i> <a href="">Sience-fi</a></li>
+                                        <li style="cursor: pointer;" id="Aventure" onclick="category(this.id);return false;"><i class="bx bx-chevron-right" ></i> <a href="">Aventure</a></li>
+                                        <li style="cursor: pointer;" id="Romance" onclick="category(this.id);return false;"><i class="bx bx-chevron-right" ></i> <a href="">Romance</a></li>
                                     </ul>
                                 </div>
                                 <div class="col">
@@ -200,6 +200,15 @@
                             }
                             $.ajax({
                                 url: "movieType/" + type,
+                                success: function(data) {
+                                    $('.pagination_data').html(data);
+                                }
+                            });
+                        }
+
+                        function category(id) {
+                            $.ajax({
+                                url: "movieCategory/" + id,
                                 success: function(data) {
                                     $('.pagination_data').html(data);
                                 }

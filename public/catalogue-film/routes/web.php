@@ -62,7 +62,8 @@ Route::delete('/addedFilms/{id}', 'App\Http\Controllers\FilmController@destroy')
 Route::post('/updateFilm/{id}', 'App\Http\Controllers\FilmController@update')->name('updateFilm_put');
 Route::post('/search', 'App\Http\Controllers\HomeController@searchByTitle')->name('search');
 
-Route::get('/movieType/{type}', 'App\Http\Controllers\HomeController@getMediaByType')->name('getMediaByType');
+Route::get('/movieCategory/{id}', 'App\Http\Controllers\FilmController@getByCategory')->name('movieCategory');
+Route::get('/movieType/{type}', 'App\Http\Controllers\FilmController@getMediaByType')->name('getMediaByType');
 Route::get('/', 'App\Http\Controllers\HomeController@populate')->name('home');
 
 /* Route::get('/movie-details', 'App\Http\Controllers\MoviePageController@index')->name('movie-details');
