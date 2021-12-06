@@ -45,8 +45,8 @@
                                 <input required name="title" id="title" type="search" class="form-control rounded"
                                     placeholder="Retrouver votre film" aria-label="Search" aria-describedby="search-addon"
                                     style="background-color:rgba(0,0,0,0); color:white" />
-                                <button type="submit" class="btn warning"
-                                    style="color:#fcc100; border-style: solid; border-color: #fcc100;">search</button>
+                                <button type="submit" class="btn"
+                                    style="background-color: whitesmoke;color:black; border-style: solid; border-color: #fcc100;">search</button>
                             </div>
                         </form>
 

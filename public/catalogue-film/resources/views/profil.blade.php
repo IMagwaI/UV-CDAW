@@ -3,10 +3,10 @@
     <link href="{{ asset('assets/css/form.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
         integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>    <div id="popup-reg" class="popup">
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script> <div id="popup-reg" class="popup">
         <div class="popup-content">
             <form id="send" class="send-form" method="POST" action="{{ route('update_profil', auth()->user()->id) }}">
                 @csrf
@@ -76,7 +76,7 @@
                                         <p class="text-secondary mb-1" id="resultStatut">
                                             {{ auth()->user()->profilStatut }}
                                         </p>
-                                       <button class="btn btn-primary">Follow</button>
+                                        <button class="btn btn-primary">Follow</button>
                                         <button class="btn btn-outline-primary">Message</button>
                                     </div>
                                 </div>
@@ -98,9 +98,9 @@
                                     <span class="text-secondary">https://google.com</span>
                                 </li>
                                 <!--                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2 icon-inline"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</h6>
-                                    <span class="text-secondary">bootdey</span>
-                                  </li> -->
+                                        <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2 icon-inline"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</h6>
+                                        <span class="text-secondary">bootdey</span>
+                                      </li> -->
                                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                     <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -154,9 +154,9 @@
                                     </div>
                                     <div class="col-sm-9 text-secondary" id="resultBday">
                                         @if (auth()->user()->bday)
-                                        {{ auth()->user()->bday }}
+                                            {{ auth()->user()->bday }}
                                         @else
-                                        <span class="text-secondary">No birthday</span>
+                                            <span class="text-secondary">No birthday</span>
                                         @endif
                                     </div>
                                 </div>
@@ -167,9 +167,9 @@
                                     </div>
                                     <div class="col-sm-9 text-secondary" id="resultPhone">
                                         @if (auth()->user()->phone)
-                                        {{ auth()->user()->phone}}
+                                            {{ auth()->user()->phone }}
                                         @else
-                                        <span class="text-secondary">No address</span>
+                                            <span class="text-secondary">No address</span>
                                         @endif
                                     </div>
                                 </div>
@@ -180,9 +180,9 @@
                                     </div>
                                     <div class="col-sm-9 text-secondary" id="resultAdress">
                                         @if (auth()->user()->adress)
-                                        {{ auth()->user()->adress }}
+                                            {{ auth()->user()->adress }}
                                         @else
-                                        <span class="text-secondary">No address</span>
+                                            <span class="text-secondary">No address</span>
                                         @endif
                                     </div>
                                 </div>
@@ -191,38 +191,6 @@
                                     <div class="col-sm-12">
                                         <button type="button" class="main-btn-rect popup-btn"
                                             data-popup="popup-reg">Modifier</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row gutters-sm">
-                            <div class="col-sm-6 mb-3">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h6 class="d-flex align-items-center mb-3"><i
-                                                class="material-icons text-info mr-2">Mes&nbsp; </i> Playlists</h6>
-                                        <small>Fun and drama</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 mb-3">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h6 class="d-flex align-items-center mb-3"><i
-                                                class="material-icons text-info mr-2">Playlists &nbsp;</i> abonnées</h6>
-                                        <small>Greatest movies of all time</small> <i class="material-icons text-info mr-2">
-                                            De &nbsp; TANTAOUI</i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h6 class="d-flex align-items-center mb-3"><i
-                                                class="material-icons text-info mr-2">Mes &nbsp;</i> commentaires</h6>
-                                        <small>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</small> <i
-                                            class="material-icons text-info mr-2"> dans &nbsp; Hunter X Hunter</i>
-
                                     </div>
                                 </div>
                             </div>
