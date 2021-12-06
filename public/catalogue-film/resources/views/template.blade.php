@@ -57,24 +57,23 @@
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     @if (Auth::check() && Auth::user()->role == 'admin')
-                    <li><a class="nav-link scrollto active" href={{ route('admin') }}>Admin Panel</a></li>
+                        <li><a class="nav-link scrollto active" href={{ route('admin') }}>Panneau admin</a></li>
                     @endif
-                    <li><a class="nav-link scrollto active" href={{ route('home') }}>Home</a></li>
+                    <li><a class="nav-link scrollto active" href={{ route('home') }}>Accueil</a></li>
                     @auth
                         {{-- <li><a class="nav-link scrollto" href="{{ route('movie-details') }}">Film</a></li> --}} <li><a class="nav-link scrollto"
                                 href="{{ route('playlists') }}">Playlists</a></li>
-                        <li><a class="nav-link scrollto"
-                            href="{{ route('addMediaPage') }}">Ajouter media</a></li>
+                        <li><a class="nav-link scrollto" href="{{ route('addMediaPage') }}">Ajouter media</a></li>
                     @else
                         {{-- <li><a class="nav-link scrollto" href="{{ route('addFilm') }}">CRUD (Jalon 2)</a></li> --}}
-                        <li><a class="nav-link scrollto" href="#main">Discover</a></li>
+                        <li><a class="nav-link scrollto" href="#main">Découvrir</a></li>
 
                     @endauth
 
                     <!-- .navbar -->
                     @auth
-                        <li class="dropdown"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <li class="dropdown"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z">
                                     </path>
                                 </svg><span> Compte</span> <i class="bi bi-chevron-down"></i></a>
@@ -99,7 +98,7 @@
 
                                     <x-jet-responsive-nav-link class="btn-danger" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                                    this.closest('form').submit();">
+                                                                                        this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-jet-responsive-nav-link>
                                 </form>
@@ -123,9 +122,9 @@
     <!-- End #main -->
 
     <!-- ======= Footer ======= -->
-                        
 
-    <footer  id="footer" class="bottom mb-0;">
+
+    <footer id="footer" class="bottom mb-0;">
 
         <div class="container">
             <div class="copyright">

@@ -33,8 +33,8 @@
                     <div class="container" data-aos="fade-up">
                         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
                             <div class="col-xl-6 col-lg-8">
-                                <h1>Welcome to Movie Time<span>.</span></h1>
-                                <h2>There's always a time for a movie</h2>
+                                <h1>Bienvenue dans Movie Time<span>.</span></h1>
+                                <h2>Il est toujours temps pour regarder un bon film</h2>
                                 <br>
                             </div>
                         </div>
@@ -62,13 +62,13 @@
                         <div class="container" data-aos="fade-up">
 
                             <div class="section-title">
-                                <h2>Discover</h2>
-                                <p>Our media</p>
+                                <h2>Découvrir</h2>
+                                <p>Nos medias</p>
 
                                 <div class="btn-group btn-group-toggle " data-toggle="buttons" style="width: 100%;">
                                     <label class="btn btn-secondary active">
                                         <input onclick="movieType();" type="radio" name="options" id="all"
-                                            autocomplete="off" checked> All
+                                            autocomplete="off" checked> Tout
                                     </label>
                                     <label class="btn btn-secondary">
                                         <input onclick="movieType();" type="radio" name="options" id="Movie"
@@ -77,7 +77,7 @@
                                     </label>
                                     <label class="btn btn-secondary">
                                         <input onclick="movieType();" type="radio" name="options" id="TV-series"
-                                            autocomplete="off"> serie
+                                            autocomplete="off"> série
                                     </label>
                                     <label class="btn btn-secondary">
                                         <input onclick="movieType();" type="radio" name="options" id="Anime"
@@ -101,7 +101,7 @@
                                                 class="bx bx-chevron-right"></i> <a href="">Film</a></li>
                                         <li style="cursor: pointer;"
                                             onclick="document.getElementById('TV-series').click(); return false;"><i
-                                                class="bx bx-chevron-right"></i> <a href="">Serie</a></li>
+                                                class="bx bx-chevron-right"></i> <a href="">Série</a></li>
                                         <li style="cursor: pointer;"
                                             onclick="document.getElementById('Anime').click(); return false;"><i
                                                 class="bx bx-chevron-right"></i> <a href="">Anime</a></li>
