@@ -17,7 +17,7 @@ Fonctionnalités implémentées :
 - Pagination.
 - Restriction des routes.
 - Modifier les données du profil.
-- Créer des playlists.
+- Créer/supprimer des playlists.
 - Consulter le historique.
 - Consulter les films ajoutés en Favoris.
 - Ajouter un commentaire à un média.
@@ -33,7 +33,7 @@ Fonctionnalités implémentées :
 
 Base de données :
 
-Vous retrouvrez notre base de donnée exportée dans le dossier jalon4.
+Vous retrouvrez notre base de donnée exportée dans le dossier jalon4, sous le nom : medias.sql
 
 Route :
 
@@ -43,9 +43,12 @@ http://localhost/UV-CDAW/public/catalogue-film/public/
 
 Identifiants sur le site :
 
-                        Login    | Mot de passe
-    -Utilisateur 1 :  
-    -Utilisateur 2 :
-    -Admin         :
+                              Login         |      Mot de passe
+
+    -Utilisateur normal :  blabla@bla.com   |    blablabla
+    -Utilisateur Banni  : banned@banned.com | blablabla
+    -Utilisateur Admin  :   admin@admin.com |  blablabla
 
 Vidéo de démonstration :
+
+        https://www.youtube.com/watch?v=15ATiP_tpIs
