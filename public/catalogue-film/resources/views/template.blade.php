@@ -110,7 +110,7 @@
                 </nav>
             @else
                 </nav>
-                <a href="{{ route('login') }}" class="get-started-btn scrollto">Connexion</a>
+                <a style="background-color: #ffbb38" href="{{ route('login') }}" class="get-started-btn scrollto">Connexion</a>
             @endauth
         </div>
     </header>

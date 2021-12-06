@@ -33,7 +33,7 @@
                     <div class="container" data-aos="fade-up">
                         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
                             <div class="col-xl-6 col-lg-8">
-                                <h1>Bienvenue dans Movie Time<span>.</span></h1>
+                                <h1>Bienvenue dans <br> Movie <span>Time.</span></h1>
                                 <h2>Il est toujours temps pour regarder un bon film</h2>
                                 <br>
                             </div>
